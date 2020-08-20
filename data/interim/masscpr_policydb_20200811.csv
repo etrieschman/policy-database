@@ -1,0 +1,86 @@
+"","policy_type","policy_sub_type","policy_measure","policy_scope","record_type","compliance","enforcer","min_date_start","max_date_end"
+"1","businesses","adapting","limiting numbers","all_businesses","modification","recommended","municipal_government",2020-02-24,NA
+"2","businesses","adapting","limiting numbers","all_businesses","modification","mandatory","municipal_government",2020-02-25,NA
+"3","businesses","adapting","limiting numbers","gyms","modification","recommended","municipal_government",2020-04-22,NA
+"4","businesses","adapting","limiting numbers","parks","modification","recommended","municipal_government",2020-04-01,NA
+"5","businesses","adapting","limiting numbers","restaurants","new","mandatory","municipal_government",2020-02-11,NA
+"6","businesses","adapting","limiting numbers","restaurants","modification","recommended","municipal_government",2020-04-09,NA
+"7","businesses","adapting","limiting numbers","supermarkets","new","recommended","municipal_government",2020-02-15,NA
+"8","businesses","adapting","limiting numbers","supermarkets","modification","mandatory","municipal_government",2020-02-18,NA
+"9","businesses","adapting","modifying hours","all_businesses","modification","mandatory","municipal_government",2020-02-25,NA
+"10","businesses","adapting","modifying hours","parks","modification","recommended","municipal_government",2020-04-01,NA
+"11","businesses","adapting","modifying hours","restaurants","modification","recommended","municipal_government",2020-04-09,NA
+"12","businesses","adapting","modifying hours","supermarkets","modification","mandatory","municipal_government",2020-02-18,NA
+"13","businesses","adapting","physical distancing","all_businesses","modification","recommended","municipal_government",2020-02-24,NA
+"14","businesses","adapting","physical distancing","all_businesses","modification","mandatory","municipal_government",2020-02-25,NA
+"15","businesses","adapting","physical distancing","gyms","modification","recommended","municipal_government",2020-04-22,NA
+"16","businesses","adapting","physical distancing","parks","new","recommended","municipal_government",2020-02-17,NA
+"17","businesses","adapting","physical distancing","parks","modification","recommended","municipal_government",2020-04-01,NA
+"18","businesses","adapting","physical distancing","restaurants","modification","recommended","municipal_government",2020-04-09,NA
+"19","businesses","adapting","physical distancing","supermarkets","new","recommended","municipal_government",2020-02-15,NA
+"20","businesses","adapting","physical distancing","supermarkets","modification","mandatory","municipal_government",2020-02-18,NA
+"21","businesses","closing","","parks","new","recommended","municipal_government",2020-02-17,NA
+"22","businesses","closing","full closure","theaters","new","mandatory","municipal_government",2020-01-30,NA
+"23","businesses","closing","partial closure","all_businesses","modification","mandatory","municipal_government",2020-02-25,NA
+"24","businesses","closing","partial closure","parks","modification","recommended","municipal_government",2020-04-01,NA
+"25","businesses","closing","partial closure","supermarkets","new","recommended","municipal_government",2020-02-15,NA
+"26","businesses","closing","partial closure","supermarkets","modification","mandatory","municipal_government",2020-02-18,NA
+"27","domestic travel","restriction movement","cancel","all_visitors","modification","recommended","municipal_government",NA,2020-04-18
+"28","domestic travel","restriction movement","restriction","all_citizens","new","mandatory","municipal_government",2020-01-27,NA
+"29","domestic travel","restriction movement","supervision","","modification","mandatory","municipal_government",2020-02-25,NA
+"30","domestic travel","restriction movement","supervision","all_visitors","modification","mandatory","national_government",2020-03-24,NA
+"31","domestic travel","restriction movement","supervision","migrant_workers","new","mandatory","national_government",2020-02-19,NA
+"32","domestic travel","stay at home","all day","","new","mandatory","police",2020-02-10,NA
+"33","gatherings","l1 - mass gatherings","cancellation","","new","mandatory","community",2020-01-30,NA
+"34","gatherings","l2 - public gatherings","cancellation","","new","recommended","municipal_government",2020-01-30,NA
+"35","gatherings","l2 - public gatherings","cancellation","","new","mandatory","municipal_government",2020-01-31,NA
+"36","gatherings","l2 - public gatherings","cancellation","","new","mandatory","community",2020-02-10,NA
+"37","gatherings","l3 - private gatherings outside home","cancellation","","new","recommended","community",2020-02-10,NA
+"38","gatherings","l4 - private gatherings at home","restriction","","new","recommended","community",2020-01-30,NA
+"39","gatherings","l4 - private gatherings at home","restriction","","new","recommended","health_ministry",2020-02-08,NA
+"40","gatherings","l4 - private gatherings at home","restriction","","modification","mandatory","community",2020-02-25,NA
+"41","gatherings","l4 - private gatherings at home","restriction","","modification","recommended","community",2020-04-30,NA
+"42","individual","performing hand hygene","general public","","new","recommended","community",2020-01-30,NA
+"43","individual","performing hand hygene","general public","","modification","mandatory","community",2020-02-25,NA
+"44","individual","performing hand hygene","general public","","modification","recommended","community",2020-04-16,NA
+"45","individual","performing hand hygiene","general public","","modification","recommended","community",2020-05-08,NA
+"46","individual","using other ppe","general public","","new","recommended","community",2020-01-30,NA
+"47","individual","using other ppe","general public","","modification","mandatory","community",2020-02-25,NA
+"48","individual","using other ppe","general public","","modification","recommended","community",2020-04-16,NA
+"49","individual","wearing a mask","general public","","new","mandatory","municipal_government",2020-01-27,NA
+"50","individual","wearing a mask","general public","","new","mandatory","community",2020-01-30,NA
+"51","individual","wearing a mask","general public","","new","recommended","health_ministry",2020-02-02,NA
+"52","individual","wearing a mask","general public","","modification","mandatory","community",2020-02-18,NA
+"53","individual","wearing a mask","general public","","modification","recommended","community",2020-04-16,NA
+"54","institutions","adapting","limiting numbers","","modification","mandatory","municipal_government",2020-02-25,NA
+"55","institutions","adapting","modifying hours","","modification","mandatory","municipal_government",2020-02-25,NA
+"56","institutions","adapting","physical distancing","","modification","mandatory","municipal_government",2020-02-25,NA
+"57","institutions","closing","full closure","","new","mandatory","municipal_government",2020-01-27,NA
+"58","institutions","closing","partial closure","","modification","mandatory","municipal_government",2020-02-25,NA
+"59","offices","adapting","limiting numbers","","new","mandatory","municipal_government",2020-02-11,NA
+"60","offices","adapting","limiting numbers","","new","recommended","municipal_government",2020-02-19,NA
+"61","offices","adapting","limiting numbers","","modification","mandatory","municipal_government",2020-02-23,NA
+"62","offices","adapting","limiting numbers","","modification","recommended","municipal_government",2020-03-16,NA
+"63","offices","adapting","limiting numbers","construction industry","new","mandatory","municipal_government",2020-02-19,NA
+"64","offices","adapting","modifying hours","","new","mandatory","municipal_government",2020-02-11,NA
+"65","offices","adapting","modifying hours","","new","recommended","municipal_government",2020-02-19,NA
+"66","offices","adapting","modifying hours","","modification","mandatory","municipal_government",2020-02-23,NA
+"67","offices","adapting","modifying hours","","modification","recommended","municipal_government",2020-03-16,NA
+"68","offices","adapting","modifying hours","construction industry","new","mandatory","municipal_government",2020-02-19,NA
+"69","offices","adapting","physical distancing","","new","mandatory","municipal_government",2020-02-11,NA
+"70","offices","adapting","physical distancing","","new","recommended","municipal_government",2020-02-19,NA
+"71","offices","adapting","physical distancing","","modification","mandatory","municipal_government",2020-02-23,NA
+"72","offices","adapting","physical distancing","","modification","recommended","municipal_government",2020-03-16,NA
+"73","offices","adapting","physical distancing","construction industry","new","mandatory","municipal_government",2020-02-19,NA
+"74","offices","closing","","","new","recommended","municipal_government",2020-01-23,NA
+"75","offices","closing","full closure","","new","mandatory","municipal_government",2020-01-28,2020-02-03
+"76","offices","closing","partial closure","","extension","mandatory","municipal_government",2020-01-31,2020-02-10
+"77","offices","closing","partial closure","","new","mandatory","municipal_government",2020-02-18,NA
+"78","offices","closing","partial closure","","modification","mandatory","municipal_government",2020-02-23,NA
+"79","offices","closing","partial closure","construction industry","new","mandatory","municipal_government",2020-02-19,NA
+"80","schools","adapting","limiting numbers","","modification","mandatory","municipal_government",2020-04-15,NA
+"81","schools","adapting","modifying hours","","modification","mandatory","municipal_government",2020-04-15,NA
+"82","schools","adapting","physical distancing","","modification","mandatory","municipal_government",2020-04-15,NA
+"83","schools","closing","full closure","","new","mandatory","municipal_government",2020-01-28,NA
+"84","schools","closing","full closure","","modification","mandatory","municipal_government",2020-02-29,NA
+"85","schools","closing","partial closure","","modification","mandatory","municipal_government",2020-04-15,NA
