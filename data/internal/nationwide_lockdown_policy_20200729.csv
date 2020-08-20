@@ -1,0 +1,106 @@
+Treatment group,,,,,,,
+,,,,announce,start,end,type
+Albania,ALB,AL,,2020-03-23,2020-03-24,2020-05-31,mandatory
+United Arab Emirates,ARE,AE,,2020-03-26,2020-03-26,2020-03-29,mandatory
+Argentina,ARG,AR,,2020-03-19,2020-03-20,2020-05-10,mandatory
+Armenia,ARM,AM,,2020-03-24,2020-03-24,2020-04-10,mandatory
+Australia,AUS,AU,,2020-03-23,2020-03-23,2020-05-16,voluntary
+Austria,AUT,AU,,2020-03-15,2020-03-16,2020-04-13,mandatory
+Azerbaijan,AZE,AZ,,2020-03-23,2020-03-24,2020-08-01,mandatory
+Belgium,BEL,BE,,2020-03-17,2020-03-18,2020-05-03,mandatory
+Bangladesh,BGD,BD,,2020-03-23,2020-03-26,2020-05-30,mandatory
+Bolivia,BOL,BO,,2020-03-21,2020-03-22,2020-07-31,mandatory
+Barbados,BRB,BB,,2020-03-26,2020-03-28,2020-05-03,mandatory
+Botswana,BWA,BW,,2020-03-31,2020-04-02,2020-05-07,mandatory
+Switzerland,CHE,CH,,2020-03-16,2020-03-17,2020-04-26,voluntary
+Republic of Congo,COG,CG,,2020-03-30,2020-03-31,2020-04-20,mandatory
+Colombia,COL,CO,,2020-03-24,2020-03-25,2020-07-15,mandatory
+Denmark,DNK,DK,,2020-03-12,2020-03-13,2020-04-13,voluntary
+Germany,DEU,DE,,2020-03-22,2020-03-23,2020-04-19,voluntary
+Djibouti,DJI,DJ,,2020-03-23,2020-03-23,2020-05-17,mandatory
+Algeria,DZA,DZ,,2020-03-23,2020-03-23,2020-05-14,mandatory
+Eritrea,ERI,ER,,2020-04-01,2020-04-02,2020-04-23,mandatory
+Spain,ESP,ES,,2020-03-14,2020-03-14,2020-05-09,mandatory
+Ethiopia,ETH,ET,,2020-03-31,2020-03-31,2020-04-14,mandatory
+France,FRA,FR,,2020-03-16,2020-03-17,2020-05-11,mandatory
+United Kingdom,GBR,GB,,2020-03-23,2020-03-23,2020-05-09,mandatory
+Georgia,GEO,GE,,2020-03-30,2020-03-31,2020-04-21,mandatory
+Greece,GRC,GR,,2020-03-22,2020-03-23,2020-05-04,mandatory
+Guatemala,GTM,GT,,2020-05-22,2020-05-22,2020-05-25,mandatory
+Hungary,HUN,HU,,2020-03-27,2020-03-28,2020-04-29,mandatory
+India,IND,IN,,2020-03-24,2020-03-25,2020-05-31,mandatory
+Iran,IRN,IR,,2020-03-13,2020-03-14,2020-04-10,mandatory
+Iraq,IRQ,IQ,,2020-03-22,2020-03-22,2020-04-11,mandatory
+Italy,ITA,IT,,2020-03-09,2020-03-10,2020-05-03,mandatory
+Jordan,JOR,JO,,2020-03-20,2020-03-21,2020-03-24,mandatory
+Kazakhstan,KAZ,KZ,,2020-06-01,2020-06-05,2020-06-19,mandatory
+Kuwait,KWT,KW,,2020-05-08,2020-05-10,2020-05-30,mandatory
+Laos,LAO,LA,,2020-03-29,2020-03-30,2020-05-03,mandatory
+Lebanon,LBN,LB,,2020-03-15,2020-03-15,2020-04-26,mandatory
+Sri Lanka,LKA,LK,,2020-04-26,2020-04-26,2020-05-10,mandatory
+Lesotho,LSO,LS,,2020-03-29,2020-03-30,2020-05-05,mandatory
+Lithuania,LTU,LT,,2020-03-14,2020-03-16,2020-04-22,mandatory
+Mozambique,MOZ,MZ,,2020-03-30,2020-03-30,2020-05-30,voluntary
+Malaysia,MYS,MY,,2020-03-16,2020-03-18,2020-05-12,mandatory
+Nepal,NPL,NP,,2020-03-24,2020-03-24,2020-06-14,mandatory
+New Zealand,NZL,NZ,,2020-03-25,2020-03-25,2020-04-26,mandatory
+Norway,NOR,NO,,2020-03-12,2020-03-12,2020-04-06,voluntary
+Pakistan,PAK,PK,,2020-03-23,2020-03-23,2020-05-09,mandatory
+Panama,PAN,PA,,2020-03-24,2020-03-25,2020-05-12,mandatory
+Poland,POL,PL,,2020-03-24,2020-03-24,2020-04-18,mandatory
+Portugal,PRT,PT,,2020-03-19,2020-03-19,2020-05-02,mandatory
+Romania,ROU,RO,,2020-03-25,2020-03-25,2020-05-15,mandatory
+Russia,RUS,RU,,2020-03-29,2020-03-30,2020-05-11,voluntary
+Rwanda,RWA,"	RW",,2020-03-21,2020-03-21,2020-04-30,mandatory
+El Salvador,SLV,SV,,2020-03-21,2020-03-21,2020-06-15,mandatory
+Tonga,TON,TO,,2020-03-27,2020-03-29,2020-04-12,mandatory
+Trinidad and Tobago,TTO,TT,,2020-03-26,2020-03-30,2020-04-30,voluntary
+Tunisia,TUN,TN,,2020-03-20,2020-03-22,2020-05-03,mandatory
+Turkey,TUR,TR,,2020-04-20,2020-04-23,2020-04-26,mandatory
+Uzbekistan,UZB,UZ,,2020-04-01,2020-04-01,2020-05-10,mandatory
+Venezuela,VEN,VE,,2020-03-16,2020-03-17,2020-05-31,mandatory
+Vietnam,VMN,VN,,2020-04-01,2020-04-01,2020-04-22,mandatory
+South Africa,ZAF,ZA,,2020-03-23,2020-03-26,2020-04-30,mandatory
+,,,,,,,
+Control group,,,,,,,
+Angola,AGO,,,,,,
+Bahrain,BHR,,,,,,
+Belarus,BLR,,,,,,
+Brazil,BRA,,,,,,
+Canada,CAN,,,,,,
+Cameroon,CMR,,,,,,
+Costa Rica,CRI,,,,,,
+Cyprus,CYP,,,,,,
+Czech Republic,CZE,,,,,,
+Dominican Republic,DOM,,,,,,
+Ecuador,ECU,,,,,,
+Egypt,EGY,,,,,,
+Finland,FIN,,,,,,
+Ghana,GHA,,,,,,
+Honduras,HND,,,,,,
+Indonesia,IDN,,,,,,
+Ireland,IRL,,,,,,
+Jamaica,JAM,,,,,,
+Japan,JPN,,,,,,
+Kenya,KEN,,,,,,
+Morocco,MAR,,,,,,
+Mexico,MEX,,,,,,
+Mongolia,MNG,,,,,,
+Malawi,MWI,,,,,,
+Namibia,NAM,,,,,,
+Nicaragua,NIC,,,,,,
+Netherlands,NLD,,,,,,
+Oman,OMN,,,,,,
+Peru,PER,,,,,,
+Philippines,PHL,,,,,,
+Paraguay,PRY,,,,,,
+Qatar,QAT,,,,,,
+Saudi Arabia,SAU,,,,,,
+Senegal,SEN,,,,,,
+Singapore,SGP,,,,,,
+Sweden,SWE,,,,,,
+Thailand,THA,,,,,,
+Uganda,UGA,,,,,,
+Ukraine,UKR,,,,,,
+Uruguay,URY,,,,,,
+Zambia,ZMB,,,,,,
