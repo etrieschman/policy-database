@@ -43,7 +43,7 @@ date_cutoff <- as.Date("2020-06-01")
 
 
 # Import data
-policy_raw <- read.csv(file= "./masscpr-policy-database/data/MassCPR_level1_v3_unverified.csv", stringsAsFactors = FALSE)
+policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_unverified_20200818.csv", stringsAsFactors = FALSE)
 
 business_scope <- c("all_business", "hotel", "restaurant", "entertainment", "market", "sport", "theater")
 institution_scope <- c("all_insti", "scenic", "public service", "traffic", "social wellfare", "healthcare")
@@ -75,7 +75,7 @@ unique(policy_clean$policy_scope)
 
 dim(policy_clean)
 min(policy_clean$date_start_cln)
-max(policy_clean$date_end_cln, na.rm= T)
+max(policy_clean$date_start_cln)
 
 # summarize policy distribution
 policy_summ <- policy_clean %>% group_by(policy_type_cln, policy_sub_type_cln, policy_measure_cln) %>% 
@@ -160,9 +160,9 @@ policy_poi_override <- sqldf::sqldf("SELECT l.*, r.policy_scope_cln as all_scope
 
 
 # visualize
-ggplot(data= policy_poi_col) + 
-  geom_segment(aes(x= date_string_start, xend= date_string_end, y= policy_scope_cln, yend= policy_scope_cln, color= policy_measure_cln),
-               position = position_dodge(width = .7)) + 
+ggplot(data= policy_poi_col, aes(color= policy_measure_cln)) + 
+  geom_linerange(aes(xmin= date_string_start, xmax= date_string_end, y= policy_scope_cln),
+               position = position_dodge(width = .7), size= 1.3, alpha= .8) + 
   facet_grid(policy_type_cln ~ ., space= "free_y", scales= "free_y")
 
 
