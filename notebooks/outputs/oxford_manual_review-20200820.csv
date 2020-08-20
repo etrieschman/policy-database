@@ -1,0 +1,580 @@
+"","countryname","countrycode","date_start","date_end","stay_home","stay_home_flag","announce","start","end","enforce","group","country_label","all_requ","gen_requ","tar_requ","all_reco","date_start_gen_req_min","check1"
+"1","Afghanistan","AFG",2020-01-01,2020-03-24,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_AFG",TRUE,FALSE,TRUE,FALSE,NA,NA
+"2","Afghanistan","AFG",2020-03-25,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_AFG",TRUE,FALSE,TRUE,FALSE,NA,NA
+"3","Albania","ALB",2020-01-01,2020-03-12,"0_no_measures","missing","2020-03-23",2020-03-24,"2020-05-31","mandatory","treatment","t_ALB",TRUE,TRUE,FALSE,FALSE,2020-03-13,FALSE
+"4","Albania","ALB",2020-03-13,2020-05-31,"2_required_exceptions","1_general","2020-03-23",2020-03-24,"2020-05-31","mandatory","treatment","t_ALB",TRUE,TRUE,FALSE,FALSE,2020-03-13,FALSE
+"5","Algeria","DZA",2020-01-01,2020-03-22,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-14","mandatory","treatment","t_DZA",TRUE,FALSE,TRUE,FALSE,NA,FALSE
+"6","Algeria","DZA",2020-03-23,2020-04-23,"3_required","0_targeted","2020-03-23",2020-03-23,"2020-05-14","mandatory","treatment","t_DZA",TRUE,FALSE,TRUE,FALSE,NA,FALSE
+"7","Algeria","DZA",2020-04-24,2020-05-31,"2_required_exceptions","0_targeted","2020-03-23",2020-03-23,"2020-05-14","mandatory","treatment","t_DZA",TRUE,FALSE,TRUE,FALSE,NA,FALSE
+"8","Andorra","AND",2020-01-01,2020-03-12,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_AND",FALSE,FALSE,FALSE,TRUE,NA,NA
+"9","Andorra","AND",2020-03-13,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_AND",FALSE,FALSE,FALSE,TRUE,NA,NA
+"10","Angola","AGO",2020-01-01,2020-03-26,"0_no_measures","missing","",NA,"","","control","c_AGO",TRUE,TRUE,FALSE,TRUE,2020-03-27,NA
+"11","Angola","AGO",2020-03-27,2020-05-25,"2_required_exceptions","1_general","",NA,"","","control","c_AGO",TRUE,TRUE,FALSE,TRUE,2020-03-27,NA
+"12","Angola","AGO",2020-05-26,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_AGO",TRUE,TRUE,FALSE,TRUE,2020-03-27,NA
+"13","Anguilla","AIA",2020-01-01,2020-03-26,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_AIA",TRUE,TRUE,FALSE,FALSE,2020-03-27,NA
+"14","Anguilla","AIA",2020-03-27,2020-04-28,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_AIA",TRUE,TRUE,FALSE,FALSE,2020-03-27,NA
+"15","Anguilla","AIA",2020-04-29,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_AIA",TRUE,TRUE,FALSE,FALSE,2020-03-27,NA
+"16","Argentina","ARG",2020-01-01,2020-03-18,"0_no_measures","missing","2020-03-19",2020-03-20,"2020-05-10","mandatory","treatment","t_ARG",TRUE,TRUE,FALSE,FALSE,2020-03-19,TRUE
+"17","Argentina","ARG",2020-03-19,2020-04-26,"3_required","1_general","2020-03-19",2020-03-20,"2020-05-10","mandatory","treatment","t_ARG",TRUE,TRUE,FALSE,FALSE,2020-03-19,TRUE
+"18","Argentina","ARG",2020-04-27,2020-05-31,"2_required_exceptions","1_general","2020-03-19",2020-03-20,"2020-05-10","mandatory","treatment","t_ARG",TRUE,TRUE,FALSE,FALSE,2020-03-19,TRUE
+"19","Aruba","ABW",2020-01-01,2020-03-20,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"20","Aruba","ABW",2020-03-21,2020-03-28,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"21","Aruba","ABW",2020-03-29,2020-04-09,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"22","Aruba","ABW",2020-04-10,2020-04-10,"3_required","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"23","Aruba","ABW",2020-04-11,2020-04-11,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"24","Aruba","ABW",2020-04-12,2020-04-13,"3_required","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"25","Aruba","ABW",2020-04-14,2020-05-27,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"26","Aruba","ABW",2020-05-28,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_ABW",TRUE,TRUE,FALSE,TRUE,2020-03-29,NA
+"27","Australia","AUS",2020-01-01,2020-03-23,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-16","voluntary","treatment","t_AUS",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"28","Australia","AUS",2020-03-24,2020-04-01,"1_recommended","1_general","2020-03-23",2020-03-23,"2020-05-16","voluntary","treatment","t_AUS",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"29","Australia","AUS",2020-04-02,2020-05-14,"2_required_exceptions","0_targeted","2020-03-23",2020-03-23,"2020-05-16","voluntary","treatment","t_AUS",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"30","Australia","AUS",2020-05-15,2020-05-24,"1_recommended","1_general","2020-03-23",2020-03-23,"2020-05-16","voluntary","treatment","t_AUS",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"31","Australia","AUS",2020-05-25,2020-05-28,"1_recommended","0_targeted","2020-03-23",2020-03-23,"2020-05-16","voluntary","treatment","t_AUS",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"32","Australia","AUS",2020-05-29,2020-05-31,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-16","voluntary","treatment","t_AUS",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"33","Austria","AUT",2020-01-01,2020-03-15,"0_no_measures","missing","2020-03-15",2020-03-16,"2020-04-13","mandatory","treatment","t_AUT",TRUE,TRUE,FALSE,FALSE,2020-03-16,TRUE
+"34","Austria","AUT",2020-03-16,2020-04-30,"2_required_exceptions","1_general","2020-03-15",2020-03-16,"2020-04-13","mandatory","treatment","t_AUT",TRUE,TRUE,FALSE,FALSE,2020-03-16,TRUE
+"35","Austria","AUT",2020-05-01,2020-05-31,"0_no_measures","missing","2020-03-15",2020-03-16,"2020-04-13","mandatory","treatment","t_AUT",TRUE,TRUE,FALSE,FALSE,2020-03-16,TRUE
+"36","Azerbaijan","AZE",2020-01-01,2020-03-30,"0_no_measures","missing","2020-03-23",2020-03-24,"2020-08-01","mandatory","treatment","t_AZE",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"37","Azerbaijan","AZE",2020-03-31,2020-05-17,"3_required","1_general","2020-03-23",2020-03-24,"2020-08-01","mandatory","treatment","t_AZE",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"38","Azerbaijan","AZE",2020-05-18,2020-05-31,"1_recommended","1_general","2020-03-23",2020-03-24,"2020-08-01","mandatory","treatment","t_AZE",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"39","Bahrain","BHR",2020-01-01,2020-03-17,"0_no_measures","missing","",NA,"","","control","c_BHR",FALSE,FALSE,FALSE,TRUE,NA,NA
+"40","Bahrain","BHR",2020-03-18,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_BHR",FALSE,FALSE,FALSE,TRUE,NA,NA
+"41","Bangladesh","BGD",2020-01-01,2020-03-18,"0_no_measures","missing","2020-03-23",2020-03-26,"2020-05-30","mandatory","treatment","t_BGD",TRUE,TRUE,TRUE,TRUE,2020-04-10,FALSE
+"42","Bangladesh","BGD",2020-03-19,2020-03-24,"2_required_exceptions","0_targeted","2020-03-23",2020-03-26,"2020-05-30","mandatory","treatment","t_BGD",TRUE,TRUE,TRUE,TRUE,2020-04-10,FALSE
+"43","Bangladesh","BGD",2020-03-25,2020-04-09,"1_recommended","1_general","2020-03-23",2020-03-26,"2020-05-30","mandatory","treatment","t_BGD",TRUE,TRUE,TRUE,TRUE,2020-04-10,FALSE
+"44","Bangladesh","BGD",2020-04-10,2020-05-30,"2_required_exceptions","1_general","2020-03-23",2020-03-26,"2020-05-30","mandatory","treatment","t_BGD",TRUE,TRUE,TRUE,TRUE,2020-04-10,FALSE
+"45","Bangladesh","BGD",2020-05-31,2020-05-31,"1_recommended","1_general","2020-03-23",2020-03-26,"2020-05-30","mandatory","treatment","t_BGD",TRUE,TRUE,TRUE,TRUE,2020-04-10,FALSE
+"46","Barbados","BRB",2020-01-01,2020-03-27,"0_no_measures","missing","2020-03-26",2020-03-28,"2020-05-03","mandatory","treatment","t_BRB",TRUE,TRUE,FALSE,TRUE,2020-04-03,FALSE
+"47","Barbados","BRB",2020-03-28,2020-04-02,"1_recommended","1_general","2020-03-26",2020-03-28,"2020-05-03","mandatory","treatment","t_BRB",TRUE,TRUE,FALSE,TRUE,2020-04-03,FALSE
+"48","Barbados","BRB",2020-04-03,2020-05-03,"3_required","1_general","2020-03-26",2020-03-28,"2020-05-03","mandatory","treatment","t_BRB",TRUE,TRUE,FALSE,TRUE,2020-04-03,FALSE
+"49","Barbados","BRB",2020-05-04,2020-05-31,"2_required_exceptions","1_general","2020-03-26",2020-03-28,"2020-05-03","mandatory","treatment","t_BRB",TRUE,TRUE,FALSE,TRUE,2020-04-03,FALSE
+"50","Belarus","BLR",2020-01-01,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_BLR",FALSE,FALSE,FALSE,FALSE,NA,NA
+"51","Belgium","BEL",2020-01-01,2020-03-17,"0_no_measures","missing","2020-03-17",2020-03-18,"2020-05-03","mandatory","treatment","t_BEL",TRUE,TRUE,FALSE,FALSE,2020-03-18,TRUE
+"52","Belgium","BEL",2020-03-18,2020-05-31,"2_required_exceptions","1_general","2020-03-17",2020-03-18,"2020-05-03","mandatory","treatment","t_BEL",TRUE,TRUE,FALSE,FALSE,2020-03-18,TRUE
+"53","Belize","BLZ",2020-01-01,2020-04-26,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BLZ",TRUE,TRUE,TRUE,FALSE,2020-05-15,NA
+"54","Belize","BLZ",2020-04-27,2020-05-14,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_BLZ",TRUE,TRUE,TRUE,FALSE,2020-05-15,NA
+"55","Belize","BLZ",2020-05-15,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_BLZ",TRUE,TRUE,TRUE,FALSE,2020-05-15,NA
+"56","Benin","BEN",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BEN",FALSE,FALSE,FALSE,FALSE,NA,NA
+"57","Bermuda","BMU",2020-01-01,2020-04-03,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BMU",TRUE,TRUE,FALSE,TRUE,2020-04-04,NA
+"58","Bermuda","BMU",2020-04-04,2020-05-01,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_BMU",TRUE,TRUE,FALSE,TRUE,2020-04-04,NA
+"59","Bermuda","BMU",2020-05-02,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_BMU",TRUE,TRUE,FALSE,TRUE,2020-04-04,NA
+"60","Bhutan","BTN",2020-01-01,2020-03-25,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BTN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"61","Bhutan","BTN",2020-03-26,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_BTN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"62","Bolivia","BOL",2020-01-01,2020-03-16,"0_no_measures","missing","2020-03-21",2020-03-22,"2020-07-31","mandatory","treatment","t_BOL",TRUE,TRUE,FALSE,FALSE,2020-03-17,FALSE
+"63","Bolivia","BOL",2020-03-17,2020-05-31,"2_required_exceptions","1_general","2020-03-21",2020-03-22,"2020-07-31","mandatory","treatment","t_BOL",TRUE,TRUE,FALSE,FALSE,2020-03-17,FALSE
+"64","Bosnia and Herzegovina","BIH",2020-01-01,2020-03-19,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BIH",TRUE,TRUE,TRUE,FALSE,2020-04-24,NA
+"65","Bosnia and Herzegovina","BIH",2020-03-20,2020-04-23,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_BIH",TRUE,TRUE,TRUE,FALSE,2020-04-24,NA
+"66","Bosnia and Herzegovina","BIH",2020-04-24,2020-05-13,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_BIH",TRUE,TRUE,TRUE,FALSE,2020-04-24,NA
+"67","Bosnia and Herzegovina","BIH",2020-05-14,2020-05-20,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_BIH",TRUE,TRUE,TRUE,FALSE,2020-04-24,NA
+"68","Bosnia and Herzegovina","BIH",2020-05-21,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BIH",TRUE,TRUE,TRUE,FALSE,2020-04-24,NA
+"69","Botswana","BWA",2020-01-01,2020-04-01,"0_no_measures","missing","2020-03-31",2020-04-02,"2020-05-07","mandatory","treatment","t_BWA",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"70","Botswana","BWA",2020-04-02,2020-05-19,"2_required_exceptions","0_targeted","2020-03-31",2020-04-02,"2020-05-07","mandatory","treatment","t_BWA",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"71","Botswana","BWA",2020-05-20,2020-05-31,"1_recommended","1_general","2020-03-31",2020-04-02,"2020-05-07","mandatory","treatment","t_BWA",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"72","Brazil","BRA",2020-01-01,2020-03-12,"0_no_measures","missing","",NA,"","","control","c_BRA",TRUE,FALSE,TRUE,TRUE,NA,NA
+"73","Brazil","BRA",2020-03-13,2020-05-04,"1_recommended","0_targeted","",NA,"","","control","c_BRA",TRUE,FALSE,TRUE,TRUE,NA,NA
+"74","Brazil","BRA",2020-05-05,2020-05-31,"2_required_exceptions","0_targeted","",NA,"","","control","c_BRA",TRUE,FALSE,TRUE,TRUE,NA,NA
+"75","British Virgin Islands","VGB",2020-01-01,2020-03-24,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_VGB",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"76","British Virgin Islands","VGB",2020-03-25,2020-03-26,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_VGB",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"77","British Virgin Islands","VGB",2020-03-27,2020-04-26,"3_required","1_general",NA,NA,NA,NA,NA,"na_VGB",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"78","British Virgin Islands","VGB",2020-04-27,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_VGB",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"79","Brunei","BRN",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BRN",FALSE,FALSE,FALSE,FALSE,NA,NA
+"80","Bulgaria","BGR",2020-01-01,2020-03-17,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BGR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"81","Bulgaria","BGR",2020-03-18,2020-03-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_BGR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"82","Bulgaria","BGR",2020-04-01,2020-04-14,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_BGR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"83","Bulgaria","BGR",2020-04-15,2020-05-07,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_BGR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"84","Bulgaria","BGR",2020-05-08,2020-05-30,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_BGR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"85","Bulgaria","BGR",2020-05-31,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BGR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"86","Burkina Faso","BFA",2020-01-01,2020-03-20,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BFA",TRUE,TRUE,FALSE,FALSE,2020-03-21,NA
+"87","Burkina Faso","BFA",2020-03-21,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_BFA",TRUE,TRUE,FALSE,FALSE,2020-03-21,NA
+"88","Burundi","BDI",2020-01-01,2020-03-04,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_BDI",TRUE,TRUE,FALSE,FALSE,2020-03-05,NA
+"89","Burundi","BDI",2020-03-05,2020-05-31,"3_required","1_general",NA,NA,NA,NA,NA,"na_BDI",TRUE,TRUE,FALSE,FALSE,2020-03-05,NA
+"90","Cambodia","KHM",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_KHM",FALSE,FALSE,FALSE,FALSE,NA,NA
+"91","Cameroon","CMR",2020-01-01,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_CMR",FALSE,FALSE,FALSE,FALSE,NA,NA
+"92","Canada","CAN",2020-01-01,2020-03-13,"0_no_measures","missing","",NA,"","","control","c_CAN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"93","Canada","CAN",2020-03-14,2020-03-15,"1_recommended","0_targeted","",NA,"","","control","c_CAN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"94","Canada","CAN",2020-03-16,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_CAN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"95","Cape Verde","CPV",2020-01-01,2020-03-19,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CPV",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"96","Cape Verde","CPV",2020-03-20,2020-03-31,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_CPV",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"97","Cape Verde","CPV",2020-04-01,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_CPV",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"98","Cayman Islands","CYM",2020-01-01,2020-03-23,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CYM",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"99","Cayman Islands","CYM",2020-03-24,2020-03-24,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_CYM",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"100","Cayman Islands","CYM",2020-03-25,2020-03-27,"3_required","1_general",NA,NA,NA,NA,NA,"na_CYM",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"101","Cayman Islands","CYM",2020-03-28,2020-04-15,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_CYM",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"102","Cayman Islands","CYM",2020-04-16,2020-05-04,"3_required","1_general",NA,NA,NA,NA,NA,"na_CYM",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"103","Cayman Islands","CYM",2020-05-05,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_CYM",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"104","Central African Republic","CAF",2020-01-01,2020-05-07,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CAF",TRUE,TRUE,FALSE,FALSE,2020-05-08,NA
+"105","Central African Republic","CAF",2020-05-08,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_CAF",TRUE,TRUE,FALSE,FALSE,2020-05-08,NA
+"106","Chad","TCD",2020-01-01,2020-04-01,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TCD",TRUE,FALSE,TRUE,FALSE,NA,NA
+"107","Chad","TCD",2020-04-02,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_TCD",TRUE,FALSE,TRUE,FALSE,NA,NA
+"108","Chile","CHL",2020-01-01,2020-03-24,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CHL",TRUE,TRUE,TRUE,FALSE,2020-03-25,NA
+"109","Chile","CHL",2020-03-25,2020-05-14,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_CHL",TRUE,TRUE,TRUE,FALSE,2020-03-25,NA
+"110","Chile","CHL",2020-05-15,2020-05-31,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_CHL",TRUE,TRUE,TRUE,FALSE,2020-03-25,NA
+"111","China","CHN",2020-01-01,2020-01-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CHN",TRUE,FALSE,TRUE,TRUE,NA,NA
+"112","China","CHN",2020-01-23,2020-01-31,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_CHN",TRUE,FALSE,TRUE,TRUE,NA,NA
+"113","China","CHN",2020-02-01,2020-04-07,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_CHN",TRUE,FALSE,TRUE,TRUE,NA,NA
+"114","China","CHN",2020-04-08,2020-05-09,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_CHN",TRUE,FALSE,TRUE,TRUE,NA,NA
+"115","China","CHN",2020-05-10,2020-05-31,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_CHN",TRUE,FALSE,TRUE,TRUE,NA,NA
+"116","Colombia","COL",2020-01-01,2020-03-24,"0_no_measures","missing","2020-03-24",2020-03-25,"2020-07-15","mandatory","treatment","t_COL",TRUE,TRUE,FALSE,FALSE,2020-03-25,TRUE
+"117","Colombia","COL",2020-03-25,2020-05-31,"2_required_exceptions","1_general","2020-03-24",2020-03-25,"2020-07-15","mandatory","treatment","t_COL",TRUE,TRUE,FALSE,FALSE,2020-03-25,TRUE
+"118","Congo","COG",2020-01-01,2020-03-27,"0_no_measures","missing","2020-03-30",2020-03-31,"2020-04-20","mandatory","treatment","t_COG",TRUE,TRUE,FALSE,FALSE,2020-03-28,FALSE
+"119","Congo","COG",2020-03-28,2020-05-17,"3_required","1_general","2020-03-30",2020-03-31,"2020-04-20","mandatory","treatment","t_COG",TRUE,TRUE,FALSE,FALSE,2020-03-28,FALSE
+"120","Congo","COG",2020-05-18,2020-05-31,"2_required_exceptions","1_general","2020-03-30",2020-03-31,"2020-04-20","mandatory","treatment","t_COG",TRUE,TRUE,FALSE,FALSE,2020-03-28,FALSE
+"121","Costa Rica","CRI",2020-01-01,2020-03-31,"0_no_measures","missing","",NA,"","","control","c_CRI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"122","Costa Rica","CRI",2020-04-01,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_CRI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"123","Cote d'Ivoire","CIV",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CIV",FALSE,FALSE,FALSE,TRUE,NA,NA
+"124","Cote d'Ivoire","CIV",2020-03-23,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_CIV",FALSE,FALSE,FALSE,TRUE,NA,NA
+"125","Croatia","HRV",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_HRV",TRUE,TRUE,FALSE,TRUE,2020-03-23,NA
+"126","Croatia","HRV",2020-03-23,2020-05-10,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_HRV",TRUE,TRUE,FALSE,TRUE,2020-03-23,NA
+"127","Croatia","HRV",2020-05-11,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_HRV",TRUE,TRUE,FALSE,TRUE,2020-03-23,NA
+"128","Cuba","CUB",2020-01-01,2020-03-23,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_CUB",TRUE,TRUE,TRUE,FALSE,2020-05-05,NA
+"129","Cuba","CUB",2020-03-24,2020-05-04,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_CUB",TRUE,TRUE,TRUE,FALSE,2020-05-05,NA
+"130","Cuba","CUB",2020-05-05,2020-05-10,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_CUB",TRUE,TRUE,TRUE,FALSE,2020-05-05,NA
+"131","Cuba","CUB",2020-05-11,2020-05-31,"3_required","1_general",NA,NA,NA,NA,NA,"na_CUB",TRUE,TRUE,TRUE,FALSE,2020-05-05,NA
+"132","Cyprus","CYP",2020-01-01,2020-03-23,"0_no_measures","missing","",NA,"","","control","c_CYP",TRUE,TRUE,FALSE,TRUE,2020-03-24,NA
+"133","Cyprus","CYP",2020-03-24,2020-05-20,"2_required_exceptions","1_general","",NA,"","","control","c_CYP",TRUE,TRUE,FALSE,TRUE,2020-03-24,NA
+"134","Cyprus","CYP",2020-05-21,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_CYP",TRUE,TRUE,FALSE,TRUE,2020-03-24,NA
+"135","Czech Republic","CZE",2020-01-01,2020-03-14,"0_no_measures","missing","",NA,"","","control","c_CZE",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"136","Czech Republic","CZE",2020-03-15,2020-04-20,"2_required_exceptions","1_general","",NA,"","","control","c_CZE",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"137","Czech Republic","CZE",2020-04-21,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_CZE",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"138","Democratic Republic of Congo","COD",2020-01-01,2020-04-05,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_COD",TRUE,FALSE,TRUE,FALSE,NA,NA
+"139","Democratic Republic of Congo","COD",2020-04-06,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_COD",TRUE,FALSE,TRUE,FALSE,NA,NA
+"140","Denmark","DNK",2020-01-01,2020-03-02,"0_no_measures","missing","2020-03-12",2020-03-13,"2020-04-13","voluntary","treatment","t_DNK",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"141","Denmark","DNK",2020-03-03,2020-05-31,"1_recommended","1_general","2020-03-12",2020-03-13,"2020-04-13","voluntary","treatment","t_DNK",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"142","Djibouti","DJI",2020-01-01,2020-03-22,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-17","mandatory","treatment","t_DJI",TRUE,TRUE,FALSE,FALSE,2020-03-23,TRUE
+"143","Djibouti","DJI",2020-03-23,2020-05-16,"3_required","1_general","2020-03-23",2020-03-23,"2020-05-17","mandatory","treatment","t_DJI",TRUE,TRUE,FALSE,FALSE,2020-03-23,TRUE
+"144","Djibouti","DJI",2020-05-17,2020-05-31,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-17","mandatory","treatment","t_DJI",TRUE,TRUE,FALSE,FALSE,2020-03-23,TRUE
+"145","Dominica","DMA",2020-01-01,2020-03-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_DMA",TRUE,TRUE,FALSE,TRUE,2020-04-01,NA
+"146","Dominica","DMA",2020-04-01,2020-05-11,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_DMA",TRUE,TRUE,FALSE,TRUE,2020-04-01,NA
+"147","Dominica","DMA",2020-05-12,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_DMA",TRUE,TRUE,FALSE,TRUE,2020-04-01,NA
+"148","Dominican Republic","DOM",2020-01-01,2020-03-16,"0_no_measures","missing","",NA,"","","control","c_DOM",TRUE,TRUE,FALSE,TRUE,2020-04-18,NA
+"149","Dominican Republic","DOM",2020-03-17,2020-04-17,"1_recommended","1_general","",NA,"","","control","c_DOM",TRUE,TRUE,FALSE,TRUE,2020-04-18,NA
+"150","Dominican Republic","DOM",2020-04-18,2020-04-27,"2_required_exceptions","1_general","",NA,"","","control","c_DOM",TRUE,TRUE,FALSE,TRUE,2020-04-18,NA
+"151","Dominican Republic","DOM",2020-04-28,2020-05-17,"3_required","1_general","",NA,"","","control","c_DOM",TRUE,TRUE,FALSE,TRUE,2020-04-18,NA
+"152","Dominican Republic","DOM",2020-05-18,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_DOM",TRUE,TRUE,FALSE,TRUE,2020-04-18,NA
+"153","Ecuador","ECU",2020-01-01,2020-03-16,"0_no_measures","missing","",NA,"","","control","c_ECU",TRUE,TRUE,FALSE,FALSE,2020-03-17,NA
+"154","Ecuador","ECU",2020-03-17,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_ECU",TRUE,TRUE,FALSE,FALSE,2020-03-17,NA
+"155","Egypt","EGY",2020-01-01,2020-03-24,"0_no_measures","missing","",NA,"","","control","c_EGY",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"156","Egypt","EGY",2020-03-25,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_EGY",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"157","El Salvador","SLV",2020-01-01,2020-03-20,"0_no_measures","missing","2020-03-21",2020-03-21,"2020-06-15","mandatory","treatment","t_SLV",TRUE,TRUE,FALSE,FALSE,2020-03-21,TRUE
+"158","El Salvador","SLV",2020-03-21,2020-05-31,"3_required","1_general","2020-03-21",2020-03-21,"2020-06-15","mandatory","treatment","t_SLV",TRUE,TRUE,FALSE,FALSE,2020-03-21,TRUE
+"159","Eritrea","ERI",2020-01-01,2020-03-22,"0_no_measures","missing","2020-04-01",2020-04-02,"2020-04-23","mandatory","treatment","t_ERI",TRUE,TRUE,FALSE,TRUE,2020-04-01,TRUE
+"160","Eritrea","ERI",2020-03-23,2020-03-31,"1_recommended","1_general","2020-04-01",2020-04-02,"2020-04-23","mandatory","treatment","t_ERI",TRUE,TRUE,FALSE,TRUE,2020-04-01,TRUE
+"161","Eritrea","ERI",2020-04-01,2020-05-31,"2_required_exceptions","1_general","2020-04-01",2020-04-02,"2020-04-23","mandatory","treatment","t_ERI",TRUE,TRUE,FALSE,TRUE,2020-04-01,TRUE
+"162","Estonia","EST",2020-01-01,2020-03-28,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_EST",TRUE,FALSE,TRUE,FALSE,NA,NA
+"163","Estonia","EST",2020-03-29,2020-05-17,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_EST",TRUE,FALSE,TRUE,FALSE,NA,NA
+"164","Estonia","EST",2020-05-18,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_EST",TRUE,FALSE,TRUE,FALSE,NA,NA
+"165","Eswatini","SWZ",2020-01-01,2020-03-26,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SWZ",TRUE,TRUE,FALSE,FALSE,2020-03-27,NA
+"166","Eswatini","SWZ",2020-03-27,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SWZ",TRUE,TRUE,FALSE,FALSE,2020-03-27,NA
+"167","Ethiopia","ETH",2020-01-01,2020-04-07,"0_no_measures","missing","2020-03-31",2020-03-31,"2020-04-14","mandatory","treatment","t_ETH",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"168","Ethiopia","ETH",2020-04-08,2020-05-31,"1_recommended","1_general","2020-03-31",2020-03-31,"2020-04-14","mandatory","treatment","t_ETH",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"169","Falkland Islands","FLK",2020-01-01,2020-03-25,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_FLK",FALSE,FALSE,FALSE,TRUE,NA,NA
+"170","Falkland Islands","FLK",2020-03-26,2020-05-10,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_FLK",FALSE,FALSE,FALSE,TRUE,NA,NA
+"171","Falkland Islands","FLK",2020-05-11,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_FLK",FALSE,FALSE,FALSE,TRUE,NA,NA
+"172","Fiji","FJI",2020-01-01,2020-03-18,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_FJI",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"173","Fiji","FJI",2020-03-19,2020-03-29,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_FJI",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"174","Fiji","FJI",2020-03-30,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_FJI",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"175","Finland","FIN",2020-01-01,2020-03-15,"0_no_measures","missing","",NA,"","","control","c_FIN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"176","Finland","FIN",2020-03-16,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_FIN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"177","France","FRA",2020-01-01,2020-03-16,"0_no_measures","missing","2020-03-16",2020-03-17,"2020-05-11","mandatory","treatment","t_FRA",TRUE,TRUE,FALSE,TRUE,2020-03-17,TRUE
+"178","France","FRA",2020-03-17,2020-05-10,"2_required_exceptions","1_general","2020-03-16",2020-03-17,"2020-05-11","mandatory","treatment","t_FRA",TRUE,TRUE,FALSE,TRUE,2020-03-17,TRUE
+"179","France","FRA",2020-05-11,2020-05-31,"1_recommended","1_general","2020-03-16",2020-03-17,"2020-05-11","mandatory","treatment","t_FRA",TRUE,TRUE,FALSE,TRUE,2020-03-17,TRUE
+"180","Gabon","GAB",2020-01-01,2020-03-20,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GAB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"181","Gabon","GAB",2020-03-21,2020-04-09,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_GAB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"182","Gabon","GAB",2020-04-10,2020-05-10,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_GAB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"183","Gabon","GAB",2020-05-11,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_GAB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"184","Gambia","GMB",2020-01-01,2020-03-17,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GMB",FALSE,FALSE,FALSE,TRUE,NA,NA
+"185","Gambia","GMB",2020-03-18,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_GMB",FALSE,FALSE,FALSE,TRUE,NA,NA
+"186","Georgia","GEO",2020-01-01,2020-03-08,"0_no_measures","missing","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"187","Georgia","GEO",2020-03-09,2020-03-22,"1_recommended","1_general","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"188","Georgia","GEO",2020-03-23,2020-03-25,"2_required_exceptions","0_targeted","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"189","Georgia","GEO",2020-03-26,2020-03-30,"2_required_exceptions","1_general","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"190","Georgia","GEO",2020-03-31,2020-05-22,"3_required","1_general","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"191","Georgia","GEO",2020-05-23,2020-05-28,"1_recommended","1_general","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"192","Georgia","GEO",2020-05-29,2020-05-31,"2_required_exceptions","0_targeted","2020-03-30",2020-03-31,"2020-04-21","mandatory","treatment","t_GEO",TRUE,TRUE,TRUE,TRUE,2020-03-26,FALSE
+"193","Germany","DEU",2020-01-01,2020-03-08,"0_no_measures","missing","2020-03-22",2020-03-23,"2020-04-19","voluntary","treatment","t_DEU",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"194","Germany","DEU",2020-03-09,2020-03-20,"1_recommended","1_general","2020-03-22",2020-03-23,"2020-04-19","voluntary","treatment","t_DEU",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"195","Germany","DEU",2020-03-21,2020-05-05,"2_required_exceptions","0_targeted","2020-03-22",2020-03-23,"2020-04-19","voluntary","treatment","t_DEU",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"196","Germany","DEU",2020-05-06,2020-05-31,"0_no_measures","missing","2020-03-22",2020-03-23,"2020-04-19","voluntary","treatment","t_DEU",TRUE,TRUE,TRUE,TRUE,NA,FALSE
+"197","Ghana","GHA",2020-01-01,2020-03-29,"0_no_measures","missing","",NA,"","","control","c_GHA",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"198","Ghana","GHA",2020-03-30,2020-04-17,"2_required_exceptions","1_general","",NA,"","","control","c_GHA",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"199","Ghana","GHA",2020-04-18,2020-04-18,"2_required_exceptions","0_targeted","",NA,"","","control","c_GHA",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"200","Ghana","GHA",2020-04-19,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_GHA",TRUE,TRUE,TRUE,FALSE,2020-03-30,NA
+"201","Gibraltar","GIB",2020-01-01,2020-03-16,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GIB",TRUE,TRUE,FALSE,FALSE,2020-03-17,NA
+"202","Gibraltar","GIB",2020-03-17,2020-04-28,"3_required","1_general",NA,NA,NA,NA,NA,"na_GIB",TRUE,TRUE,FALSE,FALSE,2020-03-17,NA
+"203","Gibraltar","GIB",2020-04-29,2020-05-21,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_GIB",TRUE,TRUE,FALSE,FALSE,2020-03-17,NA
+"204","Gibraltar","GIB",2020-05-22,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GIB",TRUE,TRUE,FALSE,FALSE,2020-03-17,NA
+"205","Greece","GRC",2020-01-01,2020-03-22,"0_no_measures","missing","2020-03-22",2020-03-23,"2020-05-04","mandatory","treatment","t_GRC",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"206","Greece","GRC",2020-03-23,2020-05-29,"2_required_exceptions","1_general","2020-03-22",2020-03-23,"2020-05-04","mandatory","treatment","t_GRC",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"207","Greece","GRC",2020-05-30,2020-05-31,"1_recommended","1_general","2020-03-22",2020-03-23,"2020-05-04","mandatory","treatment","t_GRC",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"208","Greenland","GRL",2020-01-01,2020-03-17,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GRL",FALSE,FALSE,FALSE,TRUE,NA,NA
+"209","Greenland","GRL",2020-03-18,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_GRL",FALSE,FALSE,FALSE,TRUE,NA,NA
+"210","Guam","GUM",2020-01-01,2020-03-15,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GUM",FALSE,FALSE,FALSE,TRUE,NA,NA
+"211","Guam","GUM",2020-03-16,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_GUM",FALSE,FALSE,FALSE,TRUE,NA,NA
+"212","Guatemala","GTM",2020-01-01,2020-03-21,"0_no_measures","missing","2020-05-22",2020-05-22,"2020-05-25","mandatory","treatment","t_GTM",TRUE,TRUE,FALSE,FALSE,2020-03-22,FALSE
+"213","Guatemala","GTM",2020-03-22,2020-05-31,"2_required_exceptions","1_general","2020-05-22",2020-05-22,"2020-05-25","mandatory","treatment","t_GTM",TRUE,TRUE,FALSE,FALSE,2020-03-22,FALSE
+"214","Guinea","GIN",2020-01-01,2020-03-29,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GIN",TRUE,TRUE,FALSE,FALSE,2020-03-30,NA
+"215","Guinea","GIN",2020-03-30,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_GIN",TRUE,TRUE,FALSE,FALSE,2020-03-30,NA
+"216","Guyana","GUY",2020-01-01,2020-03-25,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_GUY",TRUE,TRUE,FALSE,TRUE,2020-04-03,NA
+"217","Guyana","GUY",2020-03-26,2020-04-02,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_GUY",TRUE,TRUE,FALSE,TRUE,2020-04-03,NA
+"218","Guyana","GUY",2020-04-03,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_GUY",TRUE,TRUE,FALSE,TRUE,2020-04-03,NA
+"219","Haiti","HTI",2020-01-01,2020-03-18,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_HTI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"220","Haiti","HTI",2020-03-19,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_HTI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"221","Honduras","HND",2020-01-01,2020-03-15,"0_no_measures","missing","",NA,"","","control","c_HND",TRUE,TRUE,FALSE,FALSE,2020-03-16,NA
+"222","Honduras","HND",2020-03-16,2020-05-31,"3_required","1_general","",NA,"","","control","c_HND",TRUE,TRUE,FALSE,FALSE,2020-03-16,NA
+"223","Hong Kong","HKG",2020-01-01,2020-02-07,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_HKG",FALSE,FALSE,FALSE,TRUE,NA,NA
+"224","Hong Kong","HKG",2020-02-08,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_HKG",FALSE,FALSE,FALSE,TRUE,NA,NA
+"225","Hungary","HUN",2020-01-01,2020-03-11,"0_no_measures","missing","2020-03-27",2020-03-28,"2020-04-29","mandatory","treatment","t_HUN",TRUE,TRUE,TRUE,TRUE,2020-03-27,TRUE
+"226","Hungary","HUN",2020-03-12,2020-03-26,"1_recommended","1_general","2020-03-27",2020-03-28,"2020-04-29","mandatory","treatment","t_HUN",TRUE,TRUE,TRUE,TRUE,2020-03-27,TRUE
+"227","Hungary","HUN",2020-03-27,2020-05-03,"2_required_exceptions","1_general","2020-03-27",2020-03-28,"2020-04-29","mandatory","treatment","t_HUN",TRUE,TRUE,TRUE,TRUE,2020-03-27,TRUE
+"228","Hungary","HUN",2020-05-04,2020-05-17,"2_required_exceptions","0_targeted","2020-03-27",2020-03-28,"2020-04-29","mandatory","treatment","t_HUN",TRUE,TRUE,TRUE,TRUE,2020-03-27,TRUE
+"229","Hungary","HUN",2020-05-18,2020-05-31,"1_recommended","1_general","2020-03-27",2020-03-28,"2020-04-29","mandatory","treatment","t_HUN",TRUE,TRUE,TRUE,TRUE,2020-03-27,TRUE
+"230","Iceland","ISL",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_ISL",FALSE,FALSE,FALSE,FALSE,NA,NA
+"231","India","IND",2020-01-01,2020-01-25,"0_no_measures","missing","2020-03-24",2020-03-25,"2020-05-31","mandatory","treatment","t_IND",TRUE,TRUE,TRUE,TRUE,2020-03-22,FALSE
+"232","India","IND",2020-01-26,2020-03-21,"1_recommended","0_targeted","2020-03-24",2020-03-25,"2020-05-31","mandatory","treatment","t_IND",TRUE,TRUE,TRUE,TRUE,2020-03-22,FALSE
+"233","India","IND",2020-03-22,2020-03-22,"3_required","1_general","2020-03-24",2020-03-25,"2020-05-31","mandatory","treatment","t_IND",TRUE,TRUE,TRUE,TRUE,2020-03-22,FALSE
+"234","India","IND",2020-03-23,2020-03-24,"3_required","0_targeted","2020-03-24",2020-03-25,"2020-05-31","mandatory","treatment","t_IND",TRUE,TRUE,TRUE,TRUE,2020-03-22,FALSE
+"235","India","IND",2020-03-25,2020-05-03,"3_required","1_general","2020-03-24",2020-03-25,"2020-05-31","mandatory","treatment","t_IND",TRUE,TRUE,TRUE,TRUE,2020-03-22,FALSE
+"236","India","IND",2020-05-04,2020-05-31,"2_required_exceptions","0_targeted","2020-03-24",2020-03-25,"2020-05-31","mandatory","treatment","t_IND",TRUE,TRUE,TRUE,TRUE,2020-03-22,FALSE
+"237","Indonesia","IDN",2020-01-01,2020-04-09,"0_no_measures","missing","",NA,"","","control","c_IDN",TRUE,FALSE,TRUE,FALSE,NA,NA
+"238","Indonesia","IDN",2020-04-10,2020-05-31,"2_required_exceptions","0_targeted","",NA,"","","control","c_IDN",TRUE,FALSE,TRUE,FALSE,NA,NA
+"239","Iran","IRN",2020-01-01,2020-03-18,"0_no_measures","missing","2020-03-13",2020-03-14,"2020-04-10","mandatory","treatment","t_IRN",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"240","Iran","IRN",2020-03-19,2020-05-31,"1_recommended","1_general","2020-03-13",2020-03-14,"2020-04-10","mandatory","treatment","t_IRN",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"241","Iraq","IRQ",2020-01-01,2020-03-12,"0_no_measures","missing","2020-03-22",2020-03-22,"2020-04-11","mandatory","treatment","t_IRQ",TRUE,TRUE,TRUE,FALSE,2020-03-26,FALSE
+"242","Iraq","IRQ",2020-03-13,2020-03-25,"2_required_exceptions","0_targeted","2020-03-22",2020-03-22,"2020-04-11","mandatory","treatment","t_IRQ",TRUE,TRUE,TRUE,FALSE,2020-03-26,FALSE
+"243","Iraq","IRQ",2020-03-26,2020-05-31,"2_required_exceptions","1_general","2020-03-22",2020-03-22,"2020-04-11","mandatory","treatment","t_IRQ",TRUE,TRUE,TRUE,FALSE,2020-03-26,FALSE
+"244","Ireland","IRL",2020-01-01,2020-03-25,"0_no_measures","missing","",NA,"","","control","c_IRL",TRUE,TRUE,FALSE,TRUE,2020-03-28,NA
+"245","Ireland","IRL",2020-03-26,2020-03-27,"1_recommended","1_general","",NA,"","","control","c_IRL",TRUE,TRUE,FALSE,TRUE,2020-03-28,NA
+"246","Ireland","IRL",2020-03-28,2020-05-17,"2_required_exceptions","1_general","",NA,"","","control","c_IRL",TRUE,TRUE,FALSE,TRUE,2020-03-28,NA
+"247","Ireland","IRL",2020-05-18,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_IRL",TRUE,TRUE,FALSE,TRUE,2020-03-28,NA
+"248","Israel","ISR",2020-01-01,2020-03-16,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_ISR",TRUE,TRUE,FALSE,TRUE,2020-03-20,NA
+"249","Israel","ISR",2020-03-17,2020-03-19,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_ISR",TRUE,TRUE,FALSE,TRUE,2020-03-20,NA
+"250","Israel","ISR",2020-03-20,2020-04-07,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_ISR",TRUE,TRUE,FALSE,TRUE,2020-03-20,NA
+"251","Israel","ISR",2020-04-08,2020-04-18,"3_required","1_general",NA,NA,NA,NA,NA,"na_ISR",TRUE,TRUE,FALSE,TRUE,2020-03-20,NA
+"252","Israel","ISR",2020-04-19,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_ISR",TRUE,TRUE,FALSE,TRUE,2020-03-20,NA
+"253","Italy","ITA",2020-01-01,2020-02-22,"0_no_measures","missing","2020-03-09",2020-03-10,"2020-05-03","mandatory","treatment","t_ITA",TRUE,TRUE,TRUE,TRUE,2020-03-10,TRUE
+"254","Italy","ITA",2020-02-23,2020-03-09,"2_required_exceptions","0_targeted","2020-03-09",2020-03-10,"2020-05-03","mandatory","treatment","t_ITA",TRUE,TRUE,TRUE,TRUE,2020-03-10,TRUE
+"255","Italy","ITA",2020-03-10,2020-03-19,"2_required_exceptions","1_general","2020-03-09",2020-03-10,"2020-05-03","mandatory","treatment","t_ITA",TRUE,TRUE,TRUE,TRUE,2020-03-10,TRUE
+"256","Italy","ITA",2020-03-20,2020-04-09,"3_required","1_general","2020-03-09",2020-03-10,"2020-05-03","mandatory","treatment","t_ITA",TRUE,TRUE,TRUE,TRUE,2020-03-10,TRUE
+"257","Italy","ITA",2020-04-10,2020-05-03,"2_required_exceptions","1_general","2020-03-09",2020-03-10,"2020-05-03","mandatory","treatment","t_ITA",TRUE,TRUE,TRUE,TRUE,2020-03-10,TRUE
+"258","Italy","ITA",2020-05-04,2020-05-31,"1_recommended","1_general","2020-03-09",2020-03-10,"2020-05-03","mandatory","treatment","t_ITA",TRUE,TRUE,TRUE,TRUE,2020-03-10,TRUE
+"259","Jamaica","JAM",2020-01-01,2020-03-12,"0_no_measures","missing","",NA,"","","control","c_JAM",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"260","Jamaica","JAM",2020-03-13,2020-03-24,"3_required","0_targeted","",NA,"","","control","c_JAM",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"261","Jamaica","JAM",2020-03-25,2020-03-31,"1_recommended","1_general","",NA,"","","control","c_JAM",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"262","Jamaica","JAM",2020-04-01,2020-04-14,"2_required_exceptions","1_general","",NA,"","","control","c_JAM",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"263","Jamaica","JAM",2020-04-15,2020-04-21,"3_required","0_targeted","",NA,"","","control","c_JAM",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"264","Jamaica","JAM",2020-04-22,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_JAM",TRUE,TRUE,TRUE,TRUE,2020-04-01,NA
+"265","Japan","JPN",2020-01-01,2020-04-06,"0_no_measures","missing","",NA,"","","control","c_JPN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"266","Japan","JPN",2020-04-07,2020-04-15,"1_recommended","0_targeted","",NA,"","","control","c_JPN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"267","Japan","JPN",2020-04-16,2020-05-13,"1_recommended","1_general","",NA,"","","control","c_JPN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"268","Japan","JPN",2020-05-14,2020-05-24,"1_recommended","0_targeted","",NA,"","","control","c_JPN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"269","Japan","JPN",2020-05-25,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_JPN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"270","Jordan","JOR",2020-01-01,2020-03-17,"0_no_measures","missing","2020-03-20",2020-03-21,"2020-03-24","mandatory","treatment","t_JOR",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"271","Jordan","JOR",2020-03-18,2020-04-26,"3_required","1_general","2020-03-20",2020-03-21,"2020-03-24","mandatory","treatment","t_JOR",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"272","Jordan","JOR",2020-04-27,2020-05-11,"2_required_exceptions","1_general","2020-03-20",2020-03-21,"2020-03-24","mandatory","treatment","t_JOR",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"273","Jordan","JOR",2020-05-12,2020-05-31,"1_recommended","1_general","2020-03-20",2020-03-21,"2020-03-24","mandatory","treatment","t_JOR",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"274","Kazakhstan","KAZ",2020-01-01,2020-03-18,"0_no_measures","missing","2020-06-01",2020-06-05,"2020-06-19","mandatory","treatment","t_KAZ",TRUE,FALSE,TRUE,FALSE,NA,FALSE
+"275","Kazakhstan","KAZ",2020-03-19,2020-05-10,"3_required","0_targeted","2020-06-01",2020-06-05,"2020-06-19","mandatory","treatment","t_KAZ",TRUE,FALSE,TRUE,FALSE,NA,FALSE
+"276","Kazakhstan","KAZ",2020-05-11,2020-05-31,"2_required_exceptions","0_targeted","2020-06-01",2020-06-05,"2020-06-19","mandatory","treatment","t_KAZ",TRUE,FALSE,TRUE,FALSE,NA,FALSE
+"277","Kenya","KEN",2020-01-01,2020-03-26,"0_no_measures","missing","",NA,"","","control","c_KEN",TRUE,TRUE,TRUE,FALSE,2020-03-27,NA
+"278","Kenya","KEN",2020-03-27,2020-04-05,"2_required_exceptions","1_general","",NA,"","","control","c_KEN",TRUE,TRUE,TRUE,FALSE,2020-03-27,NA
+"279","Kenya","KEN",2020-04-06,2020-05-03,"3_required","0_targeted","",NA,"","","control","c_KEN",TRUE,TRUE,TRUE,FALSE,2020-03-27,NA
+"280","Kenya","KEN",2020-05-04,2020-05-31,"3_required","1_general","",NA,"","","control","c_KEN",TRUE,TRUE,TRUE,FALSE,2020-03-27,NA
+"281","Kosovo","RKS",2020-01-01,2020-03-12,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_RKS",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"282","Kosovo","RKS",2020-03-13,2020-03-23,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_RKS",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"283","Kosovo","RKS",2020-03-24,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_RKS",TRUE,TRUE,TRUE,FALSE,2020-03-24,NA
+"284","Kuwait","KWT",2020-01-01,2020-03-21,"0_no_measures","missing","2020-05-08",2020-05-10,"2020-05-30","mandatory","treatment","t_KWT",TRUE,TRUE,TRUE,FALSE,2020-03-22,FALSE
+"285","Kuwait","KWT",2020-03-22,2020-04-05,"2_required_exceptions","1_general","2020-05-08",2020-05-10,"2020-05-30","mandatory","treatment","t_KWT",TRUE,TRUE,TRUE,FALSE,2020-03-22,FALSE
+"286","Kuwait","KWT",2020-04-06,2020-04-20,"3_required","0_targeted","2020-05-08",2020-05-10,"2020-05-30","mandatory","treatment","t_KWT",TRUE,TRUE,TRUE,FALSE,2020-03-22,FALSE
+"287","Kuwait","KWT",2020-04-21,2020-05-09,"2_required_exceptions","1_general","2020-05-08",2020-05-10,"2020-05-30","mandatory","treatment","t_KWT",TRUE,TRUE,TRUE,FALSE,2020-03-22,FALSE
+"288","Kuwait","KWT",2020-05-10,2020-05-30,"3_required","1_general","2020-05-08",2020-05-10,"2020-05-30","mandatory","treatment","t_KWT",TRUE,TRUE,TRUE,FALSE,2020-03-22,FALSE
+"289","Kuwait","KWT",2020-05-31,2020-05-31,"3_required","0_targeted","2020-05-08",2020-05-10,"2020-05-30","mandatory","treatment","t_KWT",TRUE,TRUE,TRUE,FALSE,2020-03-22,FALSE
+"290","Kyrgyz Republic","KGZ",2020-01-01,2020-03-13,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_KGZ",TRUE,TRUE,TRUE,TRUE,NA,NA
+"291","Kyrgyz Republic","KGZ",2020-03-14,2020-03-24,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_KGZ",TRUE,TRUE,TRUE,TRUE,NA,NA
+"292","Kyrgyz Republic","KGZ",2020-03-25,2020-05-10,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_KGZ",TRUE,TRUE,TRUE,TRUE,NA,NA
+"293","Kyrgyz Republic","KGZ",2020-05-11,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_KGZ",TRUE,TRUE,TRUE,TRUE,NA,NA
+"294","Laos","LAO",2020-01-01,2020-03-29,"0_no_measures","missing","2020-03-29",2020-03-30,"2020-05-03","mandatory","treatment","t_LAO",TRUE,TRUE,FALSE,FALSE,2020-03-30,TRUE
+"295","Laos","LAO",2020-03-30,2020-05-03,"2_required_exceptions","1_general","2020-03-29",2020-03-30,"2020-05-03","mandatory","treatment","t_LAO",TRUE,TRUE,FALSE,FALSE,2020-03-30,TRUE
+"296","Laos","LAO",2020-05-04,2020-05-31,"0_no_measures","missing","2020-03-29",2020-03-30,"2020-05-03","mandatory","treatment","t_LAO",TRUE,TRUE,FALSE,FALSE,2020-03-30,TRUE
+"297","Latvia","LVA",2020-01-01,2020-03-12,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_LVA",FALSE,FALSE,FALSE,TRUE,NA,NA
+"298","Latvia","LVA",2020-03-13,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_LVA",FALSE,FALSE,FALSE,TRUE,NA,NA
+"299","Lebanon","LBN",2020-01-01,2020-03-15,"0_no_measures","missing","2020-03-15",2020-03-15,"2020-04-26","mandatory","treatment","t_LBN",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"300","Lebanon","LBN",2020-03-16,2020-03-17,"1_recommended","1_general","2020-03-15",2020-03-15,"2020-04-26","mandatory","treatment","t_LBN",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"301","Lebanon","LBN",2020-03-18,2020-05-02,"2_required_exceptions","1_general","2020-03-15",2020-03-15,"2020-04-26","mandatory","treatment","t_LBN",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"302","Lebanon","LBN",2020-05-03,2020-05-12,"1_recommended","1_general","2020-03-15",2020-03-15,"2020-04-26","mandatory","treatment","t_LBN",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"303","Lebanon","LBN",2020-05-13,2020-05-17,"2_required_exceptions","1_general","2020-03-15",2020-03-15,"2020-04-26","mandatory","treatment","t_LBN",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"304","Lebanon","LBN",2020-05-18,2020-05-31,"1_recommended","1_general","2020-03-15",2020-03-15,"2020-04-26","mandatory","treatment","t_LBN",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"305","Lesotho","LSO",2020-01-01,2020-03-17,"0_no_measures","missing","2020-03-29",2020-03-30,"2020-05-05","mandatory","treatment","t_LSO",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"306","Lesotho","LSO",2020-03-18,2020-05-05,"2_required_exceptions","1_general","2020-03-29",2020-03-30,"2020-05-05","mandatory","treatment","t_LSO",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"307","Lesotho","LSO",2020-05-06,2020-05-31,"1_recommended","1_general","2020-03-29",2020-03-30,"2020-05-05","mandatory","treatment","t_LSO",TRUE,TRUE,FALSE,TRUE,2020-03-18,FALSE
+"308","Liberia","LBR",2020-01-01,2020-03-20,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_LBR",TRUE,TRUE,TRUE,FALSE,2020-04-08,NA
+"309","Liberia","LBR",2020-03-21,2020-04-07,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_LBR",TRUE,TRUE,TRUE,FALSE,2020-04-08,NA
+"310","Liberia","LBR",2020-04-08,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_LBR",TRUE,TRUE,TRUE,FALSE,2020-04-08,NA
+"311","Libya","LBY",2020-01-01,2020-03-21,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_LBY",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"312","Libya","LBY",2020-03-22,2020-03-23,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_LBY",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"313","Libya","LBY",2020-03-24,2020-04-07,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_LBY",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"314","Libya","LBY",2020-04-08,2020-04-16,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_LBY",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"315","Libya","LBY",2020-04-17,2020-05-27,"3_required","1_general",NA,NA,NA,NA,NA,"na_LBY",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"316","Libya","LBY",2020-05-28,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_LBY",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"317","Lithuania","LTU",2020-01-01,2020-03-15,"0_no_measures","missing","2020-03-14",2020-03-16,"2020-04-22","mandatory","treatment","t_LTU",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"318","Lithuania","LTU",2020-03-16,2020-05-31,"1_recommended","1_general","2020-03-14",2020-03-16,"2020-04-22","mandatory","treatment","t_LTU",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"319","Luxembourg","LUX",2020-01-01,2020-03-16,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_LUX",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"320","Luxembourg","LUX",2020-03-17,2020-04-19,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_LUX",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"321","Luxembourg","LUX",2020-04-20,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_LUX",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"322","Macao","MAC",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MAC",FALSE,FALSE,FALSE,FALSE,NA,NA
+"323","Madagascar","MDG",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MDG",TRUE,TRUE,TRUE,TRUE,NA,NA
+"324","Madagascar","MDG",2020-03-23,2020-04-19,"3_required","0_targeted",NA,NA,NA,NA,NA,"na_MDG",TRUE,TRUE,TRUE,TRUE,NA,NA
+"325","Madagascar","MDG",2020-04-20,2020-05-11,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_MDG",TRUE,TRUE,TRUE,TRUE,NA,NA
+"326","Madagascar","MDG",2020-05-12,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_MDG",TRUE,TRUE,TRUE,TRUE,NA,NA
+"327","Malawi","MWI",2020-01-01,2020-04-17,"0_no_measures","missing","",NA,"","","control","c_MWI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"328","Malawi","MWI",2020-04-18,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_MWI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"329","Malaysia","MYS",2020-01-01,2020-03-17,"0_no_measures","missing","2020-03-16",2020-03-18,"2020-05-12","mandatory","treatment","t_MYS",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"330","Malaysia","MYS",2020-03-18,2020-05-31,"1_recommended","1_general","2020-03-16",2020-03-18,"2020-05-12","mandatory","treatment","t_MYS",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"331","Mali","MLI",2020-01-01,2020-03-24,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MLI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"332","Mali","MLI",2020-03-25,2020-05-09,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_MLI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"333","Mali","MLI",2020-05-10,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MLI",FALSE,FALSE,FALSE,TRUE,NA,NA
+"334","Mauritania","MRT",2020-01-01,2020-03-18,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MRT",TRUE,TRUE,FALSE,FALSE,2020-03-19,NA
+"335","Mauritania","MRT",2020-03-19,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_MRT",TRUE,TRUE,FALSE,FALSE,2020-03-19,NA
+"336","Mauritius","MUS",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MUS",TRUE,TRUE,FALSE,FALSE,2020-03-23,NA
+"337","Mauritius","MUS",2020-03-23,2020-05-29,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_MUS",TRUE,TRUE,FALSE,FALSE,2020-03-23,NA
+"338","Mauritius","MUS",2020-05-30,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MUS",TRUE,TRUE,FALSE,FALSE,2020-03-23,NA
+"339","Mexico","MEX",2020-01-01,2020-03-29,"0_no_measures","missing","",NA,"","","control","c_MEX",TRUE,TRUE,FALSE,FALSE,2020-03-30,NA
+"340","Mexico","MEX",2020-03-30,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_MEX",TRUE,TRUE,FALSE,FALSE,2020-03-30,NA
+"341","Moldova","MDA",2020-01-01,2020-03-23,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MDA",TRUE,TRUE,FALSE,TRUE,2020-03-24,NA
+"342","Moldova","MDA",2020-03-24,2020-05-15,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_MDA",TRUE,TRUE,FALSE,TRUE,2020-03-24,NA
+"343","Moldova","MDA",2020-05-16,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_MDA",TRUE,TRUE,FALSE,TRUE,2020-03-24,NA
+"344","Mongolia","MNG",2020-01-01,2020-05-04,"0_no_measures","missing","",NA,"","","control","c_MNG",TRUE,FALSE,TRUE,FALSE,NA,NA
+"345","Mongolia","MNG",2020-05-05,2020-05-07,"3_required","0_targeted","",NA,"","","control","c_MNG",TRUE,FALSE,TRUE,FALSE,NA,NA
+"346","Mongolia","MNG",2020-05-08,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_MNG",TRUE,FALSE,TRUE,FALSE,NA,NA
+"347","Montserrat","MSR",2020-01-01,2020-03-17,NA,"missing",NA,NA,NA,NA,NA,"na_MSR",TRUE,TRUE,FALSE,NA,2020-03-18,NA
+"348","Montserrat","MSR",2020-03-18,2020-04-10,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_MSR",TRUE,TRUE,FALSE,NA,2020-03-18,NA
+"349","Montserrat","MSR",2020-04-11,2020-04-19,"3_required","1_general",NA,NA,NA,NA,NA,"na_MSR",TRUE,TRUE,FALSE,NA,2020-03-18,NA
+"350","Montserrat","MSR",2020-04-20,2020-04-22,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_MSR",TRUE,TRUE,FALSE,NA,2020-03-18,NA
+"351","Montserrat","MSR",2020-04-23,2020-04-30,"3_required","1_general",NA,NA,NA,NA,NA,"na_MSR",TRUE,TRUE,FALSE,NA,2020-03-18,NA
+"352","Montserrat","MSR",2020-05-01,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_MSR",TRUE,TRUE,FALSE,NA,2020-03-18,NA
+"353","Morocco","MAR",2020-01-01,2020-03-19,"0_no_measures","missing","",NA,"","","control","c_MAR",TRUE,TRUE,FALSE,FALSE,2020-03-20,NA
+"354","Morocco","MAR",2020-03-20,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_MAR",TRUE,TRUE,FALSE,FALSE,2020-03-20,NA
+"355","Mozambique","MOZ",2020-01-01,2020-03-31,"0_no_measures","missing","2020-03-30",2020-03-30,"2020-05-30","voluntary","treatment","t_MOZ",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"356","Mozambique","MOZ",2020-04-01,2020-05-31,"1_recommended","1_general","2020-03-30",2020-03-30,"2020-05-30","voluntary","treatment","t_MOZ",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"357","Myanmar","MMR",2020-01-01,2020-04-03,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_MMR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"358","Myanmar","MMR",2020-04-04,2020-04-13,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_MMR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"359","Myanmar","MMR",2020-04-14,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_MMR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"360","Namibia","NAM",2020-01-01,2020-03-26,"0_no_measures","missing","",NA,"","","control","c_NAM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"361","Namibia","NAM",2020-03-27,2020-05-06,"2_required_exceptions","0_targeted","",NA,"","","control","c_NAM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"362","Namibia","NAM",2020-05-07,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_NAM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"363","Nepal","NPL",2020-01-01,2020-03-19,"0_no_measures","missing","2020-03-24",2020-03-24,"2020-06-14","mandatory","treatment","t_NPL",TRUE,TRUE,TRUE,TRUE,2020-03-24,TRUE
+"364","Nepal","NPL",2020-03-20,2020-03-22,"1_recommended","1_general","2020-03-24",2020-03-24,"2020-06-14","mandatory","treatment","t_NPL",TRUE,TRUE,TRUE,TRUE,2020-03-24,TRUE
+"365","Nepal","NPL",2020-03-23,2020-03-23,"2_required_exceptions","0_targeted","2020-03-24",2020-03-24,"2020-06-14","mandatory","treatment","t_NPL",TRUE,TRUE,TRUE,TRUE,2020-03-24,TRUE
+"366","Nepal","NPL",2020-03-24,2020-05-31,"2_required_exceptions","1_general","2020-03-24",2020-03-24,"2020-06-14","mandatory","treatment","t_NPL",TRUE,TRUE,TRUE,TRUE,2020-03-24,TRUE
+"367","Netherlands","NLD",2020-01-01,2020-03-05,"0_no_measures","missing","",NA,"","","control","c_NLD",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"368","Netherlands","NLD",2020-03-06,2020-03-11,"1_recommended","0_targeted","",NA,"","","control","c_NLD",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"369","Netherlands","NLD",2020-03-12,2020-03-22,"1_recommended","1_general","",NA,"","","control","c_NLD",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"370","Netherlands","NLD",2020-03-23,2020-05-10,"2_required_exceptions","1_general","",NA,"","","control","c_NLD",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"371","Netherlands","NLD",2020-05-11,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_NLD",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"372","New Zealand","NZL",2020-01-01,2020-03-20,"0_no_measures","missing","2020-03-25",2020-03-25,"2020-04-26","mandatory","treatment","t_NZL",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"373","New Zealand","NZL",2020-03-21,2020-03-22,"1_recommended","1_general","2020-03-25",2020-03-25,"2020-04-26","mandatory","treatment","t_NZL",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"374","New Zealand","NZL",2020-03-23,2020-05-13,"2_required_exceptions","1_general","2020-03-25",2020-03-25,"2020-04-26","mandatory","treatment","t_NZL",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"375","New Zealand","NZL",2020-05-14,2020-05-31,"0_no_measures","missing","2020-03-25",2020-03-25,"2020-04-26","mandatory","treatment","t_NZL",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"376","Nicaragua","NIC",2020-01-01,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_NIC",FALSE,FALSE,FALSE,FALSE,NA,NA
+"377","Niger","NER",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_NER",FALSE,FALSE,FALSE,FALSE,NA,NA
+"378","Nigeria","NGA",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_NGA",TRUE,TRUE,TRUE,TRUE,NA,NA
+"379","Nigeria","NGA",2020-03-23,2020-03-28,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_NGA",TRUE,TRUE,TRUE,TRUE,NA,NA
+"380","Nigeria","NGA",2020-03-29,2020-05-03,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_NGA",TRUE,TRUE,TRUE,TRUE,NA,NA
+"381","Nigeria","NGA",2020-05-04,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_NGA",TRUE,TRUE,TRUE,TRUE,NA,NA
+"382","Norway","NOR",2020-01-01,2020-05-31,"0_no_measures","missing","2020-03-12",2020-03-12,"2020-04-06","voluntary","treatment","t_NOR",FALSE,FALSE,FALSE,FALSE,NA,FALSE
+"383","Oman","OMN",2020-01-01,2020-04-09,"0_no_measures","missing","",NA,"","","control","c_OMN",TRUE,TRUE,TRUE,TRUE,2020-04-10,NA
+"384","Oman","OMN",2020-04-10,2020-04-29,"2_required_exceptions","1_general","",NA,"","","control","c_OMN",TRUE,TRUE,TRUE,TRUE,2020-04-10,NA
+"385","Oman","OMN",2020-04-30,2020-05-20,"2_required_exceptions","0_targeted","",NA,"","","control","c_OMN",TRUE,TRUE,TRUE,TRUE,2020-04-10,NA
+"386","Oman","OMN",2020-05-21,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_OMN",TRUE,TRUE,TRUE,TRUE,2020-04-10,NA
+"387","Pakistan","PAK",2020-01-01,2020-03-22,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-09","mandatory","treatment","t_PAK",TRUE,TRUE,TRUE,FALSE,2020-03-23,TRUE
+"388","Pakistan","PAK",2020-03-23,2020-05-16,"2_required_exceptions","1_general","2020-03-23",2020-03-23,"2020-05-09","mandatory","treatment","t_PAK",TRUE,TRUE,TRUE,FALSE,2020-03-23,TRUE
+"389","Pakistan","PAK",2020-05-17,2020-05-31,"2_required_exceptions","0_targeted","2020-03-23",2020-03-23,"2020-05-09","mandatory","treatment","t_PAK",TRUE,TRUE,TRUE,FALSE,2020-03-23,TRUE
+"390","Palestine","PSE",2020-01-01,2020-03-21,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_PSE",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"391","Palestine","PSE",2020-03-22,2020-05-25,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_PSE",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"392","Palestine","PSE",2020-05-26,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_PSE",TRUE,TRUE,TRUE,FALSE,2020-03-22,NA
+"393","Panama","PAN",2020-01-01,2020-03-16,"0_no_measures","missing","2020-03-24",2020-03-25,"2020-05-12","mandatory","treatment","t_PAN",TRUE,TRUE,FALSE,TRUE,2020-04-01,FALSE
+"394","Panama","PAN",2020-03-17,2020-03-31,"1_recommended","1_general","2020-03-24",2020-03-25,"2020-05-12","mandatory","treatment","t_PAN",TRUE,TRUE,FALSE,TRUE,2020-04-01,FALSE
+"395","Panama","PAN",2020-04-01,2020-05-31,"2_required_exceptions","1_general","2020-03-24",2020-03-25,"2020-05-12","mandatory","treatment","t_PAN",TRUE,TRUE,FALSE,TRUE,2020-04-01,FALSE
+"396","Papua New Guinea","PNG",2020-01-01,2020-04-07,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_PNG",TRUE,FALSE,TRUE,TRUE,NA,NA
+"397","Papua New Guinea","PNG",2020-04-08,2020-04-26,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_PNG",TRUE,FALSE,TRUE,TRUE,NA,NA
+"398","Papua New Guinea","PNG",2020-04-27,2020-05-31,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_PNG",TRUE,FALSE,TRUE,TRUE,NA,NA
+"399","Paraguay","PRY",2020-01-01,2020-03-09,"0_no_measures","missing","",NA,"","","control","c_PRY",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"400","Paraguay","PRY",2020-03-10,2020-03-16,"1_recommended","1_general","",NA,"","","control","c_PRY",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"401","Paraguay","PRY",2020-03-17,2020-04-08,"2_required_exceptions","1_general","",NA,"","","control","c_PRY",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"402","Paraguay","PRY",2020-04-09,2020-05-24,"3_required","1_general","",NA,"","","control","c_PRY",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"403","Paraguay","PRY",2020-05-25,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_PRY",TRUE,TRUE,FALSE,TRUE,2020-03-17,NA
+"404","Peru","PER",2020-01-01,2020-03-14,"0_no_measures","missing","",NA,"","","control","c_PER",TRUE,TRUE,FALSE,FALSE,2020-03-15,NA
+"405","Peru","PER",2020-03-15,2020-03-17,"2_required_exceptions","1_general","",NA,"","","control","c_PER",TRUE,TRUE,FALSE,FALSE,2020-03-15,NA
+"406","Peru","PER",2020-03-18,2020-05-10,"3_required","1_general","",NA,"","","control","c_PER",TRUE,TRUE,FALSE,FALSE,2020-03-15,NA
+"407","Peru","PER",2020-05-11,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_PER",TRUE,TRUE,FALSE,FALSE,2020-03-15,NA
+"408","Philippines","PHL",2020-01-01,2020-03-14,"0_no_measures","missing","",NA,"","","control","c_PHL",TRUE,TRUE,TRUE,TRUE,2020-03-18,NA
+"409","Philippines","PHL",2020-03-15,2020-03-17,"2_required_exceptions","0_targeted","",NA,"","","control","c_PHL",TRUE,TRUE,TRUE,TRUE,2020-03-18,NA
+"410","Philippines","PHL",2020-03-18,2020-04-30,"3_required","1_general","",NA,"","","control","c_PHL",TRUE,TRUE,TRUE,TRUE,2020-03-18,NA
+"411","Philippines","PHL",2020-05-01,2020-05-28,"2_required_exceptions","1_general","",NA,"","","control","c_PHL",TRUE,TRUE,TRUE,TRUE,2020-03-18,NA
+"412","Philippines","PHL",2020-05-29,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_PHL",TRUE,TRUE,TRUE,TRUE,2020-03-18,NA
+"413","Pitcairn Islands","PCN",2020-01-01,2020-05-31,NA,"missing",NA,NA,NA,NA,NA,"na_PCN",FALSE,FALSE,FALSE,NA,NA,NA
+"414","Poland","POL",2020-01-01,2020-03-30,"0_no_measures","missing","2020-03-24",2020-03-24,"2020-04-18","mandatory","treatment","t_POL",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"415","Poland","POL",2020-03-31,2020-04-08,"2_required_exceptions","1_general","2020-03-24",2020-03-24,"2020-04-18","mandatory","treatment","t_POL",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"416","Poland","POL",2020-04-09,2020-05-29,"1_recommended","1_general","2020-03-24",2020-03-24,"2020-04-18","mandatory","treatment","t_POL",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"417","Poland","POL",2020-05-30,2020-05-31,"0_no_measures","missing","2020-03-24",2020-03-24,"2020-04-18","mandatory","treatment","t_POL",TRUE,TRUE,FALSE,TRUE,2020-03-31,FALSE
+"418","Portugal","PRT",2020-01-01,2020-03-18,"0_no_measures","missing","2020-03-19",2020-03-19,"2020-05-02","mandatory","treatment","t_PRT",TRUE,TRUE,FALSE,TRUE,2020-03-19,TRUE
+"419","Portugal","PRT",2020-03-19,2020-05-03,"2_required_exceptions","1_general","2020-03-19",2020-03-19,"2020-05-02","mandatory","treatment","t_PRT",TRUE,TRUE,FALSE,TRUE,2020-03-19,TRUE
+"420","Portugal","PRT",2020-05-04,2020-05-31,"1_recommended","1_general","2020-03-19",2020-03-19,"2020-05-02","mandatory","treatment","t_PRT",TRUE,TRUE,FALSE,TRUE,2020-03-19,TRUE
+"421","Puerto Rico","PRI",2020-01-01,2020-03-14,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_PRI",TRUE,TRUE,FALSE,FALSE,2020-03-15,NA
+"422","Puerto Rico","PRI",2020-03-15,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_PRI",TRUE,TRUE,FALSE,FALSE,2020-03-15,NA
+"423","Qatar","QAT",2020-01-01,2020-03-16,"0_no_measures","missing","",NA,"","","control","c_QAT",FALSE,FALSE,FALSE,TRUE,NA,NA
+"424","Qatar","QAT",2020-03-17,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_QAT",FALSE,FALSE,FALSE,TRUE,NA,NA
+"425","Romania","ROU",2020-01-01,2020-03-11,"0_no_measures","missing","2020-03-25",2020-03-25,"2020-05-15","mandatory","treatment","t_ROU",TRUE,TRUE,FALSE,TRUE,2020-03-25,TRUE
+"426","Romania","ROU",2020-03-12,2020-03-24,"1_recommended","1_general","2020-03-25",2020-03-25,"2020-05-15","mandatory","treatment","t_ROU",TRUE,TRUE,FALSE,TRUE,2020-03-25,TRUE
+"427","Romania","ROU",2020-03-25,2020-05-14,"2_required_exceptions","1_general","2020-03-25",2020-03-25,"2020-05-15","mandatory","treatment","t_ROU",TRUE,TRUE,FALSE,TRUE,2020-03-25,TRUE
+"428","Romania","ROU",2020-05-15,2020-05-31,"1_recommended","1_general","2020-03-25",2020-03-25,"2020-05-15","mandatory","treatment","t_ROU",TRUE,TRUE,FALSE,TRUE,2020-03-25,TRUE
+"429","Russia","RUS",2020-01-01,2020-03-04,"0_no_measures","missing","2020-03-29",2020-03-30,"2020-05-11","voluntary","treatment","t_RUS",TRUE,TRUE,TRUE,FALSE,2020-03-19,FALSE
+"430","Russia","RUS",2020-03-05,2020-03-18,"2_required_exceptions","0_targeted","2020-03-29",2020-03-30,"2020-05-11","voluntary","treatment","t_RUS",TRUE,TRUE,TRUE,FALSE,2020-03-19,FALSE
+"431","Russia","RUS",2020-03-19,2020-03-29,"2_required_exceptions","1_general","2020-03-29",2020-03-30,"2020-05-11","voluntary","treatment","t_RUS",TRUE,TRUE,TRUE,FALSE,2020-03-19,FALSE
+"432","Russia","RUS",2020-03-30,2020-05-31,"3_required","0_targeted","2020-03-29",2020-03-30,"2020-05-11","voluntary","treatment","t_RUS",TRUE,TRUE,TRUE,FALSE,2020-03-19,FALSE
+"433","Rwanda","RWA",2020-01-01,2020-03-20,"0_no_measures","missing","2020-03-21",2020-03-21,"2020-04-30","mandatory","treatment","t_RWA",TRUE,TRUE,FALSE,TRUE,2020-03-21,TRUE
+"434","Rwanda","RWA",2020-03-21,2020-05-03,"2_required_exceptions","1_general","2020-03-21",2020-03-21,"2020-04-30","mandatory","treatment","t_RWA",TRUE,TRUE,FALSE,TRUE,2020-03-21,TRUE
+"435","Rwanda","RWA",2020-05-04,2020-05-31,"1_recommended","1_general","2020-03-21",2020-03-21,"2020-04-30","mandatory","treatment","t_RWA",TRUE,TRUE,FALSE,TRUE,2020-03-21,TRUE
+"436","San Marino","SMR",2020-01-01,2020-03-07,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SMR",TRUE,TRUE,FALSE,TRUE,2020-04-10,NA
+"437","San Marino","SMR",2020-03-08,2020-04-09,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SMR",TRUE,TRUE,FALSE,TRUE,2020-04-10,NA
+"438","San Marino","SMR",2020-04-10,2020-05-02,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SMR",TRUE,TRUE,FALSE,TRUE,2020-04-10,NA
+"439","San Marino","SMR",2020-05-03,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SMR",TRUE,TRUE,FALSE,TRUE,2020-04-10,NA
+"440","Saudi Arabia","SAU",2020-01-01,2020-03-22,"0_no_measures","missing","",NA,"","","control","c_SAU",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"441","Saudi Arabia","SAU",2020-03-23,2020-04-05,"2_required_exceptions","1_general","",NA,"","","control","c_SAU",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"442","Saudi Arabia","SAU",2020-04-06,2020-05-22,"3_required","0_targeted","",NA,"","","control","c_SAU",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"443","Saudi Arabia","SAU",2020-05-23,2020-05-30,"3_required","1_general","",NA,"","","control","c_SAU",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"444","Saudi Arabia","SAU",2020-05-31,2020-05-31,"1_recommended","0_targeted","",NA,"","","control","c_SAU",TRUE,TRUE,TRUE,TRUE,2020-03-23,NA
+"445","Senegal","SEN",2020-01-01,2020-03-24,"0_no_measures","missing","",NA,"","","control","c_SEN",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"446","Senegal","SEN",2020-03-25,2020-05-31,"3_required","1_general","",NA,"","","control","c_SEN",TRUE,TRUE,FALSE,FALSE,2020-03-25,NA
+"447","Serbia","SRB",2020-01-01,2020-03-14,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SRB",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"448","Serbia","SRB",2020-03-15,2020-03-17,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SRB",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"449","Serbia","SRB",2020-03-18,2020-05-16,"3_required","1_general",NA,NA,NA,NA,NA,"na_SRB",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"450","Serbia","SRB",2020-05-17,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SRB",TRUE,TRUE,FALSE,TRUE,2020-03-15,NA
+"451","Seychelles","SYC",2020-01-01,2020-04-07,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SYC",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"452","Seychelles","SYC",2020-04-08,2020-05-03,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SYC",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"453","Seychelles","SYC",2020-05-04,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SYC",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"454","Sierra Leone","SLE",2020-01-01,2020-04-04,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SLE",TRUE,TRUE,FALSE,TRUE,2020-04-05,NA
+"455","Sierra Leone","SLE",2020-04-05,2020-04-07,"3_required","1_general",NA,NA,NA,NA,NA,"na_SLE",TRUE,TRUE,FALSE,TRUE,2020-04-05,NA
+"456","Sierra Leone","SLE",2020-04-08,2020-04-25,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SLE",TRUE,TRUE,FALSE,TRUE,2020-04-05,NA
+"457","Sierra Leone","SLE",2020-04-26,2020-05-02,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SLE",TRUE,TRUE,FALSE,TRUE,2020-04-05,NA
+"458","Sierra Leone","SLE",2020-05-03,2020-05-05,"3_required","1_general",NA,NA,NA,NA,NA,"na_SLE",TRUE,TRUE,FALSE,TRUE,2020-04-05,NA
+"459","Sierra Leone","SLE",2020-05-06,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SLE",TRUE,TRUE,FALSE,TRUE,2020-04-05,NA
+"460","Singapore","SGP",2020-01-01,2020-04-02,"0_no_measures","missing","",NA,"","","control","c_SGP",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"461","Singapore","SGP",2020-04-03,2020-04-07,"1_recommended","1_general","",NA,"","","control","c_SGP",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"462","Singapore","SGP",2020-04-08,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_SGP",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"463","Slovak Republic","SVK",2020-01-01,2020-03-11,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SVK",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"464","Slovak Republic","SVK",2020-03-12,2020-04-07,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SVK",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"465","Slovak Republic","SVK",2020-04-08,2020-04-13,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SVK",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"466","Slovak Republic","SVK",2020-04-14,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SVK",TRUE,TRUE,FALSE,TRUE,2020-04-08,NA
+"467","Slovenia","SVN",2020-01-01,2020-03-13,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SVN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"468","Slovenia","SVN",2020-03-14,2020-05-13,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SVN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"469","Slovenia","SVN",2020-05-14,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SVN",FALSE,FALSE,FALSE,TRUE,NA,NA
+"470","Solomon Islands","SLB",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SLB",FALSE,FALSE,FALSE,FALSE,NA,NA
+"471","Somalia","SOM",2020-01-01,2020-04-10,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SOM",FALSE,FALSE,FALSE,TRUE,NA,NA
+"472","Somalia","SOM",2020-04-11,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SOM",FALSE,FALSE,FALSE,TRUE,NA,NA
+"473","South Africa","ZAF",2020-01-01,2020-03-25,"0_no_measures","missing","2020-03-23",2020-03-26,"2020-04-30","mandatory","treatment","t_ZAF",TRUE,TRUE,FALSE,FALSE,2020-03-26,TRUE
+"474","South Africa","ZAF",2020-03-26,2020-05-31,"2_required_exceptions","1_general","2020-03-23",2020-03-26,"2020-04-30","mandatory","treatment","t_ZAF",TRUE,TRUE,FALSE,FALSE,2020-03-26,TRUE
+"475","South Korea","KOR",2020-01-01,2020-02-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_KOR",TRUE,TRUE,TRUE,TRUE,2020-03-21,NA
+"476","South Korea","KOR",2020-02-23,2020-03-20,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_KOR",TRUE,TRUE,TRUE,TRUE,2020-03-21,NA
+"477","South Korea","KOR",2020-03-21,2020-04-17,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_KOR",TRUE,TRUE,TRUE,TRUE,2020-03-21,NA
+"478","South Korea","KOR",2020-04-18,2020-04-19,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_KOR",TRUE,TRUE,TRUE,TRUE,2020-03-21,NA
+"479","South Korea","KOR",2020-04-20,2020-05-28,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_KOR",TRUE,TRUE,TRUE,TRUE,2020-03-21,NA
+"480","South Korea","KOR",2020-05-29,2020-05-31,"1_recommended","0_targeted",NA,NA,NA,NA,NA,"na_KOR",TRUE,TRUE,TRUE,TRUE,2020-03-21,NA
+"481","South Sudan","SSD",2020-01-01,2020-03-23,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SSD",TRUE,TRUE,TRUE,TRUE,2020-05-07,NA
+"482","South Sudan","SSD",2020-03-24,2020-04-17,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SSD",TRUE,TRUE,TRUE,TRUE,2020-05-07,NA
+"483","South Sudan","SSD",2020-04-18,2020-05-06,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_SSD",TRUE,TRUE,TRUE,TRUE,2020-05-07,NA
+"484","South Sudan","SSD",2020-05-07,2020-05-28,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SSD",TRUE,TRUE,TRUE,TRUE,2020-05-07,NA
+"485","South Sudan","SSD",2020-05-29,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_SSD",TRUE,TRUE,TRUE,TRUE,2020-05-07,NA
+"486","Spain","ESP",2020-01-01,2020-03-13,"0_no_measures","missing","2020-03-14",2020-03-14,"2020-05-09","mandatory","treatment","t_ESP",TRUE,TRUE,FALSE,TRUE,2020-03-14,TRUE
+"487","Spain","ESP",2020-03-14,2020-05-26,"2_required_exceptions","1_general","2020-03-14",2020-03-14,"2020-05-09","mandatory","treatment","t_ESP",TRUE,TRUE,FALSE,TRUE,2020-03-14,TRUE
+"488","Spain","ESP",2020-05-27,2020-05-31,"1_recommended","1_general","2020-03-14",2020-03-14,"2020-05-09","mandatory","treatment","t_ESP",TRUE,TRUE,FALSE,TRUE,2020-03-14,TRUE
+"489","Sri Lanka","LKA",2020-01-01,2020-03-17,"0_no_measures","missing","2020-04-26",2020-04-26,"2020-05-10","mandatory","treatment","t_LKA",TRUE,TRUE,TRUE,FALSE,2020-03-20,FALSE
+"490","Sri Lanka","LKA",2020-03-18,2020-03-19,"3_required","0_targeted","2020-04-26",2020-04-26,"2020-05-10","mandatory","treatment","t_LKA",TRUE,TRUE,TRUE,FALSE,2020-03-20,FALSE
+"491","Sri Lanka","LKA",2020-03-20,2020-04-19,"3_required","1_general","2020-04-26",2020-04-26,"2020-05-10","mandatory","treatment","t_LKA",TRUE,TRUE,TRUE,FALSE,2020-03-20,FALSE
+"492","Sri Lanka","LKA",2020-04-20,2020-04-23,"3_required","0_targeted","2020-04-26",2020-04-26,"2020-05-10","mandatory","treatment","t_LKA",TRUE,TRUE,TRUE,FALSE,2020-03-20,FALSE
+"493","Sri Lanka","LKA",2020-04-24,2020-05-10,"3_required","1_general","2020-04-26",2020-04-26,"2020-05-10","mandatory","treatment","t_LKA",TRUE,TRUE,TRUE,FALSE,2020-03-20,FALSE
+"494","Sri Lanka","LKA",2020-05-11,2020-05-31,"2_required_exceptions","1_general","2020-04-26",2020-04-26,"2020-05-10","mandatory","treatment","t_LKA",TRUE,TRUE,TRUE,FALSE,2020-03-20,FALSE
+"495","Sudan","SDN",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SDN",TRUE,TRUE,TRUE,TRUE,2020-05-29,NA
+"496","Sudan","SDN",2020-03-23,2020-04-17,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SDN",TRUE,TRUE,TRUE,TRUE,2020-05-29,NA
+"497","Sudan","SDN",2020-04-18,2020-05-28,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_SDN",TRUE,TRUE,TRUE,TRUE,2020-05-29,NA
+"498","Sudan","SDN",2020-05-29,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SDN",TRUE,TRUE,TRUE,TRUE,2020-05-29,NA
+"499","Suriname","SUR",2020-01-01,2020-03-27,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SUR",TRUE,TRUE,TRUE,TRUE,2020-03-28,NA
+"500","Suriname","SUR",2020-03-28,2020-05-23,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_SUR",TRUE,TRUE,TRUE,TRUE,2020-03-28,NA
+"501","Suriname","SUR",2020-05-24,2020-05-25,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SUR",TRUE,TRUE,TRUE,TRUE,2020-03-28,NA
+"502","Suriname","SUR",2020-05-26,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_SUR",TRUE,TRUE,TRUE,TRUE,2020-03-28,NA
+"503","Sweden","SWE",2020-01-01,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_SWE",FALSE,FALSE,FALSE,FALSE,NA,NA
+"504","Switzerland","CHE",2020-01-01,2020-03-16,"0_no_measures","missing","2020-03-16",2020-03-17,"2020-04-26","voluntary","treatment","t_CHE",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"505","Switzerland","CHE",2020-03-17,2020-05-31,"1_recommended","1_general","2020-03-16",2020-03-17,"2020-04-26","voluntary","treatment","t_CHE",FALSE,FALSE,FALSE,TRUE,NA,FALSE
+"506","Syria","SYR",2020-01-01,2020-04-16,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_SYR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"507","Syria","SYR",2020-04-17,2020-05-24,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_SYR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"508","Syria","SYR",2020-05-25,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_SYR",TRUE,TRUE,TRUE,TRUE,NA,NA
+"509","Taiwan","TWN",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TWN",FALSE,FALSE,FALSE,FALSE,NA,NA
+"510","Tajikistan","TJK",2020-01-01,2020-05-08,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TJK",TRUE,TRUE,TRUE,TRUE,NA,NA
+"511","Tajikistan","TJK",2020-05-09,2020-05-11,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_TJK",TRUE,TRUE,TRUE,TRUE,NA,NA
+"512","Tajikistan","TJK",2020-05-12,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_TJK",TRUE,TRUE,TRUE,TRUE,NA,NA
+"513","Tanzania","TZA",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TZA",FALSE,FALSE,FALSE,FALSE,NA,NA
+"514","Thailand","THA",2020-01-01,2020-03-20,"0_no_measures","missing","",NA,"","","control","c_THA",FALSE,FALSE,FALSE,TRUE,NA,NA
+"515","Thailand","THA",2020-03-21,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_THA",FALSE,FALSE,FALSE,TRUE,NA,NA
+"516","Timor-Leste","TLS",2020-01-01,2020-03-27,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TLS",FALSE,FALSE,FALSE,TRUE,NA,NA
+"517","Timor-Leste","TLS",2020-03-28,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_TLS",FALSE,FALSE,FALSE,TRUE,NA,NA
+"518","Togo","TGO",2020-01-01,2020-03-19,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TGO",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"519","Togo","TGO",2020-03-20,2020-04-01,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_TGO",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"520","Togo","TGO",2020-04-02,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_TGO",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"521","Trinidad and Tobago","TTO",2020-01-01,2020-03-29,"0_no_measures","missing","2020-03-26",2020-03-30,"2020-04-30","voluntary","treatment","t_TTO",TRUE,TRUE,FALSE,FALSE,2020-03-30,TRUE
+"522","Trinidad and Tobago","TTO",2020-03-30,2020-05-31,"2_required_exceptions","1_general","2020-03-26",2020-03-30,"2020-04-30","voluntary","treatment","t_TTO",TRUE,TRUE,FALSE,FALSE,2020-03-30,TRUE
+"523","Tunisia","TUN",2020-01-01,2020-03-19,"0_no_measures","missing","2020-03-20",2020-03-22,"2020-05-03","mandatory","treatment","t_TUN",TRUE,TRUE,FALSE,TRUE,2020-03-20,TRUE
+"524","Tunisia","TUN",2020-03-20,2020-05-14,"2_required_exceptions","1_general","2020-03-20",2020-03-22,"2020-05-03","mandatory","treatment","t_TUN",TRUE,TRUE,FALSE,TRUE,2020-03-20,TRUE
+"525","Tunisia","TUN",2020-05-15,2020-05-31,"1_recommended","1_general","2020-03-20",2020-03-22,"2020-05-03","mandatory","treatment","t_TUN",TRUE,TRUE,FALSE,TRUE,2020-03-20,TRUE
+"526","Turkey","TUR",2020-01-01,2020-03-08,"0_no_measures","missing","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"527","Turkey","TUR",2020-03-09,2020-03-20,"1_recommended","1_general","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"528","Turkey","TUR",2020-03-21,2020-04-10,"2_required_exceptions","1_general","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"529","Turkey","TUR",2020-04-11,2020-04-12,"3_required","0_targeted","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"530","Turkey","TUR",2020-04-13,2020-04-17,"2_required_exceptions","1_general","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"531","Turkey","TUR",2020-04-18,2020-04-19,"3_required","0_targeted","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"532","Turkey","TUR",2020-04-20,2020-05-31,"2_required_exceptions","1_general","2020-04-20",2020-04-23,"2020-04-26","mandatory","treatment","t_TUR",TRUE,TRUE,TRUE,TRUE,2020-03-21,FALSE
+"533","Turkmenistan","TKM",2020-01-01,2020-05-31,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TKM",FALSE,FALSE,FALSE,FALSE,NA,NA
+"534","Turks and Caicos Islands","TCA",2020-01-01,2020-03-25,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_TCA",TRUE,TRUE,FALSE,FALSE,2020-03-26,NA
+"535","Turks and Caicos Islands","TCA",2020-03-26,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_TCA",TRUE,TRUE,FALSE,FALSE,2020-03-26,NA
+"536","Uganda","UGA",2020-01-01,2020-03-29,"0_no_measures","missing","",NA,"","","control","c_UGA",TRUE,TRUE,FALSE,TRUE,2020-03-30,NA
+"537","Uganda","UGA",2020-03-30,2020-05-17,"2_required_exceptions","1_general","",NA,"","","control","c_UGA",TRUE,TRUE,FALSE,TRUE,2020-03-30,NA
+"538","Uganda","UGA",2020-05-18,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_UGA",TRUE,TRUE,FALSE,TRUE,2020-03-30,NA
+"539","Ukraine","UKR",2020-01-01,2020-03-15,"0_no_measures","missing","",NA,"","","control","c_UKR",TRUE,TRUE,FALSE,TRUE,2020-04-03,NA
+"540","Ukraine","UKR",2020-03-16,2020-04-02,"1_recommended","1_general","",NA,"","","control","c_UKR",TRUE,TRUE,FALSE,TRUE,2020-04-03,NA
+"541","Ukraine","UKR",2020-04-03,2020-05-31,"2_required_exceptions","1_general","",NA,"","","control","c_UKR",TRUE,TRUE,FALSE,TRUE,2020-04-03,NA
+"542","United Arab Emirates","ARE",2020-01-01,2020-03-12,"0_no_measures","missing","2020-03-26",2020-03-26,"2020-03-29","mandatory","treatment","t_ARE",TRUE,TRUE,TRUE,TRUE,2020-03-23,FALSE
+"543","United Arab Emirates","ARE",2020-03-13,2020-03-22,"1_recommended","0_targeted","2020-03-26",2020-03-26,"2020-03-29","mandatory","treatment","t_ARE",TRUE,TRUE,TRUE,TRUE,2020-03-23,FALSE
+"544","United Arab Emirates","ARE",2020-03-23,2020-05-14,"2_required_exceptions","1_general","2020-03-26",2020-03-26,"2020-03-29","mandatory","treatment","t_ARE",TRUE,TRUE,TRUE,TRUE,2020-03-23,FALSE
+"545","United Arab Emirates","ARE",2020-05-15,2020-05-17,"1_recommended","0_targeted","2020-03-26",2020-03-26,"2020-03-29","mandatory","treatment","t_ARE",TRUE,TRUE,TRUE,TRUE,2020-03-23,FALSE
+"546","United Arab Emirates","ARE",2020-05-18,2020-05-31,"0_no_measures","missing","2020-03-26",2020-03-26,"2020-03-29","mandatory","treatment","t_ARE",TRUE,TRUE,TRUE,TRUE,2020-03-23,FALSE
+"547","United Kingdom","GBR",2020-01-01,2020-03-22,"0_no_measures","missing","2020-03-23",2020-03-23,"2020-05-09","mandatory","treatment","t_GBR",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"548","United Kingdom","GBR",2020-03-23,2020-05-12,"2_required_exceptions","1_general","2020-03-23",2020-03-23,"2020-05-09","mandatory","treatment","t_GBR",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"549","United Kingdom","GBR",2020-05-13,2020-05-31,"1_recommended","1_general","2020-03-23",2020-03-23,"2020-05-09","mandatory","treatment","t_GBR",TRUE,TRUE,FALSE,TRUE,2020-03-23,TRUE
+"550","United States","USA",2020-01-01,2020-03-14,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_USA",TRUE,FALSE,TRUE,FALSE,NA,NA
+"551","United States","USA",2020-03-15,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_USA",TRUE,FALSE,TRUE,FALSE,NA,NA
+"552","Uruguay","URY",2020-01-01,2020-03-12,"0_no_measures","missing","",NA,"","","control","c_URY",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"553","Uruguay","URY",2020-03-13,2020-04-01,"1_recommended","1_general","",NA,"","","control","c_URY",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"554","Uruguay","URY",2020-04-02,2020-04-12,"2_required_exceptions","1_general","",NA,"","","control","c_URY",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"555","Uruguay","URY",2020-04-13,2020-05-31,"1_recommended","1_general","",NA,"","","control","c_URY",TRUE,TRUE,FALSE,TRUE,2020-04-02,NA
+"556","Uzbekistan","UZB",2020-01-01,2020-03-26,"0_no_measures","missing","2020-04-01",2020-04-01,"2020-05-10","mandatory","treatment","t_UZB",TRUE,TRUE,TRUE,FALSE,2020-03-27,FALSE
+"557","Uzbekistan","UZB",2020-03-27,2020-05-07,"2_required_exceptions","1_general","2020-04-01",2020-04-01,"2020-05-10","mandatory","treatment","t_UZB",TRUE,TRUE,TRUE,FALSE,2020-03-27,FALSE
+"558","Uzbekistan","UZB",2020-05-08,2020-05-31,"2_required_exceptions","0_targeted","2020-04-01",2020-04-01,"2020-05-10","mandatory","treatment","t_UZB",TRUE,TRUE,TRUE,FALSE,2020-03-27,FALSE
+"559","Vanuatu","VUT",2020-01-01,2020-03-25,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_VUT",FALSE,FALSE,FALSE,TRUE,NA,NA
+"560","Vanuatu","VUT",2020-03-26,2020-05-31,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_VUT",FALSE,FALSE,FALSE,TRUE,NA,NA
+"561","Venezuela","VEN",2020-01-01,2020-03-12,"0_no_measures","missing","2020-03-16",2020-03-17,"2020-05-31","mandatory","treatment","t_VEN",TRUE,TRUE,FALSE,FALSE,2020-03-13,FALSE
+"562","Venezuela","VEN",2020-03-13,2020-05-31,"2_required_exceptions","1_general","2020-03-16",2020-03-17,"2020-05-31","mandatory","treatment","t_VEN",TRUE,TRUE,FALSE,FALSE,2020-03-13,FALSE
+"563","Vietnam","VNM",2020-01-01,2020-03-31,"0_no_measures","missing","2020-04-01",2020-04-01,"2020-04-22","mandatory","treatment","t_VNM",TRUE,TRUE,TRUE,FALSE,2020-04-01,TRUE
+"564","Vietnam","VNM",2020-04-01,2020-04-14,"2_required_exceptions","1_general","2020-04-01",2020-04-01,"2020-04-22","mandatory","treatment","t_VNM",TRUE,TRUE,TRUE,FALSE,2020-04-01,TRUE
+"565","Vietnam","VNM",2020-04-15,2020-04-21,"2_required_exceptions","0_targeted","2020-04-01",2020-04-01,"2020-04-22","mandatory","treatment","t_VNM",TRUE,TRUE,TRUE,FALSE,2020-04-01,TRUE
+"566","Vietnam","VNM",2020-04-22,2020-05-31,"0_no_measures","missing","2020-04-01",2020-04-01,"2020-04-22","mandatory","treatment","t_VNM",TRUE,TRUE,TRUE,FALSE,2020-04-01,TRUE
+"567","Yemen","YEM",2020-01-01,2020-04-30,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_YEM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"568","Yemen","YEM",2020-05-01,2020-05-04,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_YEM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"569","Yemen","YEM",2020-05-05,2020-05-27,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_YEM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"570","Yemen","YEM",2020-05-28,2020-05-31,"2_required_exceptions","0_targeted",NA,NA,NA,NA,NA,"na_YEM",TRUE,TRUE,TRUE,TRUE,NA,NA
+"571","Zambia","ZMB",2020-01-01,2020-04-08,"0_no_measures","missing","",NA,"","","control","c_ZMB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"572","Zambia","ZMB",2020-04-09,2020-04-14,"1_recommended","1_general","",NA,"","","control","c_ZMB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"573","Zambia","ZMB",2020-04-15,2020-05-07,"2_required_exceptions","0_targeted","",NA,"","","control","c_ZMB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"574","Zambia","ZMB",2020-05-08,2020-05-31,"0_no_measures","missing","",NA,"","","control","c_ZMB",TRUE,TRUE,TRUE,TRUE,NA,NA
+"575","Zimbabwe","ZWE",2020-01-01,2020-03-22,"0_no_measures","missing",NA,NA,NA,NA,NA,"na_ZWE",TRUE,TRUE,FALSE,TRUE,2020-03-30,NA
+"576","Zimbabwe","ZWE",2020-03-23,2020-03-29,"1_recommended","1_general",NA,NA,NA,NA,NA,"na_ZWE",TRUE,TRUE,FALSE,TRUE,2020-03-30,NA
+"577","Zimbabwe","ZWE",2020-03-30,2020-05-31,"2_required_exceptions","1_general",NA,NA,NA,NA,NA,"na_ZWE",TRUE,TRUE,FALSE,TRUE,2020-03-30,NA
+"578",NA,"ARM",NA,NA,NA,NA,"2020-03-24",2020-03-24,"2020-04-10","mandatory","treatment","t_ARM",FALSE,FALSE,FALSE,NA,NA,FALSE
+"579",NA,"TON",NA,NA,NA,NA,"2020-03-27",2020-03-29,"2020-04-12","mandatory","treatment","t_TON",FALSE,FALSE,FALSE,NA,NA,FALSE

@@ -7,37 +7,6 @@
 # ______________________________________________________________
 
 
-#### Setup ####
-dir <- "C:/Users/ErichTrieschman/dev"
-setwd(dir)
-
-#### ... packages ####
-# install.packages("ggplot2", dependencies = T)
-# install.packages("tidyverse", dependencies = T)
-# install.packages("tidyr", dependencies = T)
-# install.packages("dplyr", dependencies = T)
-# install.packages("reshape2", dependencies = T)
-# install.packages("scales",dependencies= T)
-# install.packages("stringr", dependencies= T)
-require(ggplot2)
-require(tidyverse)
-require(tidyr)
-require(dplyr)
-# require(plyr)
-require(reshape2)
-require(scales)
-require(stringr)
-
-# color function
-gg_color_hue <- function(n) {
-  hues = seq(15, 375, length = n + 1)
-  hcl(h = hues, l = 65, c = 100)[1:n]
-}
-
-# fixed variables
-today <- gsub("-","", Sys.Date())
-date_cutoff <- as.Date("2020-06-01")
-
 # install package from https://covid19datahub.io/index.html
 # install.packages("COVID19", dependencies = T)
 # require(COVID19)
@@ -47,8 +16,7 @@ date_cutoff <- as.Date("2020-06-01")
 # raw_oxford <- covid19(raw= F)
 # unique(raw_oxford$administrative_area_level_1)
 
-
-raw_oxford <- read.csv(file= "./policy-database/data/external/oxcgrt/OxCGRT_latest.csv", stringsAsFactors = F)
+raw_oxford <- read.csv(file= here("policy-database/data/external/oxcgrt/OxCGRT_latest.csv"), stringsAsFactors = F)
 
 # --------------------Clean variables based on exploration below ------------
 # ____________________________________________________________________________
@@ -66,19 +34,20 @@ cln_oxford <- cln_oxford[cln_oxford$date_cln < date_cutoff,]
 
 # create character stay at home values
 cln_oxford <- cln_oxford %>%
-  mutate(stay_home_req_char = ifelse(c6_stay.at.home.requirements == 0, "0_no_measures",
+  mutate(stay_home = ifelse(c6_stay.at.home.requirements == 0, "0_no_measures",
                                      ifelse(c6_stay.at.home.requirements == 1, "1_recommended",
                                             ifelse(c6_stay.at.home.requirements == 2, "2_required_exceptions",
                                                    ifelse(c6_stay.at.home.requirements == 3, "3_required",
                                                           "missing"))))) %>%
-  mutate(stay_home_flag_char = ifelse(is.na(c6_flag), "missing", 
+  mutate(stay_home_flag = ifelse(is.na(c6_flag), "missing", 
                                       ifelse(c6_flag == 0, "0_targeted",
                                       ifelse(c6_flag == 1, "1_general",
                                              "missing"))))
 
+
 # create strings of like policies
 col_pre_oxford <- cln_oxford %>% arrange(countryname, date_cln) %>%
-  select(countryname, countrycode, stay_home_req_char, stay_home_flag_char, date_cln)
+  select(countryname, countrycode, stay_home, stay_home_flag, date_cln)
 
 # index on rows and create counters
 col_pre_oxford$date_start <- NA
@@ -88,14 +57,14 @@ for(i in 2:nrow(col_pre_oxford)){
   
   col_pre_oxford$date_start[i] <- with(col_pre_oxford, 
                                        ifelse(countryname[i] == countryname[i-1] & 
-                                                stay_home_req_char[i] == stay_home_req_char[i-1] &
-                                                stay_home_flag_char[i] == stay_home_flag_char[i-1],
+                                                stay_home[i] == stay_home[i-1] &
+                                                stay_home_flag[i] == stay_home_flag[i-1],
                                               NA, date_cln[i]))
   
   col_pre_oxford$date_end[i] <- with(col_pre_oxford, 
                                                ifelse(countryname[i] == countryname[i+1] & 
-                                                        stay_home_req_char[i] == stay_home_req_char[i+1] &
-                                                        stay_home_flag_char[i] == stay_home_flag_char[i+1],
+                                                        stay_home[i] == stay_home[i+1] &
+                                                        stay_home_flag[i] == stay_home_flag[i+1],
                                                       NA, date_cln[i]))
   
   col_pre_oxford$date_start[i] <- ifelse(is.na(col_pre_oxford$date_start[i]),
@@ -106,7 +75,7 @@ for(i in 2:nrow(col_pre_oxford)){
 col_pre_oxford$date_end[nrow(col_pre_oxford)] <- col_pre_oxford$date_cln[nrow(col_pre_oxford)]
 
 col_oxford <- col_pre_oxford %>% 
-  group_by(countryname, countrycode, stay_home_req_char, stay_home_flag_char, date_start) %>%
+  group_by(countryname, countrycode, stay_home, stay_home_flag, date_start) %>%
   summarize(date_end = max(date_end, na.rm= T)) %>%
   arrange(countryname, date_start)
 
@@ -131,7 +100,7 @@ country_comparison <- merge(x= val_data, y= col_oxford, by.x= "country_code3", b
 
 # merge lockdown data onto val data
 val_merge <- full_join(x= col_oxford, y= val_data, by = c("countrycode" = "country_code3"), suffixes= c("_o", "_y")) %>%
-  select(countryname, countrycode, date_start, date_end, stay_home_req_char, stay_home_flag_char, announce:group)
+  select(countryname, countrycode, date_start, date_end, stay_home, stay_home_flag, announce:group)
 val_merge$country_label <- with(val_merge, paste0(ifelse(is.na(group), "na_", 
                                                                       ifelse(group== "treatment", "t_",
                                                                       ifelse(group== "control", "c_", "na_"))), countrycode))
@@ -144,7 +113,7 @@ compare_countries <- function(i){
   
     p <- ggplot(data= compare_sub) + 
       geom_point(aes(y = country_label, x= start), size= 7, shape= 21) + 
-      geom_segment(aes(y = country_label, yend= country_label, x= date_start, xend= date_end, color= stay_home_req_char, linetype= stay_home_flag_char), size= 1)
+      geom_segment(aes(y = country_label, yend= country_label, x= date_start, xend= date_end, color= stay_home, linetype= stay_home_flag), size= 1)
     plot(p)
 }
 
@@ -168,18 +137,18 @@ while(countries_left > 0){
 
 # write.csv(x= val_merge, file= "./policy-database/data/interim/manual_review_dataset.csv")
 
-# --------------------Implement validation algorithm  ------------------
+# --------------------Implement validation flagging algorithm  ------------------
 # ____________________________________________________________________________
 
 # run first order check
 val_final <- val_merge %>%
   group_by(countryname) %>%
-  mutate(all_requ = sum(stay_home_req_char %in% c("2_required_exceptions", "3_required"))>0,
-         gen_requ = sum(stay_home_flag_char == "1_general" & all_requ)>0,
-         tar_requ = sum(stay_home_flag_char == "0_targeted" & all_requ)>0,
-         all_reco = sum(stay_home_req_char == "1_recommended")>0,
-         date_start_gen_req_min = as.Date(min(date_start[stay_home_req_char %in% c("2_required_exceptions", "3_required") & 
-                                                           stay_home_flag_char == "1_general"], na.rm= T)),) %>%
+  mutate(all_requ = sum(stay_home %in% c("2_required_exceptions", "3_required"))>0,
+         gen_requ = sum(stay_home_flag == "1_general" & all_requ)>0,
+         tar_requ = sum(stay_home_flag == "0_targeted" & all_requ)>0,
+         all_reco = sum(stay_home == "1_recommended")>0,
+         date_start_gen_req_min = as.Date(min(date_start[stay_home %in% c("2_required_exceptions", "3_required") & 
+                                                           stay_home_flag == "1_general"], na.rm= T)),) %>%
   ungroup() %>%
   mutate(check1 = abs(start - date_start_gen_req_min) <= 2)
 
@@ -190,7 +159,14 @@ val_final_summ2 <- val_final_summ1 %>% group_by(gen_requ, check1, tar_requ, all_
   arrange(desc(gen_requ),)
 
 
+# output for manual review
+write.csv(x = val_final, file = here(paste0("policy-database/notebooks/outputs/oxford_manual_review-", today, ".csv")))
 
+# --------------------Manually check where required  ------------------
+# ____________________________________________________________________________
+
+# add flags to help with manual checking
+temp <- merge(x= val_final, y= val_final_summ2, by= )
 
 # --------------------visualize ------------------
 # ____________________________________________________________________________
@@ -202,8 +178,8 @@ plot_country <- function(i){
   lock_visual_sub <- cln_oxford %>% filter(countryname %in% i)
   
   # visualize policies
-  p <- ggplot(data= lock_visual_sub, aes(x= date_cln, y= countryname, color = stay_home_req_char)) + 
-    geom_point(aes(shape= stay_home_flag_char), size= 2, position= position_dodge(width= 0.7)) + 
+  p <- ggplot(data= lock_visual_sub, aes(x= date_cln, y= countryname, color = stay_home)) + 
+    geom_point(aes(shape= stay_home_flag), size= 2, position= position_dodge(width= 0.7)) + 
     
     geom_text(aes(label= date_cln_min), size= 3, angle= 90, position= position_dodge(width= 0.7))
   
