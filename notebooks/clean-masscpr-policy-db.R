@@ -39,20 +39,21 @@ gg_color_hue <- function(n) {
 }
 
 today <- gsub( "-","", Sys.Date())
-date_cutoff <- as.Date("2020-06-01")
+date_cutoff <- as.Date("2020-07-31")
 
 
 # Import data
-policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_unverified_20200818.csv", stringsAsFactors = FALSE)
+# policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_unverified_20200818.csv", stringsAsFactors = FALSE)
+policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_pverified_20200819.csv", stringsAsFactors = FALSE)
 
 business_scope <- c("all_business", "hotel", "restaurant", "entertainment", "market", "sport", "theater")
-institution_scope <- c("all_insti", "scenic", "public service", "traffic", "social wellfare", "healthcare")
+institution_scope <- c("all_insti", "scenic", "public service", "traffic", "social welfare", "healthcare")
 
 # --------------------clean based on summaries  ------------
 # ____________________________________________________________________________
 
 # remove et_validated responses
-policy_clean <- policy_raw %>% filter(is.na(verify_et) | verify_et != FALSE)
+policy_clean <- policy_raw %>% filter(!(verification_status %in% c("update", "delete")))
 
 # clean categories
 policy_clean <- policy_clean %>%
@@ -67,6 +68,11 @@ policy_clean <- policy_clean %>%
   mutate(date_announce_cln = as.Date(date_announce, format= "%m/%d/%Y"),
          date_start_cln = as.Date(date_start, format= "%m/%d/%Y"),
          date_end_cln = as.Date(date_end, format= "%m/%d/%Y"))
+
+# update some spelling
+policy_clean <- policy_clean %>%
+  mutate_at(c("policy_type_cln", "policy_sub_type_cln", "policy_measure_cln", "policy_scope_cln", "enforcer"), function(x){gsub("hygene", "hygiene", x)}) %>%
+  mutate_at(c("compliance"), function(x){gsub("recommanded", "recommended", x)})
 
 rbind(lapply(policy_clean, class))
 unique(policy_clean$policy_scope)
@@ -98,7 +104,7 @@ policy_poi_sort <- policy_clean %>%
   mutate(poi_hierarchy = as.numeric(paste0(gsub("\\D", "", policy_measure_cln), 
                                 ifelse(grepl("all_", policy_scope_cln), 2, 1)))) %>%
   arrange(policy_type_cln, policy_scope_cln, date_start_cln) %>%
-  select(policy_type_cln, policy_sub_type_cln, policy_measure_cln, policy_scope_cln, date_start_cln, date_end_cln, poi_hierarchy)
+  select(policy_type_cln, policy_sub_type_cln, policy_measure_cln, policy_scope_cln, date_start_cln, date_end_cln, poi_hierarchy, compliance, enforcer)
 
 # create strings of dates
 policy_poi_sort$date_string_start <- NA
@@ -147,26 +153,34 @@ policy_poi_col$date_string_start <- as.Date(policy_poi_col$date_string_start, or
 policy_poi_col$date_string_end <- as.Date(policy_poi_col$date_string_end, origin= "1970-01-01")
 
 # Override higher-level policies
-policy_poi_override <- sqldf::sqldf("SELECT l.*, r.policy_scope_cln as all_scope, 
-                                    r.policy_measure_cln as all_measure,
-                                    r.date_string_start as all_start, r.date_string_end as all_end
-                                    FROM  policy_poi_col l
-                                    LEFT JOIN  policy_poi_col r
-                                    ON l.policy_type_cln = r.policy_type_cln 
-                                    AND l.poi_hierarchy < r.poi_hierarchy
-                                    AND l.date_string_start >= r.date_string_start
-                                    AND r.date_string_start >= l.date_string_end") %>% as_tibble()
+# policy_poi_override <- sqldf::sqldf("SELECT l.*, r.policy_scope_cln as all_scope, 
+#                                     r.policy_measure_cln as all_measure,
+#                                     r.date_string_start as all_start, r.date_string_end as all_end
+#                                     FROM  policy_poi_col l
+#                                     LEFT JOIN  policy_poi_col r
+#                                     ON l.policy_type_cln = r.policy_type_cln 
+#                                     AND l.poi_hierarchy < r.poi_hierarchy
+#                                     AND l.date_string_start >= r.date_string_start
+#                                     AND r.date_string_start >= l.date_string_end") %>% as_tibble()
 
 
 
 # visualize
-ggplot(data= policy_poi_col, aes(color= policy_measure_cln)) + 
-  geom_linerange(aes(xmin= date_string_start, xmax= date_string_end, y= policy_scope_cln),
+ggplot() + 
+  geom_linerange(data= policy_poi_col, aes(xmin= date_string_start, xmax= date_string_end, y= policy_scope_cln, color= policy_measure_cln),
                position = position_dodge(width = .7), size= 1.3, alpha= .8) + 
-  facet_grid(policy_type_cln ~ ., space= "free_y", scales= "free_y")
+  geom_point(data= policy_poi_sort, aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln, shape= compliance),
+             position = position_dodge(width = .7), size= 4, alpha= .5) + 
+  
+  facet_grid(policy_type_cln ~ ., space= "free_y", scales= "free_y") + 
+  scale_x_date(labels= date_format("%b-%Y"), breaks= "1 month")
 
 
-# manually override scenarios
+
+# --------------------create individual policy strings  ------------
+# ____________________________________________________________________________
+
+
 
 # --------------------visualize overall policies -----------------------------
 # ____________________________________________________________________________
@@ -248,8 +262,9 @@ policy_trvl_cln <- policy_viz %>%
   mutate(policy_measure_viz = gsub("l\\d - ", "", policy_measure_cln))
 
 p_trvl <- ggplot(data= policy_trvl_cln) + 
-  geom_point(aes(x= date_start_cln, y= policy_sub_type_cln, color= policy_measure_viz, shape= policy_scope_cln), 
+  geom_point(aes(x= date_start_cln, y= target_region, color= policy_measure_viz, shape= policy_scope_cln), 
              size= 3, alpha= .8, position = position_dodge(width = 0.4)) + 
+  facet_grid(policy_sub_type ~ ., scales= "free_y", switch= "y") + 
 
   labs(title= "Domestic travel ",  
        color= "Policy measure",
@@ -266,7 +281,7 @@ policy_gath_cln <- policy_viz %>%
   mutate_at(c("policy_measure_cln"), function(x){gsub("l\\d - ", "", x)})
 
 p_gath <- ggplot(data= policy_gath_cln) + 
-  geom_point(aes(x= date_start_cln, y= policy_sub_type_cln, color= policy_measure_cln), 
+  geom_point(aes(x= date_start_cln, y= policy_sub_type_cln, color= policy_measure_cln, shape= compliance), 
              size= 3, alpha= .8, position = position_dodge(width = 0.4)) + 
 
   labs(title= "Gatherings",  
