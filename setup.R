@@ -39,5 +39,3 @@ gg_color_hue <- function(n) {
   hcl(h = hues, l = 65, c = 100)[1:n]
 }
 
-today <- gsub( "-","", Sys.Date())
-date_cutoff <- as.Date("2020-06-01")
