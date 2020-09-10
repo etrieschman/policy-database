@@ -219,7 +219,7 @@ plot_country <- function(i){
   plot(p)
 }
 
-plot_country(69)
+plot_country(64)
 
 # pdf all of the countries for viewing
 pdf("./policy-database/notebooks/outputs/who-phsm-lockdown-overview.pdf", width = 11, height= 8.5)

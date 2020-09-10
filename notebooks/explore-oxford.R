@@ -259,9 +259,9 @@ plot_country <- function(i){
   
   # visualize policies
   p <- ggplot(data= lock_visual_sub, aes(x= date_cln, y= countryname, color = stay_home)) + 
-    geom_point(aes(shape= stay_home_flag), size= 2, position= position_dodge(width= 0.7)) + 
+    geom_point(aes(shape= stay_home_flag), size= 2, position= position_dodge(width= 0.7))
     
-    geom_text(aes(label= date_cln_min), size= 3, angle= 90, position= position_dodge(width= 0.7))
+    # geom_text(aes(label= date_cln_min), size= 3, angle= 90, position= position_dodge(width= 0.7))
   
     # geom_linerange(aes(xmin= date_start_cln, xmax = date_end_cln, y= policy_area), position= position_dodge(width= 0.7)) + 
     # scale_color_manual(values = enforce_col) + 

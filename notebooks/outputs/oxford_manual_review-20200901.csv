@@ -1,0 +1,578 @@
+"","countryname","countrycode","stay_home","stay_home_flag","date_start","date_end"
+"1","Afghanistan","AFG","0_no_measures","missing",2020-01-01,2020-03-24
+"2","Afghanistan","AFG","2_required_exceptions","0_targeted",2020-03-25,2020-05-31
+"3","Albania","ALB","0_no_measures","missing",2020-01-01,2020-03-12
+"4","Albania","ALB","2_required_exceptions","1_general",2020-03-13,2020-05-31
+"5","Algeria","DZA","0_no_measures","missing",2020-01-01,2020-03-22
+"6","Algeria","DZA","3_required","0_targeted",2020-03-23,2020-04-23
+"7","Algeria","DZA","2_required_exceptions","0_targeted",2020-04-24,2020-05-31
+"8","Andorra","AND","0_no_measures","missing",2020-01-01,2020-03-12
+"9","Andorra","AND","1_recommended","1_general",2020-03-13,2020-05-31
+"10","Angola","AGO","0_no_measures","missing",2020-01-01,2020-03-26
+"11","Angola","AGO","2_required_exceptions","1_general",2020-03-27,2020-05-25
+"12","Angola","AGO","1_recommended","1_general",2020-05-26,2020-05-31
+"13","Anguilla","AIA","0_no_measures","missing",2020-01-01,2020-03-26
+"14","Anguilla","AIA","2_required_exceptions","1_general",2020-03-27,2020-04-28
+"15","Anguilla","AIA","0_no_measures","missing",2020-04-29,2020-05-31
+"16","Argentina","ARG","0_no_measures","missing",2020-01-01,2020-03-18
+"17","Argentina","ARG","3_required","1_general",2020-03-19,2020-04-26
+"18","Argentina","ARG","2_required_exceptions","1_general",2020-04-27,2020-05-31
+"19","Aruba","ABW","0_no_measures","missing",2020-01-01,2020-03-20
+"20","Aruba","ABW","1_recommended","1_general",2020-03-21,2020-03-28
+"21","Aruba","ABW","2_required_exceptions","1_general",2020-03-29,2020-04-09
+"22","Aruba","ABW","3_required","1_general",2020-04-10,2020-04-10
+"23","Aruba","ABW","2_required_exceptions","1_general",2020-04-11,2020-04-11
+"24","Aruba","ABW","3_required","1_general",2020-04-12,2020-04-13
+"25","Aruba","ABW","2_required_exceptions","1_general",2020-04-14,2020-05-27
+"26","Aruba","ABW","1_recommended","1_general",2020-05-28,2020-05-31
+"27","Australia","AUS","0_no_measures","missing",2020-01-01,2020-03-23
+"28","Australia","AUS","1_recommended","1_general",2020-03-24,2020-04-01
+"29","Australia","AUS","2_required_exceptions","0_targeted",2020-04-02,2020-05-14
+"30","Australia","AUS","1_recommended","1_general",2020-05-15,2020-05-24
+"31","Australia","AUS","1_recommended","0_targeted",2020-05-25,2020-05-28
+"32","Australia","AUS","0_no_measures","missing",2020-05-29,2020-05-31
+"33","Austria","AUT","0_no_measures","missing",2020-01-01,2020-03-15
+"34","Austria","AUT","2_required_exceptions","1_general",2020-03-16,2020-04-30
+"35","Austria","AUT","0_no_measures","missing",2020-05-01,2020-05-31
+"36","Azerbaijan","AZE","0_no_measures","missing",2020-01-01,2020-03-30
+"37","Azerbaijan","AZE","3_required","1_general",2020-03-31,2020-05-17
+"38","Azerbaijan","AZE","1_recommended","1_general",2020-05-18,2020-05-31
+"39","Bahrain","BHR","0_no_measures","missing",2020-01-01,2020-03-17
+"40","Bahrain","BHR","1_recommended","1_general",2020-03-18,2020-05-31
+"41","Bangladesh","BGD","0_no_measures","missing",2020-01-01,2020-03-18
+"42","Bangladesh","BGD","2_required_exceptions","0_targeted",2020-03-19,2020-03-24
+"43","Bangladesh","BGD","1_recommended","1_general",2020-03-25,2020-04-09
+"44","Bangladesh","BGD","2_required_exceptions","1_general",2020-04-10,2020-05-30
+"45","Bangladesh","BGD","1_recommended","1_general",2020-05-31,2020-05-31
+"46","Barbados","BRB","0_no_measures","missing",2020-01-01,2020-03-27
+"47","Barbados","BRB","1_recommended","1_general",2020-03-28,2020-04-02
+"48","Barbados","BRB","3_required","1_general",2020-04-03,2020-05-03
+"49","Barbados","BRB","2_required_exceptions","1_general",2020-05-04,2020-05-31
+"50","Belarus","BLR","0_no_measures","missing",2020-01-01,2020-05-31
+"51","Belgium","BEL","0_no_measures","missing",2020-01-01,2020-03-17
+"52","Belgium","BEL","2_required_exceptions","1_general",2020-03-18,2020-05-31
+"53","Belize","BLZ","0_no_measures","missing",2020-01-01,2020-04-26
+"54","Belize","BLZ","2_required_exceptions","0_targeted",2020-04-27,2020-05-14
+"55","Belize","BLZ","2_required_exceptions","1_general",2020-05-15,2020-05-31
+"56","Benin","BEN","0_no_measures","missing",2020-01-01,2020-05-31
+"57","Bermuda","BMU","0_no_measures","missing",2020-01-01,2020-04-03
+"58","Bermuda","BMU","2_required_exceptions","1_general",2020-04-04,2020-05-01
+"59","Bermuda","BMU","1_recommended","1_general",2020-05-02,2020-05-31
+"60","Bhutan","BTN","0_no_measures","missing",2020-01-01,2020-03-25
+"61","Bhutan","BTN","1_recommended","1_general",2020-03-26,2020-05-31
+"62","Bolivia","BOL","0_no_measures","missing",2020-01-01,2020-03-16
+"63","Bolivia","BOL","2_required_exceptions","1_general",2020-03-17,2020-05-31
+"64","Bosnia and Herzegovina","BIH","0_no_measures","missing",2020-01-01,2020-03-19
+"65","Bosnia and Herzegovina","BIH","3_required","0_targeted",2020-03-20,2020-04-23
+"66","Bosnia and Herzegovina","BIH","2_required_exceptions","1_general",2020-04-24,2020-05-13
+"67","Bosnia and Herzegovina","BIH","2_required_exceptions","0_targeted",2020-05-14,2020-05-20
+"68","Bosnia and Herzegovina","BIH","0_no_measures","missing",2020-05-21,2020-05-31
+"69","Botswana","BWA","0_no_measures","missing",2020-01-01,2020-04-01
+"70","Botswana","BWA","2_required_exceptions","0_targeted",2020-04-02,2020-05-19
+"71","Botswana","BWA","1_recommended","1_general",2020-05-20,2020-05-31
+"72","Brazil","BRA","0_no_measures","missing",2020-01-01,2020-03-12
+"73","Brazil","BRA","1_recommended","0_targeted",2020-03-13,2020-05-04
+"74","Brazil","BRA","2_required_exceptions","0_targeted",2020-05-05,2020-05-31
+"75","British Virgin Islands","VGB","0_no_measures","missing",2020-01-01,2020-03-24
+"76","British Virgin Islands","VGB","2_required_exceptions","1_general",2020-03-25,2020-03-26
+"77","British Virgin Islands","VGB","3_required","1_general",2020-03-27,2020-04-26
+"78","British Virgin Islands","VGB","2_required_exceptions","1_general",2020-04-27,2020-05-31
+"79","Brunei","BRN","0_no_measures","missing",2020-01-01,2020-05-31
+"80","Bulgaria","BGR","0_no_measures","missing",2020-01-01,2020-03-17
+"81","Bulgaria","BGR","2_required_exceptions","0_targeted",2020-03-18,2020-03-31
+"82","Bulgaria","BGR","1_recommended","1_general",2020-04-01,2020-04-14
+"83","Bulgaria","BGR","2_required_exceptions","0_targeted",2020-04-15,2020-05-07
+"84","Bulgaria","BGR","1_recommended","1_general",2020-05-08,2020-05-30
+"85","Bulgaria","BGR","0_no_measures","missing",2020-05-31,2020-05-31
+"86","Burkina Faso","BFA","0_no_measures","missing",2020-01-01,2020-03-20
+"87","Burkina Faso","BFA","2_required_exceptions","1_general",2020-03-21,2020-05-31
+"88","Burundi","BDI","0_no_measures","missing",2020-01-01,2020-03-04
+"89","Burundi","BDI","3_required","1_general",2020-03-05,2020-05-31
+"90","Cambodia","KHM","0_no_measures","missing",2020-01-01,2020-05-31
+"91","Cameroon","CMR","0_no_measures","missing",2020-01-01,2020-05-31
+"92","Canada","CAN","0_no_measures","missing",2020-01-01,2020-03-13
+"93","Canada","CAN","1_recommended","0_targeted",2020-03-14,2020-03-15
+"94","Canada","CAN","1_recommended","1_general",2020-03-16,2020-05-31
+"95","Cape Verde","CPV","0_no_measures","missing",2020-01-01,2020-03-19
+"96","Cape Verde","CPV","1_recommended","0_targeted",2020-03-20,2020-03-31
+"97","Cape Verde","CPV","2_required_exceptions","1_general",2020-04-01,2020-05-31
+"98","Cayman Islands","CYM","0_no_measures","missing",2020-01-01,2020-03-23
+"99","Cayman Islands","CYM","2_required_exceptions","1_general",2020-03-24,2020-03-24
+"100","Cayman Islands","CYM","3_required","1_general",2020-03-25,2020-03-27
+"101","Cayman Islands","CYM","2_required_exceptions","1_general",2020-03-28,2020-04-15
+"102","Cayman Islands","CYM","3_required","1_general",2020-04-16,2020-05-04
+"103","Cayman Islands","CYM","2_required_exceptions","0_targeted",2020-05-05,2020-05-31
+"104","Central African Republic","CAF","0_no_measures","missing",2020-01-01,2020-05-07
+"105","Central African Republic","CAF","2_required_exceptions","1_general",2020-05-08,2020-05-31
+"106","Chad","TCD","0_no_measures","missing",2020-01-01,2020-04-01
+"107","Chad","TCD","2_required_exceptions","0_targeted",2020-04-02,2020-05-31
+"108","Chile","CHL","0_no_measures","missing",2020-01-01,2020-03-24
+"109","Chile","CHL","2_required_exceptions","1_general",2020-03-25,2020-05-14
+"110","Chile","CHL","3_required","0_targeted",2020-05-15,2020-05-31
+"111","China","CHN","0_no_measures","missing",2020-01-01,2020-01-22
+"112","China","CHN","1_recommended","0_targeted",2020-01-23,2020-01-31
+"113","China","CHN","3_required","0_targeted",2020-02-01,2020-04-07
+"114","China","CHN","1_recommended","0_targeted",2020-04-08,2020-05-09
+"115","China","CHN","3_required","0_targeted",2020-05-10,2020-05-31
+"116","Colombia","COL","0_no_measures","missing",2020-01-01,2020-03-24
+"117","Colombia","COL","2_required_exceptions","1_general",2020-03-25,2020-05-31
+"118","Congo","COG","0_no_measures","missing",2020-01-01,2020-03-27
+"119","Congo","COG","3_required","1_general",2020-03-28,2020-05-17
+"120","Congo","COG","2_required_exceptions","1_general",2020-05-18,2020-05-31
+"121","Costa Rica","CRI","0_no_measures","missing",2020-01-01,2020-03-31
+"122","Costa Rica","CRI","1_recommended","1_general",2020-04-01,2020-05-31
+"123","Cote d'Ivoire","CIV","0_no_measures","missing",2020-01-01,2020-03-22
+"124","Cote d'Ivoire","CIV","1_recommended","1_general",2020-03-23,2020-05-31
+"125","Croatia","HRV","0_no_measures","missing",2020-01-01,2020-03-22
+"126","Croatia","HRV","2_required_exceptions","1_general",2020-03-23,2020-05-10
+"127","Croatia","HRV","1_recommended","1_general",2020-05-11,2020-05-31
+"128","Cuba","CUB","0_no_measures","missing",2020-01-01,2020-03-23
+"129","Cuba","CUB","2_required_exceptions","0_targeted",2020-03-24,2020-05-04
+"130","Cuba","CUB","2_required_exceptions","1_general",2020-05-05,2020-05-10
+"131","Cuba","CUB","3_required","1_general",2020-05-11,2020-05-31
+"132","Cyprus","CYP","0_no_measures","missing",2020-01-01,2020-03-23
+"133","Cyprus","CYP","2_required_exceptions","1_general",2020-03-24,2020-05-20
+"134","Cyprus","CYP","1_recommended","1_general",2020-05-21,2020-05-31
+"135","Czech Republic","CZE","0_no_measures","missing",2020-01-01,2020-03-14
+"136","Czech Republic","CZE","2_required_exceptions","1_general",2020-03-15,2020-04-20
+"137","Czech Republic","CZE","1_recommended","1_general",2020-04-21,2020-05-31
+"138","Democratic Republic of Congo","COD","0_no_measures","missing",2020-01-01,2020-04-05
+"139","Democratic Republic of Congo","COD","2_required_exceptions","0_targeted",2020-04-06,2020-05-31
+"140","Denmark","DNK","0_no_measures","missing",2020-01-01,2020-03-02
+"141","Denmark","DNK","1_recommended","1_general",2020-03-03,2020-05-31
+"142","Djibouti","DJI","0_no_measures","missing",2020-01-01,2020-03-22
+"143","Djibouti","DJI","3_required","1_general",2020-03-23,2020-05-16
+"144","Djibouti","DJI","0_no_measures","missing",2020-05-17,2020-05-31
+"145","Dominica","DMA","0_no_measures","missing",2020-01-01,2020-03-31
+"146","Dominica","DMA","2_required_exceptions","1_general",2020-04-01,2020-05-11
+"147","Dominica","DMA","1_recommended","1_general",2020-05-12,2020-05-31
+"148","Dominican Republic","DOM","0_no_measures","missing",2020-01-01,2020-03-16
+"149","Dominican Republic","DOM","1_recommended","1_general",2020-03-17,2020-04-17
+"150","Dominican Republic","DOM","2_required_exceptions","1_general",2020-04-18,2020-04-27
+"151","Dominican Republic","DOM","3_required","1_general",2020-04-28,2020-05-17
+"152","Dominican Republic","DOM","2_required_exceptions","1_general",2020-05-18,2020-05-31
+"153","Ecuador","ECU","0_no_measures","missing",2020-01-01,2020-03-16
+"154","Ecuador","ECU","2_required_exceptions","1_general",2020-03-17,2020-05-31
+"155","Egypt","EGY","0_no_measures","missing",2020-01-01,2020-03-24
+"156","Egypt","EGY","2_required_exceptions","1_general",2020-03-25,2020-05-31
+"157","El Salvador","SLV","0_no_measures","missing",2020-01-01,2020-03-20
+"158","El Salvador","SLV","3_required","1_general",2020-03-21,2020-05-31
+"159","Eritrea","ERI","0_no_measures","missing",2020-01-01,2020-03-22
+"160","Eritrea","ERI","1_recommended","1_general",2020-03-23,2020-03-31
+"161","Eritrea","ERI","2_required_exceptions","1_general",2020-04-01,2020-05-31
+"162","Estonia","EST","0_no_measures","missing",2020-01-01,2020-03-28
+"163","Estonia","EST","2_required_exceptions","0_targeted",2020-03-29,2020-05-17
+"164","Estonia","EST","0_no_measures","missing",2020-05-18,2020-05-31
+"165","Eswatini","SWZ","0_no_measures","missing",2020-01-01,2020-03-26
+"166","Eswatini","SWZ","2_required_exceptions","1_general",2020-03-27,2020-05-31
+"167","Ethiopia","ETH","0_no_measures","missing",2020-01-01,2020-04-07
+"168","Ethiopia","ETH","1_recommended","1_general",2020-04-08,2020-05-31
+"169","Falkland Islands","FLK","0_no_measures","missing",2020-01-01,2020-03-25
+"170","Falkland Islands","FLK","1_recommended","1_general",2020-03-26,2020-05-10
+"171","Falkland Islands","FLK","0_no_measures","missing",2020-05-11,2020-05-31
+"172","Fiji","FJI","0_no_measures","missing",2020-01-01,2020-03-18
+"173","Fiji","FJI","2_required_exceptions","0_targeted",2020-03-19,2020-03-29
+"174","Fiji","FJI","2_required_exceptions","1_general",2020-03-30,2020-05-31
+"175","Finland","FIN","0_no_measures","missing",2020-01-01,2020-03-15
+"176","Finland","FIN","1_recommended","1_general",2020-03-16,2020-05-31
+"177","France","FRA","0_no_measures","missing",2020-01-01,2020-03-16
+"178","France","FRA","2_required_exceptions","1_general",2020-03-17,2020-05-10
+"179","France","FRA","1_recommended","1_general",2020-05-11,2020-05-31
+"180","Gabon","GAB","0_no_measures","missing",2020-01-01,2020-03-20
+"181","Gabon","GAB","1_recommended","1_general",2020-03-21,2020-04-09
+"182","Gabon","GAB","2_required_exceptions","0_targeted",2020-04-10,2020-05-10
+"183","Gabon","GAB","1_recommended","1_general",2020-05-11,2020-05-31
+"184","Gambia","GMB","0_no_measures","missing",2020-01-01,2020-03-17
+"185","Gambia","GMB","1_recommended","1_general",2020-03-18,2020-05-31
+"186","Georgia","GEO","0_no_measures","missing",2020-01-01,2020-03-08
+"187","Georgia","GEO","1_recommended","1_general",2020-03-09,2020-03-22
+"188","Georgia","GEO","2_required_exceptions","0_targeted",2020-03-23,2020-03-25
+"189","Georgia","GEO","2_required_exceptions","1_general",2020-03-26,2020-03-30
+"190","Georgia","GEO","3_required","1_general",2020-03-31,2020-05-22
+"191","Georgia","GEO","1_recommended","1_general",2020-05-23,2020-05-28
+"192","Georgia","GEO","2_required_exceptions","0_targeted",2020-05-29,2020-05-31
+"193","Germany","DEU","0_no_measures","missing",2020-01-01,2020-03-08
+"194","Germany","DEU","1_recommended","1_general",2020-03-09,2020-03-20
+"195","Germany","DEU","2_required_exceptions","0_targeted",2020-03-21,2020-05-05
+"196","Germany","DEU","0_no_measures","missing",2020-05-06,2020-05-31
+"197","Ghana","GHA","0_no_measures","missing",2020-01-01,2020-03-29
+"198","Ghana","GHA","2_required_exceptions","1_general",2020-03-30,2020-04-17
+"199","Ghana","GHA","2_required_exceptions","0_targeted",2020-04-18,2020-04-18
+"200","Ghana","GHA","0_no_measures","missing",2020-04-19,2020-05-31
+"201","Gibraltar","GIB","0_no_measures","missing",2020-01-01,2020-03-16
+"202","Gibraltar","GIB","3_required","1_general",2020-03-17,2020-04-28
+"203","Gibraltar","GIB","2_required_exceptions","1_general",2020-04-29,2020-05-21
+"204","Gibraltar","GIB","0_no_measures","missing",2020-05-22,2020-05-31
+"205","Greece","GRC","0_no_measures","missing",2020-01-01,2020-03-22
+"206","Greece","GRC","2_required_exceptions","1_general",2020-03-23,2020-05-29
+"207","Greece","GRC","1_recommended","1_general",2020-05-30,2020-05-31
+"208","Greenland","GRL","0_no_measures","missing",2020-01-01,2020-03-17
+"209","Greenland","GRL","1_recommended","1_general",2020-03-18,2020-05-31
+"210","Guam","GUM","0_no_measures","missing",2020-01-01,2020-03-15
+"211","Guam","GUM","1_recommended","1_general",2020-03-16,2020-05-31
+"212","Guatemala","GTM","0_no_measures","missing",2020-01-01,2020-03-21
+"213","Guatemala","GTM","2_required_exceptions","1_general",2020-03-22,2020-05-31
+"214","Guinea","GIN","0_no_measures","missing",2020-01-01,2020-03-29
+"215","Guinea","GIN","2_required_exceptions","1_general",2020-03-30,2020-05-31
+"216","Guyana","GUY","0_no_measures","missing",2020-01-01,2020-03-25
+"217","Guyana","GUY","1_recommended","1_general",2020-03-26,2020-04-02
+"218","Guyana","GUY","2_required_exceptions","1_general",2020-04-03,2020-05-31
+"219","Haiti","HTI","0_no_measures","missing",2020-01-01,2020-03-18
+"220","Haiti","HTI","1_recommended","1_general",2020-03-19,2020-05-31
+"221","Honduras","HND","0_no_measures","missing",2020-01-01,2020-03-15
+"222","Honduras","HND","3_required","1_general",2020-03-16,2020-05-31
+"223","Hong Kong","HKG","0_no_measures","missing",2020-01-01,2020-02-07
+"224","Hong Kong","HKG","1_recommended","1_general",2020-02-08,2020-05-31
+"225","Hungary","HUN","0_no_measures","missing",2020-01-01,2020-03-11
+"226","Hungary","HUN","1_recommended","1_general",2020-03-12,2020-03-26
+"227","Hungary","HUN","2_required_exceptions","1_general",2020-03-27,2020-05-03
+"228","Hungary","HUN","2_required_exceptions","0_targeted",2020-05-04,2020-05-17
+"229","Hungary","HUN","1_recommended","1_general",2020-05-18,2020-05-31
+"230","Iceland","ISL","0_no_measures","missing",2020-01-01,2020-05-31
+"231","India","IND","0_no_measures","missing",2020-01-01,2020-01-25
+"232","India","IND","1_recommended","0_targeted",2020-01-26,2020-03-21
+"233","India","IND","3_required","1_general",2020-03-22,2020-03-22
+"234","India","IND","3_required","0_targeted",2020-03-23,2020-03-24
+"235","India","IND","3_required","1_general",2020-03-25,2020-05-03
+"236","India","IND","2_required_exceptions","0_targeted",2020-05-04,2020-05-31
+"237","Indonesia","IDN","0_no_measures","missing",2020-01-01,2020-04-09
+"238","Indonesia","IDN","2_required_exceptions","0_targeted",2020-04-10,2020-05-31
+"239","Iran","IRN","0_no_measures","missing",2020-01-01,2020-03-18
+"240","Iran","IRN","1_recommended","1_general",2020-03-19,2020-05-31
+"241","Iraq","IRQ","0_no_measures","missing",2020-01-01,2020-03-12
+"242","Iraq","IRQ","2_required_exceptions","0_targeted",2020-03-13,2020-03-25
+"243","Iraq","IRQ","2_required_exceptions","1_general",2020-03-26,2020-05-31
+"244","Ireland","IRL","0_no_measures","missing",2020-01-01,2020-03-25
+"245","Ireland","IRL","1_recommended","1_general",2020-03-26,2020-03-27
+"246","Ireland","IRL","2_required_exceptions","1_general",2020-03-28,2020-05-17
+"247","Ireland","IRL","1_recommended","1_general",2020-05-18,2020-05-31
+"248","Israel","ISR","0_no_measures","missing",2020-01-01,2020-03-16
+"249","Israel","ISR","1_recommended","1_general",2020-03-17,2020-03-19
+"250","Israel","ISR","2_required_exceptions","1_general",2020-03-20,2020-04-07
+"251","Israel","ISR","3_required","1_general",2020-04-08,2020-04-18
+"252","Israel","ISR","2_required_exceptions","1_general",2020-04-19,2020-05-31
+"253","Italy","ITA","0_no_measures","missing",2020-01-01,2020-02-22
+"254","Italy","ITA","2_required_exceptions","0_targeted",2020-02-23,2020-03-09
+"255","Italy","ITA","2_required_exceptions","1_general",2020-03-10,2020-03-19
+"256","Italy","ITA","3_required","1_general",2020-03-20,2020-04-09
+"257","Italy","ITA","2_required_exceptions","1_general",2020-04-10,2020-05-03
+"258","Italy","ITA","1_recommended","1_general",2020-05-04,2020-05-31
+"259","Jamaica","JAM","0_no_measures","missing",2020-01-01,2020-03-12
+"260","Jamaica","JAM","3_required","0_targeted",2020-03-13,2020-03-24
+"261","Jamaica","JAM","1_recommended","1_general",2020-03-25,2020-03-31
+"262","Jamaica","JAM","2_required_exceptions","1_general",2020-04-01,2020-04-14
+"263","Jamaica","JAM","3_required","0_targeted",2020-04-15,2020-04-21
+"264","Jamaica","JAM","2_required_exceptions","1_general",2020-04-22,2020-05-31
+"265","Japan","JPN","0_no_measures","missing",2020-01-01,2020-04-06
+"266","Japan","JPN","1_recommended","0_targeted",2020-04-07,2020-04-15
+"267","Japan","JPN","1_recommended","1_general",2020-04-16,2020-05-13
+"268","Japan","JPN","1_recommended","0_targeted",2020-05-14,2020-05-24
+"269","Japan","JPN","0_no_measures","missing",2020-05-25,2020-05-31
+"270","Jordan","JOR","0_no_measures","missing",2020-01-01,2020-03-17
+"271","Jordan","JOR","3_required","1_general",2020-03-18,2020-04-26
+"272","Jordan","JOR","2_required_exceptions","1_general",2020-04-27,2020-05-11
+"273","Jordan","JOR","1_recommended","1_general",2020-05-12,2020-05-31
+"274","Kazakhstan","KAZ","0_no_measures","missing",2020-01-01,2020-03-18
+"275","Kazakhstan","KAZ","3_required","0_targeted",2020-03-19,2020-05-10
+"276","Kazakhstan","KAZ","2_required_exceptions","0_targeted",2020-05-11,2020-05-31
+"277","Kenya","KEN","0_no_measures","missing",2020-01-01,2020-03-26
+"278","Kenya","KEN","2_required_exceptions","1_general",2020-03-27,2020-04-05
+"279","Kenya","KEN","3_required","0_targeted",2020-04-06,2020-05-03
+"280","Kenya","KEN","3_required","1_general",2020-05-04,2020-05-31
+"281","Kosovo","RKS","0_no_measures","missing",2020-01-01,2020-03-12
+"282","Kosovo","RKS","2_required_exceptions","0_targeted",2020-03-13,2020-03-23
+"283","Kosovo","RKS","2_required_exceptions","1_general",2020-03-24,2020-05-31
+"284","Kuwait","KWT","0_no_measures","missing",2020-01-01,2020-03-21
+"285","Kuwait","KWT","2_required_exceptions","1_general",2020-03-22,2020-04-05
+"286","Kuwait","KWT","3_required","0_targeted",2020-04-06,2020-04-20
+"287","Kuwait","KWT","2_required_exceptions","1_general",2020-04-21,2020-05-09
+"288","Kuwait","KWT","3_required","1_general",2020-05-10,2020-05-30
+"289","Kuwait","KWT","3_required","0_targeted",2020-05-31,2020-05-31
+"290","Kyrgyz Republic","KGZ","0_no_measures","missing",2020-01-01,2020-03-13
+"291","Kyrgyz Republic","KGZ","1_recommended","1_general",2020-03-14,2020-03-24
+"292","Kyrgyz Republic","KGZ","3_required","0_targeted",2020-03-25,2020-05-10
+"293","Kyrgyz Republic","KGZ","2_required_exceptions","0_targeted",2020-05-11,2020-05-31
+"294","Laos","LAO","0_no_measures","missing",2020-01-01,2020-03-29
+"295","Laos","LAO","2_required_exceptions","1_general",2020-03-30,2020-05-03
+"296","Laos","LAO","0_no_measures","missing",2020-05-04,2020-05-31
+"297","Latvia","LVA","0_no_measures","missing",2020-01-01,2020-03-12
+"298","Latvia","LVA","1_recommended","1_general",2020-03-13,2020-05-31
+"299","Lebanon","LBN","0_no_measures","missing",2020-01-01,2020-03-15
+"300","Lebanon","LBN","1_recommended","1_general",2020-03-16,2020-03-17
+"301","Lebanon","LBN","2_required_exceptions","1_general",2020-03-18,2020-05-02
+"302","Lebanon","LBN","1_recommended","1_general",2020-05-03,2020-05-12
+"303","Lebanon","LBN","2_required_exceptions","1_general",2020-05-13,2020-05-17
+"304","Lebanon","LBN","1_recommended","1_general",2020-05-18,2020-05-31
+"305","Lesotho","LSO","0_no_measures","missing",2020-01-01,2020-03-17
+"306","Lesotho","LSO","2_required_exceptions","1_general",2020-03-18,2020-05-05
+"307","Lesotho","LSO","1_recommended","1_general",2020-05-06,2020-05-31
+"308","Liberia","LBR","0_no_measures","missing",2020-01-01,2020-03-20
+"309","Liberia","LBR","2_required_exceptions","0_targeted",2020-03-21,2020-04-07
+"310","Liberia","LBR","2_required_exceptions","1_general",2020-04-08,2020-05-31
+"311","Libya","LBY","0_no_measures","missing",2020-01-01,2020-03-21
+"312","Libya","LBY","2_required_exceptions","1_general",2020-03-22,2020-03-23
+"313","Libya","LBY","3_required","0_targeted",2020-03-24,2020-04-07
+"314","Libya","LBY","2_required_exceptions","1_general",2020-04-08,2020-04-16
+"315","Libya","LBY","3_required","1_general",2020-04-17,2020-05-27
+"316","Libya","LBY","2_required_exceptions","1_general",2020-05-28,2020-05-31
+"317","Lithuania","LTU","0_no_measures","missing",2020-01-01,2020-03-15
+"318","Lithuania","LTU","1_recommended","1_general",2020-03-16,2020-05-31
+"319","Luxembourg","LUX","0_no_measures","missing",2020-01-01,2020-03-16
+"320","Luxembourg","LUX","2_required_exceptions","1_general",2020-03-17,2020-04-19
+"321","Luxembourg","LUX","1_recommended","1_general",2020-04-20,2020-05-31
+"322","Macao","MAC","0_no_measures","missing",2020-01-01,2020-05-31
+"323","Madagascar","MDG","0_no_measures","missing",2020-01-01,2020-03-22
+"324","Madagascar","MDG","3_required","0_targeted",2020-03-23,2020-04-19
+"325","Madagascar","MDG","1_recommended","1_general",2020-04-20,2020-05-11
+"326","Madagascar","MDG","2_required_exceptions","0_targeted",2020-05-12,2020-05-31
+"327","Malawi","MWI","0_no_measures","missing",2020-01-01,2020-04-17
+"328","Malawi","MWI","1_recommended","1_general",2020-04-18,2020-05-31
+"329","Malaysia","MYS","0_no_measures","missing",2020-01-01,2020-03-17
+"330","Malaysia","MYS","1_recommended","1_general",2020-03-18,2020-05-31
+"331","Mali","MLI","0_no_measures","missing",2020-01-01,2020-03-24
+"332","Mali","MLI","1_recommended","1_general",2020-03-25,2020-05-09
+"333","Mali","MLI","0_no_measures","missing",2020-05-10,2020-05-31
+"334","Mauritania","MRT","0_no_measures","missing",2020-01-01,2020-03-18
+"335","Mauritania","MRT","2_required_exceptions","1_general",2020-03-19,2020-05-31
+"336","Mauritius","MUS","0_no_measures","missing",2020-01-01,2020-03-22
+"337","Mauritius","MUS","2_required_exceptions","1_general",2020-03-23,2020-05-29
+"338","Mauritius","MUS","0_no_measures","missing",2020-05-30,2020-05-31
+"339","Mexico","MEX","0_no_measures","missing",2020-01-01,2020-03-29
+"340","Mexico","MEX","2_required_exceptions","1_general",2020-03-30,2020-05-31
+"341","Moldova","MDA","0_no_measures","missing",2020-01-01,2020-03-23
+"342","Moldova","MDA","2_required_exceptions","1_general",2020-03-24,2020-05-15
+"343","Moldova","MDA","1_recommended","1_general",2020-05-16,2020-05-31
+"344","Mongolia","MNG","0_no_measures","missing",2020-01-01,2020-05-04
+"345","Mongolia","MNG","3_required","0_targeted",2020-05-05,2020-05-07
+"346","Mongolia","MNG","0_no_measures","missing",2020-05-08,2020-05-31
+"347","Montserrat","MSR",NA,"missing",2020-01-01,2020-03-17
+"348","Montserrat","MSR","2_required_exceptions","1_general",2020-03-18,2020-04-10
+"349","Montserrat","MSR","3_required","1_general",2020-04-11,2020-04-19
+"350","Montserrat","MSR","2_required_exceptions","1_general",2020-04-20,2020-04-22
+"351","Montserrat","MSR","3_required","1_general",2020-04-23,2020-04-30
+"352","Montserrat","MSR","2_required_exceptions","1_general",2020-05-01,2020-05-31
+"353","Morocco","MAR","0_no_measures","missing",2020-01-01,2020-03-19
+"354","Morocco","MAR","2_required_exceptions","1_general",2020-03-20,2020-05-31
+"355","Mozambique","MOZ","0_no_measures","missing",2020-01-01,2020-03-31
+"356","Mozambique","MOZ","1_recommended","1_general",2020-04-01,2020-05-31
+"357","Myanmar","MMR","0_no_measures","missing",2020-01-01,2020-04-03
+"358","Myanmar","MMR","1_recommended","1_general",2020-04-04,2020-04-13
+"359","Myanmar","MMR","2_required_exceptions","0_targeted",2020-04-14,2020-05-31
+"360","Namibia","NAM","0_no_measures","missing",2020-01-01,2020-03-26
+"361","Namibia","NAM","2_required_exceptions","0_targeted",2020-03-27,2020-05-06
+"362","Namibia","NAM","1_recommended","1_general",2020-05-07,2020-05-31
+"363","Nepal","NPL","0_no_measures","missing",2020-01-01,2020-03-19
+"364","Nepal","NPL","1_recommended","1_general",2020-03-20,2020-03-22
+"365","Nepal","NPL","2_required_exceptions","0_targeted",2020-03-23,2020-03-23
+"366","Nepal","NPL","2_required_exceptions","1_general",2020-03-24,2020-05-31
+"367","Netherlands","NLD","0_no_measures","missing",2020-01-01,2020-03-05
+"368","Netherlands","NLD","1_recommended","0_targeted",2020-03-06,2020-03-11
+"369","Netherlands","NLD","1_recommended","1_general",2020-03-12,2020-03-22
+"370","Netherlands","NLD","2_required_exceptions","1_general",2020-03-23,2020-05-10
+"371","Netherlands","NLD","1_recommended","1_general",2020-05-11,2020-05-31
+"372","New Zealand","NZL","0_no_measures","missing",2020-01-01,2020-03-20
+"373","New Zealand","NZL","1_recommended","1_general",2020-03-21,2020-03-22
+"374","New Zealand","NZL","2_required_exceptions","1_general",2020-03-23,2020-05-13
+"375","New Zealand","NZL","0_no_measures","missing",2020-05-14,2020-05-31
+"376","Nicaragua","NIC","0_no_measures","missing",2020-01-01,2020-05-31
+"377","Niger","NER","0_no_measures","missing",2020-01-01,2020-05-31
+"378","Nigeria","NGA","0_no_measures","missing",2020-01-01,2020-03-22
+"379","Nigeria","NGA","1_recommended","0_targeted",2020-03-23,2020-03-28
+"380","Nigeria","NGA","2_required_exceptions","0_targeted",2020-03-29,2020-05-03
+"381","Nigeria","NGA","1_recommended","1_general",2020-05-04,2020-05-31
+"382","Norway","NOR","0_no_measures","missing",2020-01-01,2020-05-31
+"383","Oman","OMN","0_no_measures","missing",2020-01-01,2020-04-09
+"384","Oman","OMN","2_required_exceptions","1_general",2020-04-10,2020-04-29
+"385","Oman","OMN","2_required_exceptions","0_targeted",2020-04-30,2020-05-20
+"386","Oman","OMN","1_recommended","1_general",2020-05-21,2020-05-31
+"387","Pakistan","PAK","0_no_measures","missing",2020-01-01,2020-03-22
+"388","Pakistan","PAK","2_required_exceptions","1_general",2020-03-23,2020-05-16
+"389","Pakistan","PAK","2_required_exceptions","0_targeted",2020-05-17,2020-05-31
+"390","Palestine","PSE","0_no_measures","missing",2020-01-01,2020-03-21
+"391","Palestine","PSE","2_required_exceptions","1_general",2020-03-22,2020-05-25
+"392","Palestine","PSE","2_required_exceptions","0_targeted",2020-05-26,2020-05-31
+"393","Panama","PAN","0_no_measures","missing",2020-01-01,2020-03-16
+"394","Panama","PAN","1_recommended","1_general",2020-03-17,2020-03-31
+"395","Panama","PAN","2_required_exceptions","1_general",2020-04-01,2020-05-31
+"396","Papua New Guinea","PNG","0_no_measures","missing",2020-01-01,2020-04-07
+"397","Papua New Guinea","PNG","2_required_exceptions","0_targeted",2020-04-08,2020-04-26
+"398","Papua New Guinea","PNG","1_recommended","0_targeted",2020-04-27,2020-05-31
+"399","Paraguay","PRY","0_no_measures","missing",2020-01-01,2020-03-09
+"400","Paraguay","PRY","1_recommended","1_general",2020-03-10,2020-03-16
+"401","Paraguay","PRY","2_required_exceptions","1_general",2020-03-17,2020-04-08
+"402","Paraguay","PRY","3_required","1_general",2020-04-09,2020-05-24
+"403","Paraguay","PRY","2_required_exceptions","1_general",2020-05-25,2020-05-31
+"404","Peru","PER","0_no_measures","missing",2020-01-01,2020-03-14
+"405","Peru","PER","2_required_exceptions","1_general",2020-03-15,2020-03-17
+"406","Peru","PER","3_required","1_general",2020-03-18,2020-05-10
+"407","Peru","PER","2_required_exceptions","1_general",2020-05-11,2020-05-31
+"408","Philippines","PHL","0_no_measures","missing",2020-01-01,2020-03-14
+"409","Philippines","PHL","2_required_exceptions","0_targeted",2020-03-15,2020-03-17
+"410","Philippines","PHL","3_required","1_general",2020-03-18,2020-04-30
+"411","Philippines","PHL","2_required_exceptions","1_general",2020-05-01,2020-05-28
+"412","Philippines","PHL","1_recommended","1_general",2020-05-29,2020-05-31
+"413","Pitcairn Islands","PCN",NA,"missing",2020-01-01,2020-05-31
+"414","Poland","POL","0_no_measures","missing",2020-01-01,2020-03-30
+"415","Poland","POL","2_required_exceptions","1_general",2020-03-31,2020-04-08
+"416","Poland","POL","1_recommended","1_general",2020-04-09,2020-05-29
+"417","Poland","POL","0_no_measures","missing",2020-05-30,2020-05-31
+"418","Portugal","PRT","0_no_measures","missing",2020-01-01,2020-03-18
+"419","Portugal","PRT","2_required_exceptions","1_general",2020-03-19,2020-05-03
+"420","Portugal","PRT","1_recommended","1_general",2020-05-04,2020-05-31
+"421","Puerto Rico","PRI","0_no_measures","missing",2020-01-01,2020-03-14
+"422","Puerto Rico","PRI","2_required_exceptions","1_general",2020-03-15,2020-05-31
+"423","Qatar","QAT","0_no_measures","missing",2020-01-01,2020-03-16
+"424","Qatar","QAT","1_recommended","1_general",2020-03-17,2020-05-31
+"425","Romania","ROU","0_no_measures","missing",2020-01-01,2020-03-11
+"426","Romania","ROU","1_recommended","1_general",2020-03-12,2020-03-24
+"427","Romania","ROU","2_required_exceptions","1_general",2020-03-25,2020-05-14
+"428","Romania","ROU","1_recommended","1_general",2020-05-15,2020-05-31
+"429","Russia","RUS","0_no_measures","missing",2020-01-01,2020-03-04
+"430","Russia","RUS","2_required_exceptions","0_targeted",2020-03-05,2020-03-18
+"431","Russia","RUS","2_required_exceptions","1_general",2020-03-19,2020-03-29
+"432","Russia","RUS","3_required","0_targeted",2020-03-30,2020-05-31
+"433","Rwanda","RWA","0_no_measures","missing",2020-01-01,2020-03-20
+"434","Rwanda","RWA","2_required_exceptions","1_general",2020-03-21,2020-05-03
+"435","Rwanda","RWA","1_recommended","1_general",2020-05-04,2020-05-31
+"436","San Marino","SMR","0_no_measures","missing",2020-01-01,2020-03-07
+"437","San Marino","SMR","1_recommended","1_general",2020-03-08,2020-04-09
+"438","San Marino","SMR","2_required_exceptions","1_general",2020-04-10,2020-05-02
+"439","San Marino","SMR","1_recommended","1_general",2020-05-03,2020-05-31
+"440","Saudi Arabia","SAU","0_no_measures","missing",2020-01-01,2020-03-22
+"441","Saudi Arabia","SAU","2_required_exceptions","1_general",2020-03-23,2020-04-05
+"442","Saudi Arabia","SAU","3_required","0_targeted",2020-04-06,2020-05-22
+"443","Saudi Arabia","SAU","3_required","1_general",2020-05-23,2020-05-30
+"444","Saudi Arabia","SAU","1_recommended","0_targeted",2020-05-31,2020-05-31
+"445","Senegal","SEN","0_no_measures","missing",2020-01-01,2020-03-24
+"446","Senegal","SEN","3_required","1_general",2020-03-25,2020-05-31
+"447","Serbia","SRB","0_no_measures","missing",2020-01-01,2020-03-14
+"448","Serbia","SRB","2_required_exceptions","1_general",2020-03-15,2020-03-17
+"449","Serbia","SRB","3_required","1_general",2020-03-18,2020-05-16
+"450","Serbia","SRB","1_recommended","1_general",2020-05-17,2020-05-31
+"451","Seychelles","SYC","0_no_measures","missing",2020-01-01,2020-04-07
+"452","Seychelles","SYC","2_required_exceptions","1_general",2020-04-08,2020-05-03
+"453","Seychelles","SYC","1_recommended","1_general",2020-05-04,2020-05-31
+"454","Sierra Leone","SLE","0_no_measures","missing",2020-01-01,2020-04-04
+"455","Sierra Leone","SLE","3_required","1_general",2020-04-05,2020-04-07
+"456","Sierra Leone","SLE","2_required_exceptions","1_general",2020-04-08,2020-04-25
+"457","Sierra Leone","SLE","1_recommended","1_general",2020-04-26,2020-05-02
+"458","Sierra Leone","SLE","3_required","1_general",2020-05-03,2020-05-05
+"459","Sierra Leone","SLE","1_recommended","1_general",2020-05-06,2020-05-31
+"460","Singapore","SGP","0_no_measures","missing",2020-01-01,2020-04-02
+"461","Singapore","SGP","1_recommended","1_general",2020-04-03,2020-04-07
+"462","Singapore","SGP","2_required_exceptions","1_general",2020-04-08,2020-05-31
+"463","Slovak Republic","SVK","0_no_measures","missing",2020-01-01,2020-03-11
+"464","Slovak Republic","SVK","1_recommended","1_general",2020-03-12,2020-04-07
+"465","Slovak Republic","SVK","2_required_exceptions","1_general",2020-04-08,2020-04-13
+"466","Slovak Republic","SVK","1_recommended","1_general",2020-04-14,2020-05-31
+"467","Slovenia","SVN","0_no_measures","missing",2020-01-01,2020-03-13
+"468","Slovenia","SVN","1_recommended","1_general",2020-03-14,2020-05-13
+"469","Slovenia","SVN","0_no_measures","missing",2020-05-14,2020-05-31
+"470","Solomon Islands","SLB","0_no_measures","missing",2020-01-01,2020-05-31
+"471","Somalia","SOM","0_no_measures","missing",2020-01-01,2020-04-10
+"472","Somalia","SOM","1_recommended","1_general",2020-04-11,2020-05-31
+"473","South Africa","ZAF","0_no_measures","missing",2020-01-01,2020-03-25
+"474","South Africa","ZAF","2_required_exceptions","1_general",2020-03-26,2020-05-31
+"475","South Korea","KOR","0_no_measures","missing",2020-01-01,2020-02-22
+"476","South Korea","KOR","1_recommended","0_targeted",2020-02-23,2020-03-20
+"477","South Korea","KOR","2_required_exceptions","1_general",2020-03-21,2020-04-17
+"478","South Korea","KOR","1_recommended","1_general",2020-04-18,2020-04-19
+"479","South Korea","KOR","0_no_measures","missing",2020-04-20,2020-05-28
+"480","South Korea","KOR","1_recommended","0_targeted",2020-05-29,2020-05-31
+"481","South Sudan","SSD","0_no_measures","missing",2020-01-01,2020-03-23
+"482","South Sudan","SSD","1_recommended","1_general",2020-03-24,2020-04-17
+"483","South Sudan","SSD","2_required_exceptions","0_targeted",2020-04-18,2020-05-06
+"484","South Sudan","SSD","2_required_exceptions","1_general",2020-05-07,2020-05-28
+"485","South Sudan","SSD","2_required_exceptions","0_targeted",2020-05-29,2020-05-31
+"486","Spain","ESP","0_no_measures","missing",2020-01-01,2020-03-13
+"487","Spain","ESP","2_required_exceptions","1_general",2020-03-14,2020-05-26
+"488","Spain","ESP","1_recommended","1_general",2020-05-27,2020-05-31
+"489","Sri Lanka","LKA","0_no_measures","missing",2020-01-01,2020-03-17
+"490","Sri Lanka","LKA","3_required","0_targeted",2020-03-18,2020-03-19
+"491","Sri Lanka","LKA","3_required","1_general",2020-03-20,2020-04-19
+"492","Sri Lanka","LKA","3_required","0_targeted",2020-04-20,2020-04-23
+"493","Sri Lanka","LKA","3_required","1_general",2020-04-24,2020-05-10
+"494","Sri Lanka","LKA","2_required_exceptions","1_general",2020-05-11,2020-05-31
+"495","Sudan","SDN","0_no_measures","missing",2020-01-01,2020-03-22
+"496","Sudan","SDN","1_recommended","1_general",2020-03-23,2020-04-17
+"497","Sudan","SDN","2_required_exceptions","0_targeted",2020-04-18,2020-05-28
+"498","Sudan","SDN","2_required_exceptions","1_general",2020-05-29,2020-05-31
+"499","Suriname","SUR","0_no_measures","missing",2020-01-01,2020-03-27
+"500","Suriname","SUR","2_required_exceptions","1_general",2020-03-28,2020-05-23
+"501","Suriname","SUR","1_recommended","1_general",2020-05-24,2020-05-25
+"502","Suriname","SUR","2_required_exceptions","0_targeted",2020-05-26,2020-05-31
+"503","Sweden","SWE","0_no_measures","missing",2020-01-01,2020-05-31
+"504","Switzerland","CHE","0_no_measures","missing",2020-01-01,2020-03-16
+"505","Switzerland","CHE","1_recommended","1_general",2020-03-17,2020-05-31
+"506","Syria","SYR","0_no_measures","missing",2020-01-01,2020-04-16
+"507","Syria","SYR","2_required_exceptions","0_targeted",2020-04-17,2020-05-24
+"508","Syria","SYR","1_recommended","1_general",2020-05-25,2020-05-31
+"509","Taiwan","TWN","0_no_measures","missing",2020-01-01,2020-05-31
+"510","Tajikistan","TJK","0_no_measures","missing",2020-01-01,2020-05-08
+"511","Tajikistan","TJK","2_required_exceptions","0_targeted",2020-05-09,2020-05-11
+"512","Tajikistan","TJK","1_recommended","1_general",2020-05-12,2020-05-31
+"513","Tanzania","TZA","0_no_measures","missing",2020-01-01,2020-05-31
+"514","Thailand","THA","0_no_measures","missing",2020-01-01,2020-03-20
+"515","Thailand","THA","1_recommended","1_general",2020-03-21,2020-05-31
+"516","Timor-Leste","TLS","0_no_measures","missing",2020-01-01,2020-03-27
+"517","Timor-Leste","TLS","1_recommended","1_general",2020-03-28,2020-05-31
+"518","Togo","TGO","0_no_measures","missing",2020-01-01,2020-03-19
+"519","Togo","TGO","1_recommended","1_general",2020-03-20,2020-04-01
+"520","Togo","TGO","2_required_exceptions","1_general",2020-04-02,2020-05-31
+"521","Trinidad and Tobago","TTO","0_no_measures","missing",2020-01-01,2020-03-29
+"522","Trinidad and Tobago","TTO","2_required_exceptions","1_general",2020-03-30,2020-05-31
+"523","Tunisia","TUN","0_no_measures","missing",2020-01-01,2020-03-19
+"524","Tunisia","TUN","2_required_exceptions","1_general",2020-03-20,2020-05-14
+"525","Tunisia","TUN","1_recommended","1_general",2020-05-15,2020-05-31
+"526","Turkey","TUR","0_no_measures","missing",2020-01-01,2020-03-08
+"527","Turkey","TUR","1_recommended","1_general",2020-03-09,2020-03-20
+"528","Turkey","TUR","2_required_exceptions","1_general",2020-03-21,2020-04-10
+"529","Turkey","TUR","3_required","0_targeted",2020-04-11,2020-04-12
+"530","Turkey","TUR","2_required_exceptions","1_general",2020-04-13,2020-04-17
+"531","Turkey","TUR","3_required","0_targeted",2020-04-18,2020-04-19
+"532","Turkey","TUR","2_required_exceptions","1_general",2020-04-20,2020-05-31
+"533","Turkmenistan","TKM","0_no_measures","missing",2020-01-01,2020-05-31
+"534","Turks and Caicos Islands","TCA","0_no_measures","missing",2020-01-01,2020-03-25
+"535","Turks and Caicos Islands","TCA","2_required_exceptions","1_general",2020-03-26,2020-05-31
+"536","Uganda","UGA","0_no_measures","missing",2020-01-01,2020-03-29
+"537","Uganda","UGA","2_required_exceptions","1_general",2020-03-30,2020-05-17
+"538","Uganda","UGA","1_recommended","1_general",2020-05-18,2020-05-31
+"539","Ukraine","UKR","0_no_measures","missing",2020-01-01,2020-03-15
+"540","Ukraine","UKR","1_recommended","1_general",2020-03-16,2020-04-02
+"541","Ukraine","UKR","2_required_exceptions","1_general",2020-04-03,2020-05-31
+"542","United Arab Emirates","ARE","0_no_measures","missing",2020-01-01,2020-03-12
+"543","United Arab Emirates","ARE","1_recommended","0_targeted",2020-03-13,2020-03-22
+"544","United Arab Emirates","ARE","2_required_exceptions","1_general",2020-03-23,2020-05-14
+"545","United Arab Emirates","ARE","1_recommended","0_targeted",2020-05-15,2020-05-17
+"546","United Arab Emirates","ARE","0_no_measures","missing",2020-05-18,2020-05-31
+"547","United Kingdom","GBR","0_no_measures","missing",2020-01-01,2020-03-22
+"548","United Kingdom","GBR","2_required_exceptions","1_general",2020-03-23,2020-05-12
+"549","United Kingdom","GBR","1_recommended","1_general",2020-05-13,2020-05-31
+"550","United States","USA","0_no_measures","missing",2020-01-01,2020-03-14
+"551","United States","USA","2_required_exceptions","0_targeted",2020-03-15,2020-05-31
+"552","Uruguay","URY","0_no_measures","missing",2020-01-01,2020-03-12
+"553","Uruguay","URY","1_recommended","1_general",2020-03-13,2020-04-01
+"554","Uruguay","URY","2_required_exceptions","1_general",2020-04-02,2020-04-12
+"555","Uruguay","URY","1_recommended","1_general",2020-04-13,2020-05-31
+"556","Uzbekistan","UZB","0_no_measures","missing",2020-01-01,2020-03-26
+"557","Uzbekistan","UZB","2_required_exceptions","1_general",2020-03-27,2020-05-07
+"558","Uzbekistan","UZB","2_required_exceptions","0_targeted",2020-05-08,2020-05-31
+"559","Vanuatu","VUT","0_no_measures","missing",2020-01-01,2020-03-25
+"560","Vanuatu","VUT","1_recommended","1_general",2020-03-26,2020-05-31
+"561","Venezuela","VEN","0_no_measures","missing",2020-01-01,2020-03-12
+"562","Venezuela","VEN","2_required_exceptions","1_general",2020-03-13,2020-05-31
+"563","Vietnam","VNM","0_no_measures","missing",2020-01-01,2020-03-31
+"564","Vietnam","VNM","2_required_exceptions","1_general",2020-04-01,2020-04-14
+"565","Vietnam","VNM","2_required_exceptions","0_targeted",2020-04-15,2020-04-21
+"566","Vietnam","VNM","0_no_measures","missing",2020-04-22,2020-05-31
+"567","Yemen","YEM","0_no_measures","missing",2020-01-01,2020-04-30
+"568","Yemen","YEM","2_required_exceptions","0_targeted",2020-05-01,2020-05-04
+"569","Yemen","YEM","1_recommended","1_general",2020-05-05,2020-05-27
+"570","Yemen","YEM","2_required_exceptions","0_targeted",2020-05-28,2020-05-31
+"571","Zambia","ZMB","0_no_measures","missing",2020-01-01,2020-04-08
+"572","Zambia","ZMB","1_recommended","1_general",2020-04-09,2020-04-14
+"573","Zambia","ZMB","2_required_exceptions","0_targeted",2020-04-15,2020-05-07
+"574","Zambia","ZMB","0_no_measures","missing",2020-05-08,2020-05-31
+"575","Zimbabwe","ZWE","0_no_measures","missing",2020-01-01,2020-03-22
+"576","Zimbabwe","ZWE","1_recommended","1_general",2020-03-23,2020-03-29
+"577","Zimbabwe","ZWE","2_required_exceptions","1_general",2020-03-30,2020-05-31

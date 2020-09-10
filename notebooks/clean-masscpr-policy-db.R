@@ -1,6 +1,7 @@
 # ______________________________________________________________ 
 # --------------- clean masscpr constructed dataset------------- 
 # ______________________________________________________________
+# TO-DOS: NEED TO FIGURE OUT HOW TO APPLY ALL-BUSINESS BEFORE FIRST SUB-BUSINESS POLICY
 # ______________________________________________________________
 
 #### Setup ####
@@ -48,7 +49,8 @@ date_origin <- "1970-01-01"
 # Import data
 # policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_unverified_20200818.csv", stringsAsFactors = FALSE)
 # policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_pverified_20200819.csv", stringsAsFactors = FALSE)
-policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_verified_20200827.csv", stringsAsFactors = FALSE)
+# policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_verified_20200827.csv", stringsAsFactors = FALSE)
+policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v4_verified_20200910.csv", stringsAsFactors = FALSE)
 
 business_scope <- c("all_business", "hotel", "restaurant", "entertainment", "market", "sport", "theater")
 institution_scope <- c("all_insti", "scenic", "public service", "traffic", "social welfare", "healthcare")
@@ -67,6 +69,9 @@ policy_clean <- policy_clean %>%
   mutate(policy_sub_type_cln = tolower(ifelse(grepl(paste0(business_scope, collapse= "|"), tolower(policy_scope)), "business adaptations", 
                                               ifelse(grepl(paste0(institution_scope, collapse= "|"), tolower(policy_scope)), "institution adaptations", 
                                                      policy_sub_type)))) %>%
+  mutate(policy_sub_type_cln = ifelse(policy_sub_type_cln %in% c("l2 - private gatherings outside home", "l3 - public gatherings"), 
+                                      "l2 - public gatherings",
+                                      ifelse(policy_sub_type_cln == "l4 - mass gatherings", "l3 - mass gatherings", policy_sub_type_cln))) %>%
   mutate(policy_measure_cln = tolower(policy_measure)) %>%
   mutate(policy_scope_cln = tolower(policy_scope)) %>%
   mutate(date_announce_cln = as.Date(date_announce, format= "%m/%d/%Y"),
@@ -111,7 +116,7 @@ temp <- policy_clean %>% filter(policy_scope_cln == "entertainment")
 
 # subset to poi policies
 policy_poi_sort <- policy_clean %>% 
-  filter(grepl("busi|inst|office|school", policy_type_cln)) %>% 
+  filter(grepl("busi|inst|office|school|cinema", policy_type_cln)) %>% 
   mutate(poi_hierarchy = as.numeric(paste0(gsub("\\D", "", policy_measure_cln), 
                                 ifelse(grepl("all_", policy_scope_cln), 2, 1)))) %>%
   arrange(policy_type_cln, policy_scope_cln, compliance, date_start_cln) %>%
@@ -121,7 +126,10 @@ policy_poi_sort <- policy_clean %>%
 policy_poi_string <- policy_poi_sort %>%
   mutate(use_cutoff_date = ifelse(!is.na(lead(compliance)) & (policy_scope_cln == lead(policy_scope_cln) & 
                                compliance == lead(compliance)), FALSE, TRUE),
-    date_end_cln = as.Date(ifelse(use_cutoff_date, date_cutoff, lead(date_start_cln)), origin= date_origin))
+    date_end_cln = as.Date(ifelse(use_cutoff_date, date_cutoff, lead(date_start_cln)), origin= date_origin)) %>%
+  group_by(policy_type_cln, policy_sub_type_cln, policy_scope_cln, compliance) %>%
+  mutate(date_start_min = min(date_start_cln, na.rm= T))
+
 
 
 # visualize
@@ -136,7 +144,7 @@ p_poi <- ggplot(data= policy_poi_string) +
   labs(color= "Policy measure", shape= "Compliance") + 
   
   facet_grid(policy_type_cln ~ ., space= "free_y", scales= "free_y", switch= "y") + 
-  scale_x_date(date_labels= "%b-%d", date_breaks= "2 week", limits= c(as.Date("2020-01-20"), as.Date("2020-05-01"))) +
+  scale_x_date(date_labels= "%b-%d", date_breaks= "2 week", limits= c(as.Date("2020-01-20"), date_cutoff)) +
   theme(axis.title = element_blank())
 
 plot(p_poi)
@@ -145,21 +153,22 @@ plot(p_poi)
 # ____________________________________________________________________________
 
 # create a daily policy dataset
-date_range_df <- data.frame(day= seq(min(policy_poi_col$date_string_start), date_cutoff, by= "1 day"))
+date_range_df <- data.frame(day= seq(min(policy_poi_string$date_start_cln), date_cutoff, by= "1 day"))
 
-date_scope_df <- sqldf("SELECT DISTINCT l.policy_type_cln, l.policy_sub_type_cln, l.policy_scope_cln,
+date_scope_df <- sqldf("SELECT DISTINCT l.policy_type_cln, l.policy_sub_type_cln, l.policy_scope_cln, l.compliance, l.date_start_min,
                        r.day
-                       FROM policy_poi_col as l
+                       FROM policy_poi_string as l
                        LEFT JOIN date_range_df as r")
 
 policy_poi_day <- sqldf("SELECT l.*, 
-                        r.policy_measure_cln, r.compliance, r.date_start_cln, r.date_end_cln
+                        r.policy_measure_cln, r.date_start_cln, r.date_end_cln
                         FROM date_scope_df as l
                         LEFT JOIN policy_poi_string as r
                         ON r.date_start_cln <= l.day
                         AND r.date_end_cln >= l.day
                         AND l.policy_type_cln == r.policy_type_cln
-                        AND l.policy_scope_cln == r.policy_scope_cln") %>% as_tibble()
+                        AND l.policy_scope_cln == r.policy_scope_cln
+                        AND l.compliance == r.compliance") %>% as_tibble()
 
 
 # override individual policies with "all_" policies
@@ -176,9 +185,10 @@ policy_poi_override <- sqldf("SELECT l.*, r.policy_scope_cln as all_scope,
                               ON l.policy_type_cln = r.policy_type_cln
                               AND l.compliance = r.compliance
                               AND l.day == r.day
-                              AND l.date_start_cln <= r.date_start_cln
-                              AND r.date_start_cln <= l.date_end_cln
                               AND l.policy_scope_cln != r.policy_scope_cln
+                              AND ((r.date_start_cln <= l.date_start_min)
+                                   OR (l.date_start_cln <= r.date_start_cln
+                                   AND r.date_start_cln <= l.date_end_cln))
                              
                              ORDER BY l.policy_scope_cln, l.compliance, l.day") %>% as_tibble()
 
@@ -205,28 +215,23 @@ policy_poi_or_col <- policy_poi_or_cln %>%
 
 
 
-# split into mandatory and recommended strings
-policy_poi_or_cln_m <- policy_poi_or_cln %>% filter(compliance == "mandatory")
-policy_poi_or_cln_r <- policy_poi_or_cln %>% filter(compliance == "recommended")
-  
-  
-
 # visualize
 # after OVERRIDES
 p_poi_o <- ggplot() + 
   geom_linerange(data= policy_poi_or_col, aes(xmin= date_start_u, xmax= date_end_u, y= policy_scope_cln,
                      color= policy_measure_cln_u, linetype= compliance),
                  position = position_dodge(width = .7), size= 1.3, alpha= .8) +
-  geom_point(data= policy_poi_or_col, aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln, shape= compliance),
+  geom_point(data= policy_poi_or_col, aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln_u, shape= compliance),
              position = position_dodge(width = .7), size= 4, alpha= .5) +
   
-  labs(color= "Policy measure", shape= "Compliance") + 
+  labs(color= "Policy measure", shape= "Compliance announcement", linetype = "Compliance imputed") + 
   
   facet_grid(policy_type_cln ~ ., space= "free_y", scales= "free_y", switch= "y") + 
-  scale_x_date(date_labels= "%b-%d", date_breaks= "2 week", limits= c(as.Date("2020-01-20"), as.Date("2020-07-31"))) +
+  scale_x_date(date_labels= "%b-%d", date_breaks= "2 week", limits= c(as.Date("2020-01-20"), date_cutoff)) +
   theme(axis.title = element_blank())
 
 plot(p_poi_o)
+# Note -- I get a warning here because the missing policy measures aren't being plotted (as we want)
 
 
 # --------------------visualize overall policies -----------------------------

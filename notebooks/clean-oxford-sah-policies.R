@@ -170,30 +170,7 @@ val_merge$country_label <- with(val_merge, paste0(ifelse(is.na(group), "na_",
 #   countries_left <- length(unique(val_merge$country_label)) - n
 # }
 
-# --------------------Implement validation flagging algorithm  ------------------
-# ____________________________________________________________________________
-
-# run first order check
-val_final <- val_merge %>%
-  group_by(countryname) %>%
-  mutate(all_requ = sum(stay_home %in% c("2_required_exceptions", "3_required"))>0,
-         gen_requ = sum(stay_home_flag == "1_general" & all_requ)>0,
-         tar_requ = sum(stay_home_flag == "0_targeted" & all_requ)>0,
-         all_reco = sum(stay_home == "1_recommended")>0,
-         date_start_gen_req_min = as.Date(min(date_start[stay_home %in% c("2_required_exceptions", "3_required") & 
-                                                           stay_home_flag == "1_general"], na.rm= T)),) %>%
-  ungroup() %>%
-  mutate(check1 = abs(start - date_start_gen_req_min) <= 2)
-
-# Summarize preliminary check for the treatment group
-val_final_summ1 <- val_final %>% select(countryname, countrycode, tar_requ, gen_requ, all_reco, check1) %>% distinct()
-val_final_summ2 <- val_final_summ1 %>% group_by(gen_requ, check1, tar_requ, all_reco) %>% 
-  dplyr::summarize(n = n(), countries = paste0(countrycode, collapse = ", ")) %>% 
-  arrange(desc(gen_requ),)
-
-
-# output for manual review
-# write.csv(x = val_final, file = here(paste0("policy-database/notebooks/outputs/oxford_manual_review-", today, ".csv")))
+write.csv(x = col_oxford, file = paste0("./policy-database/notebooks/outputs/oxford_manual_review-", today, ".csv"))
 
 # --------------------import WHO to run checks  ------------------
 # ____________________________________________________________________________
@@ -205,7 +182,7 @@ who_sah <- who_raw %>% filter(grepl(paste(sah_search, collapse= "|"),tolower(who
 # --------------------import manually reviewed data  ------------------
 # ____________________________________________________________________________
 
-mr_data <- read.csv(file= "./policy-database/notebooks/outputs/oxford_manual_review-20200820 - with updates.csv", stringsAsFactors = F)
+mr_data <- read.csv(file= "./policy-database/notebooks/outputs/oxford_manual_review-20200901 - with updates.csv", stringsAsFactors = F)
 
 # subset to treatment and control (for now), create updated variables, and limit columns
 mr_data_sub <- mr_data 
@@ -232,7 +209,7 @@ mr_data_lg <- mr_data_cln %>%
 
   mutate(is_update_end_date = ifelse(next_start - date_end == 1 | is.na(next_start), FALSE, TRUE),
          date_end_u = as.Date(ifelse(is_update_end_date, next_start - 1, date_end), origin= "1970-01-01")) %>%
-  select(countryname, countrycode, group, date_start, date_end, date_start_u, date_end_u, stay_home_u, stay_home_flag_u, 
+  select(countryname, countrycode, date_start, date_end, date_start_u, date_end_u, stay_home_u, stay_home_flag_u, 
          subcountry_first_cln, recommendation_first_cln,
          is_update_start_date, is_update_end_date, is_update_policy, is_update_scope)
 
@@ -240,25 +217,51 @@ mr_data_lg <- mr_data_cln %>%
 mr_data_summ <- mr_data_lg %>%
   group_by(countryname, countrycode) %>%
   mutate(sah_flag = stay_home_u %in% c("2_required_exceptions", "3_required") & stay_home_flag_u == "1_general",
+         sah_noexep_flag = stay_home_u == "3_required" & stay_home_flag_u == "1_general",
          sah_rec_flag = stay_home_u == "1_recommended", 
          sah_sub_flag = stay_home_flag_u == "0_targeted") %>%
   mutate(date_sah_min = min(date_start_u[sah_flag], na.rm= T),
          date_sah_max = max(date_end_u[sah_flag], na.rm= T),
+         date_sah_noexep_min = min(date_start_u[sah_noexep_flag], na.rm= T),
+         date_sah_noexep_max = max(date_end_u[sah_noexep_flag], na.rm= T),
          date_sah_rec_min = min(date_start_u[sah_rec_flag & recommendation_first_cln], na.rm= T),
         date_sah_sub_min = min(date_start_u[sah_sub_flag & subcountry_first_cln], na.rm= T))
 
 # --------------------create final dataset  ---------------------------------------
 # ____________________________________________________________________________
 
+# create final dataset
 mr_ox_out <- mr_data_summ %>% ungroup() %>% 
   mutate(flag_sah_all = is.finite(date_sah_min),
+         flag_sah_noexep = is.finite(date_sah_noexep_min),
          flag_sah_no_rec_first = is.finite(date_sah_min) & !is.finite(date_sah_rec_min),
          flag_say_no_sub_first = is.finite(date_sah_min) & !is.finite(date_sah_sub_min),
          flag_sah_no_rec_no_sub_first = is.finite(date_sah_min) & !is.finite(date_sah_rec_min) & !is.finite(date_sah_sub_min)) %>%
   select(countryname, countrycode, 
-         date_sah_min, date_sah_max, date_sah_sub_min, date_sah_rec_min,
-         flag_sah_all, flag_sah_no_rec_first, flag_say_no_sub_first, flag_sah_no_rec_no_sub_first) %>% distinct()
+         date_sah_min, date_sah_max, date_sah_noexep_min, date_sah_noexep_max, date_sah_sub_min, date_sah_rec_min,
+         flag_sah_all, flag_sah_noexep, flag_sah_no_rec_first, flag_say_no_sub_first, flag_sah_no_rec_no_sub_first) %>% distinct()
 
+names(mr_ox_out)
+
+# create summary of changes
+mr_ox_summ <- mr_data_cln %>%
+  summarize(countries = n_distinct(countryname),
+            not_in_WHO = n_distinct(countryname[is.na(national_required)]),
+            any_update = n_distinct(countryname[national_required == "update"]),
+            date_update = n_distinct(countryname[national_required == "update" & update_date != date_start]),
+            policy_update = n_distinct(countryname[national_required == "update" & update_policy != stay_home]),
+            scope_update = n_distinct(countryname[national_required == "update" & update_scope != stay_home_flag]),
+            countries_pct = countries / countries,
+            not_in_WHO_pct = not_in_WHO / countries,
+            any_update_pct = any_update / countries,
+            date_update_pct = date_update / countries,
+            policy_update_pct = policy_update / countries,
+            scope_update_pct = scope_update / countries)
+mr_ox_summ <- t(mr_ox_summ)
+
+
+# save file to share with Yichun
+write.csv(x = mr_ox_out, file = paste0("./policy-database/data/processed/oxford_sah_clean - ", today, ".csv"))
 # --------------------plot for review  ---------------------------------------
 # ____________________________________________________________________________
 
@@ -266,10 +269,10 @@ size_width <- 180
 rows <- 2
 sah_col <- gg_color_hue(length(unique(mr_data_summ$stay_home_u)))
 names(sah_col) <- rev(unique(mr_data_summ$stay_home_u))
-tar_line <- factor(1:length(unique(mr_data_summ$stay_home_flag_u)))
+tar_line <- (1:length(unique(mr_data_summ$stay_home_flag_u)))
 names(tar_line) <- rev(unique(mr_data_summ$stay_home_flag_u))
 
-pdf("./policy-database/notebooks/outputs/oxford-manual-data-cleaning.pdf", width = 18, height= 12)
+pdf("./policy-database/notebooks/outputs/oxford-manual-data-cleaning 20200901.pdf", width = 18, height= 12)
 for(i in 1:length(unique(mr_data_summ$countrycode))){
 # for(i in 1:3){
 
@@ -318,57 +321,6 @@ for(i in 1:length(unique(mr_data_summ$countrycode))){
     
 }
 dev.off()
-
-
-
-# --------------------visualize ------------------
-# ____________________________________________________________________________
-
-# visualize what's going on
-# write a function to plot a country
-plot_country <- function(i){
-
-  lock_visual_sub <- cln_oxford %>% filter(countryname %in% i)
-  
-  # visualize policies
-  p <- ggplot(data= lock_visual_sub, aes(x= date_cln, y= countryname, color = stay_home)) + 
-    geom_point(aes(shape= stay_home_flag), size= 2, position= position_dodge(width= 0.7)) + 
-    
-    geom_text(aes(label= date_cln_min), size= 3, angle= 90, position= position_dodge(width= 0.7))
-  
-    # geom_linerange(aes(xmin= date_start_cln, xmax = date_end_cln, y= policy_area), position= position_dodge(width= 0.7)) + 
-    # scale_color_manual(values = enforce_col) + 
-    # scale_shape_manual(values = measure_shape) +
-    # ggtitle(loop_country)
-    
-  
-  plot(p)
-}
-
-# test the function
-plot_country("Germany")
-plot_country(i)
-
-
-# pdf all of the countries for viewing
-pdf("./policy-database/notebooks/outputs/oxgrt-lockdown-overview.pdf", width = 11, height= 8.5)
-
-countries_left <- length(unique(cln_oxford$countryname))
-n_countries <- 10
-while(countries_left > 0){
-  
-  m <- length(unique(cln_oxford$countryname)) - countries_left + 1
-  n <- m + n_countries
-  
-  i <- countries[m:n]
-  
-  plot_country(i)
-  
-  countries_left <- length(unique(cln_oxford$countryname)) - n
-}
-
-
-dev.off() 
 
 
                  

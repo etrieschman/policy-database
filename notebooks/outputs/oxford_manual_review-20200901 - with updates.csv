@@ -1,0 +1,578 @@
+,countryname,countrycode,date_start,date_end,stay_home,stay_home_flag,national_required,update_date,update_policy,update_scope,subcountry_first,recommendation_first
+1,Afghanistan,AFG,1/1/2020,3/24/2020,0_no_measures,missing,,,,,,
+2,Afghanistan,AFG,3/25/2020,5/31/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,
+3,Albania,ALB,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+4,Albania,ALB,3/13/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+5,Algeria,DZA,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+6,Algeria,DZA,3/23/2020,4/23/2020,3_required,0_targeted,TRUE,,,,TRUE,FALSE
+7,Algeria,DZA,4/24/2020,5/31/2020,2_required_exceptions,0_targeted,update,4/1/2020,2_required_exceptions,1_general,TRUE,FALSE
+8,Andorra,AND,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+9,Andorra,AND,3/13/2020,5/31/2020,1_recommended,1_general,FALSE,,,,,TRUE
+11,Angola,AGO,3/27/2020,5/25/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+12,Angola,AGO,5/26/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+10,Angola,AGO,1/1/2020,3/26/2020,0_no_measures,missing,,,,,,
+13,Anguilla,AIA,1/1/2020,3/26/2020,0_no_measures,missing,NA,,,,,
+15,Anguilla,AIA,4/29/2020,5/31/2020,0_no_measures,missing,NA,,,,,
+14,Anguilla,AIA,3/27/2020,4/28/2020,2_required_exceptions,1_general,NA,,,,,
+16,Argentina,ARG,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+17,Argentina,ARG,3/19/2020,4/26/2020,3_required,1_general,TRUE,,,,FALSE,
+18,Argentina,ARG,4/27/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+19,Aruba,ABW,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+20,Aruba,ABW,3/21/2020,3/28/2020,1_recommended,1_general,update,3/21/2020,2_required_exceptions,1_general,FALSE,FALSE
+21,Aruba,ABW,3/29/2020,4/9/2020,2_required_exceptions,1_general,update,3/29/2020,3_required,1_general,FALSE,FALSE
+22,Aruba,ABW,4/10/2020,4/10/2020,3_required,1_general,TRUE,,,,FALSE,
+23,Aruba,ABW,4/11/2020,4/11/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+24,Aruba,ABW,4/12/2020,4/13/2020,3_required,1_general,TRUE,,,,FALSE,
+25,Aruba,ABW,4/14/2020,5/27/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+26,Aruba,ABW,5/28/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,
+27,Australia,AUS,1/1/2020,3/23/2020,0_no_measures,missing,TRUE,,,,FALSE,
+32,Australia,AUS,5/29/2020,5/31/2020,0_no_measures,missing,TRUE,,,,FALSE,
+28,Australia,AUS,3/24/2020,4/1/2020,1_recommended,1_general,update,3/24/2020,2_required_exceptions,1_general,FALSE,FALSE
+29,Australia,AUS,4/2/2020,5/14/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+30,Australia,AUS,5/15/2020,5/24/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+31,Australia,AUS,5/25/2020,5/28/2020,1_recommended,0_targeted,TRUE,,,,FALSE,FALSE
+33,Austria,AUT,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+35,Austria,AUT,5/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+34,Austria,AUT,3/16/2020,4/30/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+36,Azerbaijan,AZE,1/1/2020,3/30/2020,0_no_measures,missing,,,,,,
+37,Azerbaijan,AZE,3/31/2020,5/17/2020,3_required,1_general,update,3/24/2020,3_required,1_general,FALSE,FALSE
+38,Azerbaijan,AZE,5/18/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+40,Bahrain,BHR,3/18/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+39,Bahrain,BHR,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+41,Bangladesh,BGD,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+42,Bangladesh,BGD,3/19/2020,3/24/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+43,Bangladesh,BGD,3/25/2020,4/9/2020,1_recommended,1_general,update,3/25/2020,3_required,1_general,TRUE,FALSE
+44,Bangladesh,BGD,4/10/2020,5/30/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+45,Bangladesh,BGD,5/31/2020,5/31/2020,1_recommended,1_general,TRUE,,,,TRUE,FALSE
+46,Barbados,BRB,1/1/2020,3/27/2020,0_no_measures,missing,,,,,,
+47,Barbados,BRB,3/28/2020,4/2/2020,1_recommended,1_general,update,3/28/2020,2_required_exceptions,1_general,FALSE,FALSE
+48,Barbados,BRB,4/3/2020,5/3/2020,3_required,1_general,update,4/3/2020,3_required,1_general,FALSE,FALSE
+49,Barbados,BRB,5/4/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+50,Belarus,BLR,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+51,Belgium,BEL,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+52,Belgium,BEL,3/18/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+53,Belize,BLZ,1/1/2020,4/26/2020,0_no_measures,missing,,,,,,
+54,Belize,BLZ,4/27/2020,5/14/2020,2_required_exceptions,0_targeted,update,4/1/2020,2_required_exceptions,1_general,TRUE,FALSE
+55,Belize,BLZ,5/15/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,
+56,Benin,BEN,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+57,Bermuda,BMU,1/1/2020,4/3/2020,0_no_measures,missing,,,,,,
+58,Bermuda,BMU,4/4/2020,5/1/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+59,Bermuda,BMU,5/2/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,
+60,Bhutan,BTN,1/1/2020,3/25/2020,0_no_measures,missing,,,,,,
+61,Bhutan,BTN,3/26/2020,5/31/2020,1_recommended,1_general,FALSE,,,,,TRUE
+62,Bolivia,BOL,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+63,Bolivia,BOL,3/17/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+64,Bosnia and Herzegovina,BIH,1/1/2020,3/19/2020,0_no_measures,missing,,,,,,
+68,Bosnia and Herzegovina,BIH,5/21/2020,5/31/2020,0_no_measures,missing,,,,,,
+65,Bosnia and Herzegovina,BIH,3/20/2020,4/23/2020,3_required,0_targeted,update,3/17/2020,2_required_exceptions,1_general,FALSE,FALSE
+66,Bosnia and Herzegovina,BIH,4/24/2020,5/13/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+67,Bosnia and Herzegovina,BIH,5/14/2020,5/20/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,
+69,Botswana,BWA,1/1/2020,4/1/2020,0_no_measures,missing,,,,,,
+70,Botswana,BWA,4/2/2020,5/19/2020,2_required_exceptions,0_targeted,update,4/2/2020,3_required,1_general,FALSE,FALSE
+71,Botswana,BWA,5/20/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+73,Brazil,BRA,3/13/2020,5/4/2020,1_recommended,0_targeted,FALSE,,,,FALSE,TRUE
+74,Brazil,BRA,5/5/2020,5/31/2020,2_required_exceptions,0_targeted,FALSE,,,,FALSE,TRUE
+72,Brazil,BRA,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+75,British Virgin Islands,VGB,1/1/2020,3/24/2020,0_no_measures,missing,NA,,,,,
+76,British Virgin Islands,VGB,3/25/2020,3/26/2020,2_required_exceptions,1_general,NA,,,,,
+77,British Virgin Islands,VGB,3/27/2020,4/26/2020,3_required,1_general,NA,,,,,
+78,British Virgin Islands,VGB,4/27/2020,5/31/2020,2_required_exceptions,1_general,NA,,,,,
+79,Brunei,BRN,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+80,Bulgaria,BGR,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+85,Bulgaria,BGR,5/31/2020,5/31/2020,0_no_measures,missing,FALSE,,,,TRUE,TRUE
+81,Bulgaria,BGR,3/18/2020,3/31/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,TRUE
+82,Bulgaria,BGR,4/1/2020,4/14/2020,1_recommended,1_general,FALSE,,,,TRUE,TRUE
+83,Bulgaria,BGR,4/15/2020,5/7/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,TRUE
+84,Bulgaria,BGR,5/8/2020,5/30/2020,1_recommended,1_general,FALSE,,,,TRUE,TRUE
+86,Burkina Faso,BFA,1/1/2020,3/20/2020,0_no_measures,missing,TRUE,,,,FALSE,FALSE
+87,Burkina Faso,BFA,3/21/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+88,Burundi,BDI,1/1/2020,3/4/2020,0_no_measures,missing,NA,,,,,
+89,Burundi,BDI,3/5/2020,5/31/2020,3_required,1_general,NA,,,,,
+90,Cambodia,KHM,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+91,Cameroon,CMR,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+93,Canada,CAN,3/14/2020,3/15/2020,1_recommended,0_targeted,TRUE,,,,TRUE,FALSE
+94,Canada,CAN,3/16/2020,5/31/2020,1_recommended,1_general,update,3/23/2020,3_required,1_general,TRUE,FALSE
+92,Canada,CAN,1/1/2020,3/13/2020,0_no_measures,missing,,,,,,
+95,Cape Verde,CPV,1/1/2020,3/19/2020,0_no_measures,missing,,,,,,
+96,Cape Verde,CPV,3/20/2020,3/31/2020,1_recommended,0_targeted,TRUE,,,,TRUE,FALSE
+97,Cape Verde,CPV,4/1/2020,5/31/2020,2_required_exceptions,1_general,update,3/27/2020,2_required_exceptions,1_general,TRUE,FALSE
+98,Cayman Islands,CYM,1/1/2020,3/23/2020,0_no_measures,missing,NA,,,,,
+99,Cayman Islands,CYM,3/24/2020,3/24/2020,2_required_exceptions,1_general,NA,,,,,
+100,Cayman Islands,CYM,3/25/2020,3/27/2020,3_required,1_general,NA,,,,,
+101,Cayman Islands,CYM,3/28/2020,4/15/2020,2_required_exceptions,1_general,NA,,,,,
+102,Cayman Islands,CYM,4/16/2020,5/4/2020,3_required,1_general,NA,,,,,
+103,Cayman Islands,CYM,5/5/2020,5/31/2020,2_required_exceptions,0_targeted,NA,,,,,
+104,Central African Republic,CAF,1/1/2020,5/7/2020,0_no_measures,missing,,,,,,
+105,Central African Republic,CAF,5/8/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+106,Chad,TCD,1/1/2020,4/1/2020,0_no_measures,missing,,,,,,
+107,Chad,TCD,4/2/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+108,Chile,CHL,1/1/2020,3/24/2020,0_no_measures,missing,,,,,,
+109,Chile,CHL,3/25/2020,5/14/2020,2_required_exceptions,1_general,update,3/22/2020,2_required_exceptions,,FALSE,FALSE
+110,Chile,CHL,5/15/2020,5/31/2020,3_required,0_targeted,update,3/22/2020,2_required_exceptions,,FALSE,FALSE
+111,China,CHN,1/1/2020,1/22/2020,0_no_measures,missing,,,,,,
+112,China,CHN,1/23/2020,1/31/2020,1_recommended,0_targeted,FALSE,,,,TRUE,TRUE
+113,China,CHN,2/1/2020,4/7/2020,3_required,0_targeted,FALSE,,,,TRUE,TRUE
+114,China,CHN,4/8/2020,5/9/2020,1_recommended,0_targeted,FALSE,,,,TRUE,TRUE
+115,China,CHN,5/10/2020,5/31/2020,3_required,0_targeted,FALSE,,,,TRUE,TRUE
+116,Colombia,COL,1/1/2020,3/24/2020,0_no_measures,missing,,,,,,
+117,Colombia,COL,3/25/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+118,Congo,COG,1/1/2020,3/27/2020,0_no_measures,missing,,,,,,
+119,Congo,COG,3/28/2020,5/17/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+120,Congo,COG,5/18/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+122,Costa Rica,CRI,4/1/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+121,Costa Rica,CRI,1/1/2020,3/31/2020,0_no_measures,missing,,,,,,
+123,Cote d'Ivoire,CIV,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+124,Cote d'Ivoire,CIV,3/23/2020,5/31/2020,1_recommended,1_general,update,3/24/2020,2_required_exceptions,1_general,FALSE,FALSE
+125,Croatia,HRV,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+126,Croatia,HRV,3/23/2020,5/10/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+127,Croatia,HRV,5/11/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+128,Cuba,CUB,1/1/2020,3/23/2020,0_no_measures,missing,,,,,,
+129,Cuba,CUB,3/24/2020,5/4/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+130,Cuba,CUB,5/5/2020,5/10/2020,2_required_exceptions,1_general,update,4/26/2020,2_required_exceptions,1_general,TRUE,FALSE
+131,Cuba,CUB,5/11/2020,5/31/2020,3_required,1_general,TRUE,,,,TRUE,FALSE
+133,Cyprus,CYP,3/24/2020,5/20/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+134,Cyprus,CYP,5/21/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+132,Cyprus,CYP,1/1/2020,3/23/2020,0_no_measures,missing,,,,,,
+136,Czech Republic,CZE,3/15/2020,4/20/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+137,Czech Republic,CZE,4/21/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+135,Czech Republic,CZE,1/1/2020,3/14/2020,0_no_measures,missing,,,,,,
+138,Democratic Republic of Congo,COD,1/1/2020,4/5/2020,0_no_measures,missing,,,,,,
+139,Democratic Republic of Congo,COD,4/6/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+140,Denmark,DNK,1/1/2020,3/2/2020,0_no_measures,missing,NA,,,,,
+141,Denmark,DNK,3/3/2020,5/31/2020,1_recommended,1_general,NA,,,,,
+142,Djibouti,DJI,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+144,Djibouti,DJI,5/17/2020,5/31/2020,0_no_measures,missing,,,,,,
+143,Djibouti,DJI,3/23/2020,5/16/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+145,Dominica,DMA,1/1/2020,3/31/2020,0_no_measures,missing,,,,,,
+146,Dominica,DMA,4/1/2020,5/11/2020,2_required_exceptions,1_general,update,3/28/2020,2_required_exceptions,1_general,FALSE,FALSE
+147,Dominica,DMA,5/12/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+149,Dominican Republic,DOM,3/17/2020,4/17/2020,1_recommended,1_general,update,3/20/2020,2_required_exceptions,1_general,FALSE,FALSE
+150,Dominican Republic,DOM,4/18/2020,4/27/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+151,Dominican Republic,DOM,4/28/2020,5/17/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+152,Dominican Republic,DOM,5/18/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+148,Dominican Republic,DOM,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+154,Ecuador,ECU,3/17/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+153,Ecuador,ECU,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+156,Egypt,EGY,3/25/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+155,Egypt,EGY,1/1/2020,3/24/2020,0_no_measures,missing,,,,,,
+157,El Salvador,SLV,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+158,El Salvador,SLV,3/21/2020,5/31/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+159,Eritrea,ERI,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+160,Eritrea,ERI,3/23/2020,3/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+161,Eritrea,ERI,4/1/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+162,Estonia,EST,1/1/2020,3/28/2020,0_no_measures,missing,,,,,,
+164,Estonia,EST,5/18/2020,5/31/2020,0_no_measures,missing,,,,,,
+163,Estonia,EST,3/29/2020,5/17/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,FALSE
+165,Eswatini,SWZ,1/1/2020,3/26/2020,0_no_measures,missing,,,,,,
+166,Eswatini,SWZ,3/27/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+167,Ethiopia,ETH,1/1/2020,4/7/2020,0_no_measures,missing,NA,,,,,
+168,Ethiopia,ETH,4/8/2020,5/31/2020,1_recommended,1_general,NA,,,,,
+169,Falkland Islands,FLK,1/1/2020,3/25/2020,0_no_measures,missing,NA,,,,,
+171,Falkland Islands,FLK,5/11/2020,5/31/2020,0_no_measures,missing,NA,,,,,
+170,Falkland Islands,FLK,3/26/2020,5/10/2020,1_recommended,1_general,NA,,,,,
+172,Fiji,FJI,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+173,Fiji,FJI,3/19/2020,3/29/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+174,Fiji,FJI,3/30/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+176,Finland,FIN,3/16/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+175,Finland,FIN,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+177,France,FRA,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+178,France,FRA,3/17/2020,5/10/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+179,France,FRA,5/11/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+180,Gabon,GAB,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+181,Gabon,GAB,3/21/2020,4/9/2020,1_recommended,1_general,TRUE,,,,TRUE,TRUE
+182,Gabon,GAB,4/10/2020,5/10/2020,2_required_exceptions,0_targeted,update,4/14/2020,2_required_exceptions,1_general,TRUE,TRUE
+183,Gabon,GAB,5/11/2020,5/31/2020,1_recommended,1_general,TRUE,,,,TRUE,TRUE
+184,Gambia,GMB,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+185,Gambia,GMB,3/18/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+186,Georgia,GEO,1/1/2020,3/8/2020,0_no_measures,missing,,,,,,
+187,Georgia,GEO,3/9/2020,3/22/2020,1_recommended,1_general,TRUE,,,,TRUE,TRUE
+188,Georgia,GEO,3/23/2020,3/25/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,TRUE
+189,Georgia,GEO,3/26/2020,3/30/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,TRUE
+190,Georgia,GEO,3/31/2020,5/22/2020,3_required,1_general,TRUE,,,,TRUE,TRUE
+191,Georgia,GEO,5/23/2020,5/28/2020,1_recommended,1_general,TRUE,,,,TRUE,TRUE
+192,Georgia,GEO,5/29/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,TRUE
+193,Germany,DEU,1/1/2020,3/8/2020,0_no_measures,missing,,,,,,
+196,Germany,DEU,5/6/2020,5/31/2020,0_no_measures,missing,,,,,,
+194,Germany,DEU,3/9/2020,3/20/2020,1_recommended,1_general,TRUE,,,,TRUE,TRUE
+195,Germany,DEU,3/21/2020,5/5/2020,2_required_exceptions,0_targeted,update,3/22/2020,2_required_exceptions,1_general,TRUE,TRUE
+198,Ghana,GHA,3/30/2020,4/17/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+199,Ghana,GHA,4/18/2020,4/18/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+197,Ghana,GHA,1/1/2020,3/29/2020,0_no_measures,missing,,,,,,
+200,Ghana,GHA,4/19/2020,5/31/2020,0_no_measures,missing,,,,,,
+201,Gibraltar,GIB,1/1/2020,3/16/2020,0_no_measures,missing,NA,,,,,
+204,Gibraltar,GIB,5/22/2020,5/31/2020,0_no_measures,missing,NA,,,,,
+202,Gibraltar,GIB,3/17/2020,4/28/2020,3_required,1_general,NA,,,,,
+203,Gibraltar,GIB,4/29/2020,5/21/2020,2_required_exceptions,1_general,NA,,,,,
+205,Greece,GRC,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+206,Greece,GRC,3/23/2020,5/29/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+207,Greece,GRC,5/30/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+208,Greenland,GRL,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+209,Greenland,GRL,3/18/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+210,Guam,GUM,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+211,Guam,GUM,3/16/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+212,Guatemala,GTM,1/1/2020,3/21/2020,0_no_measures,missing,,,,,,
+213,Guatemala,GTM,3/22/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+214,Guinea,GIN,1/1/2020,3/29/2020,0_no_measures,missing,,,,,,
+215,Guinea,GIN,3/30/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+216,Guyana,GUY,1/1/2020,3/25/2020,0_no_measures,missing,,,,,,
+217,Guyana,GUY,3/26/2020,4/2/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+218,Guyana,GUY,4/3/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+219,Haiti,HTI,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+220,Haiti,HTI,3/19/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+222,Honduras,HND,3/16/2020,5/31/2020,3_required,1_general,update,3/21/2020,2_required_exceptions,1_general,TRUE,FALSE
+221,Honduras,HND,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+223,Hong Kong,HKG,1/1/2020,2/7/2020,0_no_measures,missing,NA,,,,,
+224,Hong Kong,HKG,2/8/2020,5/31/2020,1_recommended,1_general,NA,,,,,
+225,Hungary,HUN,1/1/2020,3/11/2020,0_no_measures,missing,,,,,,
+226,Hungary,HUN,3/12/2020,3/26/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+227,Hungary,HUN,3/27/2020,5/3/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+228,Hungary,HUN,5/4/2020,5/17/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,TRUE
+229,Hungary,HUN,5/18/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+230,Iceland,ISL,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+231,India,IND,1/1/2020,1/25/2020,0_no_measures,missing,,,,,,
+232,India,IND,1/26/2020,3/21/2020,1_recommended,0_targeted,TRUE,,,,TRUE,TRUE
+233,India,IND,3/22/2020,3/22/2020,3_required,1_general,TRUE,,,,TRUE,TRUE
+234,India,IND,3/23/2020,3/24/2020,3_required,0_targeted,TRUE,,,,TRUE,TRUE
+235,India,IND,3/25/2020,5/3/2020,3_required,1_general,TRUE,,,,TRUE,TRUE
+236,India,IND,5/4/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,TRUE
+238,Indonesia,IDN,4/10/2020,5/31/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,FALSE
+237,Indonesia,IDN,1/1/2020,4/9/2020,0_no_measures,missing,,,,,,
+239,Iran,IRN,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+240,Iran,IRN,3/19/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+241,Iraq,IRQ,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+242,Iraq,IRQ,3/13/2020,3/25/2020,2_required_exceptions,0_targeted,update,3/22/2020,2_required_exceptions,1_general,TRUE,FALSE
+243,Iraq,IRQ,3/26/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+245,Ireland,IRL,3/26/2020,3/27/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+246,Ireland,IRL,3/28/2020,5/17/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+247,Ireland,IRL,5/18/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+244,Ireland,IRL,1/1/2020,3/25/2020,0_no_measures,missing,,,,,,
+249,Israel,ISR,3/17/2020,3/19/2020,1_recommended,1_general,update,3/17/2020,2_required_exceptions,1_general,FALSE,FALSE
+250,Israel,ISR,3/20/2020,4/7/2020,2_required_exceptions,1_general,update,3/25/2020,3_required,1_general,FALSE,FALSE
+251,Israel,ISR,4/8/2020,4/18/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+252,Israel,ISR,4/19/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+248,Israel,ISR,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+253,Italy,ITA,1/1/2020,2/22/2020,0_no_measures,missing,,,,,,
+254,Italy,ITA,2/23/2020,3/9/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+255,Italy,ITA,3/10/2020,3/19/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+256,Italy,ITA,3/20/2020,4/9/2020,3_required,1_general,TRUE,,,,TRUE,FALSE
+257,Italy,ITA,4/10/2020,5/3/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+258,Italy,ITA,5/4/2020,5/31/2020,1_recommended,1_general,TRUE,,,,TRUE,FALSE
+260,Jamaica,JAM,3/13/2020,3/24/2020,3_required,0_targeted,update,3/17/2020,2_required_exceptions,1_general,FALSE,FALSE
+261,Jamaica,JAM,3/25/2020,3/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+262,Jamaica,JAM,4/1/2020,4/14/2020,2_required_exceptions,1_general,update,4/1/2020,3_required,1_general,FALSE,FALSE
+263,Jamaica,JAM,4/15/2020,4/21/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+264,Jamaica,JAM,4/22/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+259,Jamaica,JAM,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+266,Japan,JPN,4/7/2020,4/15/2020,1_recommended,0_targeted,FALSE,,,,TRUE,TRUE
+267,Japan,JPN,4/16/2020,5/13/2020,1_recommended,1_general,FALSE,,,,TRUE,TRUE
+268,Japan,JPN,5/14/2020,5/24/2020,1_recommended,0_targeted,FALSE,,,,TRUE,TRUE
+265,Japan,JPN,1/1/2020,4/6/2020,0_no_measures,missing,,,,,,
+269,Japan,JPN,5/25/2020,5/31/2020,0_no_measures,missing,,,,,,
+270,Jordan,JOR,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+271,Jordan,JOR,3/18/2020,4/26/2020,3_required,1_general,update,3/21/2020,3_required,1_general,FALSE,FALSE
+272,Jordan,JOR,4/27/2020,5/11/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+273,Jordan,JOR,5/12/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+274,Kazakhstan,KAZ,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+275,Kazakhstan,KAZ,3/19/2020,5/10/2020,3_required,0_targeted,TRUE,,,,TRUE,FALSE
+276,Kazakhstan,KAZ,5/11/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+278,Kenya,KEN,3/27/2020,4/5/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+279,Kenya,KEN,4/6/2020,5/3/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+280,Kenya,KEN,5/4/2020,5/31/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+277,Kenya,KEN,1/1/2020,3/26/2020,0_no_measures,missing,,,,,,
+281,Kosovo,RKS,1/1/2020,3/12/2020,0_no_measures,missing,NA,,,,,
+282,Kosovo,RKS,3/13/2020,3/23/2020,2_required_exceptions,0_targeted,NA,,,,,
+283,Kosovo,RKS,3/24/2020,5/31/2020,2_required_exceptions,1_general,NA,,,,,
+284,Kuwait,KWT,1/1/2020,3/21/2020,0_no_measures,missing,,,,,,
+285,Kuwait,KWT,3/22/2020,4/5/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+286,Kuwait,KWT,4/6/2020,4/20/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+287,Kuwait,KWT,4/21/2020,5/9/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+288,Kuwait,KWT,5/10/2020,5/30/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+289,Kuwait,KWT,5/31/2020,5/31/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+291,Kyrgyz Republic,KGZ,3/14/2020,3/24/2020,1_recommended,1_general,FALSE,,,,TRUE,TRUE
+292,Kyrgyz Republic,KGZ,3/25/2020,5/10/2020,3_required,0_targeted,FALSE,,,,TRUE,TRUE
+293,Kyrgyz Republic,KGZ,5/11/2020,5/31/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,TRUE
+290,Kyrgyz Republic,KGZ,1/1/2020,3/13/2020,0_no_measures,missing,,,,,,
+294,Laos,LAO,1/1/2020,3/29/2020,0_no_measures,missing,,,,,,
+296,Laos,LAO,5/4/2020,5/31/2020,0_no_measures,missing,,,,,,
+295,Laos,LAO,3/30/2020,5/3/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+298,Latvia,LVA,3/13/2020,5/31/2020,1_recommended,1_general,NA,,,,,
+297,Latvia,LVA,1/1/2020,3/12/2020,0_no_measures,missing,NA,,,,,
+299,Lebanon,LBN,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+300,Lebanon,LBN,3/16/2020,3/17/2020,1_recommended,1_general,update,3/16/2020,3_required,1_general,FALSE,FALSE
+301,Lebanon,LBN,3/18/2020,5/2/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+302,Lebanon,LBN,5/3/2020,5/12/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+303,Lebanon,LBN,5/13/2020,5/17/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+304,Lebanon,LBN,5/18/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+305,Lesotho,LSO,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+306,Lesotho,LSO,3/18/2020,5/5/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+307,Lesotho,LSO,5/6/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+309,Liberia,LBR,3/21/2020,4/7/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+310,Liberia,LBR,4/8/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+308,Liberia,LBR,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+312,Libya,LBY,3/22/2020,3/23/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+313,Libya,LBY,3/24/2020,4/7/2020,3_required,0_targeted,update,3/22/2020,2_required_exceptions,1_general,FALSE,FALSE
+314,Libya,LBY,4/8/2020,4/16/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+315,Libya,LBY,4/17/2020,5/27/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+316,Libya,LBY,5/28/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+311,Libya,LBY,1/1/2020,3/21/2020,0_no_measures,missing,,,,,,
+317,Lithuania,LTU,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+318,Lithuania,LTU,3/16/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+320,Luxembourg,LUX,3/17/2020,4/19/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+321,Luxembourg,LUX,4/20/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+319,Luxembourg,LUX,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+322,Macao,MAC,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+324,Madagascar,MDG,3/23/2020,4/19/2020,3_required,0_targeted,update,3/23/2020,2_required_exceptions,1_general,FALSE,FALSE
+325,Madagascar,MDG,4/20/2020,5/11/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+326,Madagascar,MDG,5/12/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+323,Madagascar,MDG,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+328,Malawi,MWI,4/18/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+327,Malawi,MWI,1/1/2020,4/17/2020,0_no_measures,missing,,,,,,
+329,Malaysia,MYS,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+330,Malaysia,MYS,3/18/2020,5/31/2020,1_recommended,1_general,update,3/18/2020,3_required,1_general,FALSE,FALSE
+332,Mali,MLI,3/25/2020,5/9/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+331,Mali,MLI,1/1/2020,3/24/2020,0_no_measures,missing,,,,,,
+333,Mali,MLI,5/10/2020,5/31/2020,0_no_measures,missing,,,,,,
+335,Mauritania,MRT,3/19/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+334,Mauritania,MRT,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+337,Mauritius,MUS,3/23/2020,5/29/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+336,Mauritius,MUS,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+338,Mauritius,MUS,5/30/2020,5/31/2020,0_no_measures,missing,,,,,,
+340,Mexico,MEX,3/30/2020,5/31/2020,2_required_exceptions,1_general,update,3/30/2020,1_recommended,1_general,TRUE,TRUE
+339,Mexico,MEX,1/1/2020,3/29/2020,0_no_measures,missing,,,,,,
+342,Moldova,MDA,3/24/2020,5/15/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+343,Moldova,MDA,5/16/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+341,Moldova,MDA,1/1/2020,3/23/2020,0_no_measures,missing,,,,,,
+345,Mongolia,MNG,5/5/2020,5/7/2020,3_required,0_targeted,FALSE,,,,TRUE,FALSE
+344,Mongolia,MNG,1/1/2020,5/4/2020,0_no_measures,missing,,,,,,
+346,Mongolia,MNG,5/8/2020,5/31/2020,0_no_measures,missing,,,,,,
+348,Montserrat,MSR,3/18/2020,4/10/2020,2_required_exceptions,1_general,NA,,,,,
+349,Montserrat,MSR,4/11/2020,4/19/2020,3_required,1_general,NA,,,,,
+350,Montserrat,MSR,4/20/2020,4/22/2020,2_required_exceptions,1_general,NA,,,,,
+351,Montserrat,MSR,4/23/2020,4/30/2020,3_required,1_general,NA,,,,,
+352,Montserrat,MSR,5/1/2020,5/31/2020,2_required_exceptions,1_general,NA,,,,,
+347,Montserrat,MSR,1/1/2020,3/17/2020,NA,missing,NA,,,,,
+354,Morocco,MAR,3/20/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+353,Morocco,MAR,1/1/2020,3/19/2020,0_no_measures,missing,,,,,,
+355,Mozambique,MOZ,1/1/2020,3/31/2020,0_no_measures,missing,,,,,,
+356,Mozambique,MOZ,4/1/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+358,Myanmar,MMR,4/4/2020,4/13/2020,1_recommended,1_general,FALSE,,,,TRUE,TRUE
+359,Myanmar,MMR,4/14/2020,5/31/2020,2_required_exceptions,0_targeted,FALSE,,,,TRUE,TRUE
+357,Myanmar,MMR,1/1/2020,4/3/2020,0_no_measures,missing,,,,,,
+361,Namibia,NAM,3/27/2020,5/6/2020,2_required_exceptions,0_targeted,update,3/27/2020,1_recommended,1_general,FALSE,TRUE
+362,Namibia,NAM,5/7/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+360,Namibia,NAM,1/1/2020,3/26/2020,0_no_measures,missing,,,,,,
+363,Nepal,NPL,1/1/2020,3/19/2020,0_no_measures,missing,,,,,,
+364,Nepal,NPL,3/20/2020,3/22/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+365,Nepal,NPL,3/23/2020,3/23/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,TRUE
+366,Nepal,NPL,3/24/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+368,Netherlands,NLD,3/6/2020,3/11/2020,1_recommended,0_targeted,TRUE,,,,FALSE,TRUE
+369,Netherlands,NLD,3/12/2020,3/22/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+370,Netherlands,NLD,3/23/2020,5/10/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+371,Netherlands,NLD,5/11/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+367,Netherlands,NLD,1/1/2020,3/5/2020,0_no_measures,missing,,,,,,
+372,New Zealand,NZL,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+375,New Zealand,NZL,5/14/2020,5/31/2020,0_no_measures,missing,,,,,,
+373,New Zealand,NZL,3/21/2020,3/22/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+374,New Zealand,NZL,3/23/2020,5/13/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+376,Nicaragua,NIC,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+377,Niger,NER,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+379,Nigeria,NGA,3/23/2020,3/28/2020,1_recommended,0_targeted,TRUE,,,,TRUE,TRUE
+380,Nigeria,NGA,3/29/2020,5/3/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,TRUE
+381,Nigeria,NGA,5/4/2020,5/31/2020,1_recommended,1_general,update,5/2/2020,2_required_exceptions,1_general,TRUE,TRUE
+378,Nigeria,NGA,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+382,Norway,NOR,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+384,Oman,OMN,4/10/2020,4/29/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+385,Oman,OMN,4/30/2020,5/20/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+386,Oman,OMN,5/21/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+383,Oman,OMN,1/1/2020,4/9/2020,0_no_measures,missing,,,,,,
+387,Pakistan,PAK,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+388,Pakistan,PAK,3/23/2020,5/16/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+389,Pakistan,PAK,5/17/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+391,Palestine,PSE,3/22/2020,5/25/2020,2_required_exceptions,1_general,NA,,,,,
+392,Palestine,PSE,5/26/2020,5/31/2020,2_required_exceptions,0_targeted,NA,,,,,
+390,Palestine,PSE,1/1/2020,3/21/2020,0_no_measures,missing,NA,,,,,
+393,Panama,PAN,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+394,Panama,PAN,3/17/2020,3/31/2020,1_recommended,1_general,update,3/25/2020,2_required_exceptions,1_general,FALSE,FALSE
+395,Panama,PAN,4/1/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+397,Papua New Guinea,PNG,4/8/2020,4/26/2020,2_required_exceptions,0_targeted,update,3/24/2020,2_required_exceptions,1_general,FALSE,FALSE
+398,Papua New Guinea,PNG,4/27/2020,5/31/2020,1_recommended,0_targeted,TRUE,,,,FALSE,FALSE
+396,Papua New Guinea,PNG,1/1/2020,4/7/2020,0_no_measures,missing,,,,,,
+400,Paraguay,PRY,3/10/2020,3/16/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+401,Paraguay,PRY,3/17/2020,4/8/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+402,Paraguay,PRY,4/9/2020,5/24/2020,3_required,1_general,TRUE,,,,FALSE,TRUE
+403,Paraguay,PRY,5/25/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+399,Paraguay,PRY,1/1/2020,3/9/2020,0_no_measures,missing,,,,,,
+405,Peru,PER,3/15/2020,3/17/2020,2_required_exceptions,1_general,update,3/14/2020,1_recommended,1_general,FALSE,TRUE
+406,Peru,PER,3/18/2020,5/10/2020,3_required,1_general,TRUE,,,,FALSE,TRUE
+407,Peru,PER,5/11/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+404,Peru,PER,1/1/2020,3/14/2020,0_no_measures,missing,,,,,,
+409,Philippines,PHL,3/15/2020,3/17/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+410,Philippines,PHL,3/18/2020,4/30/2020,3_required,1_general,TRUE,,,,TRUE,FALSE
+411,Philippines,PHL,5/1/2020,5/28/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,FALSE
+412,Philippines,PHL,5/29/2020,5/31/2020,1_recommended,1_general,TRUE,,,,TRUE,FALSE
+408,Philippines,PHL,1/1/2020,3/14/2020,0_no_measures,missing,,,,,,
+413,Pitcairn Islands,PCN,1/1/2020,5/31/2020,NA,missing,,,,,,
+414,Poland,POL,1/1/2020,3/30/2020,0_no_measures,missing,,,,,,
+417,Poland,POL,5/30/2020,5/31/2020,0_no_measures,missing,,,,,,
+415,Poland,POL,3/31/2020,4/8/2020,2_required_exceptions,1_general,update,3/24/2020,2_required_exceptions,1_general,FALSE,FALSE
+416,Poland,POL,4/9/2020,5/29/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+418,Portugal,PRT,1/1/2020,3/18/2020,0_no_measures,missing,,,,,,
+419,Portugal,PRT,3/19/2020,5/3/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+420,Portugal,PRT,5/4/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+422,Puerto Rico,PRI,3/15/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+421,Puerto Rico,PRI,1/1/2020,3/14/2020,0_no_measures,missing,,,,,,
+424,Qatar,QAT,3/17/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+423,Qatar,QAT,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+425,Romania,ROU,1/1/2020,3/11/2020,0_no_measures,missing,,,,,,
+426,Romania,ROU,3/12/2020,3/24/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+427,Romania,ROU,3/25/2020,5/14/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+428,Romania,ROU,5/15/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+429,Russia,RUS,1/1/2020,3/4/2020,0_no_measures,missing,,,,,,
+430,Russia,RUS,3/5/2020,3/18/2020,2_required_exceptions,0_targeted,update,3/30/2020,1_recommended,1_general,TRUE,TRUE
+431,Russia,RUS,3/19/2020,3/29/2020,2_required_exceptions,1_general,update,3/30/2020,1_recommended,1_general,TRUE,TRUE
+432,Russia,RUS,3/30/2020,5/31/2020,3_required,0_targeted,TRUE,,,,TRUE,TRUE
+433,Rwanda,RWA,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+434,Rwanda,RWA,3/21/2020,5/3/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+435,Rwanda,RWA,5/4/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+437,San Marino,SMR,3/8/2020,4/9/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+438,San Marino,SMR,4/10/2020,5/2/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+439,San Marino,SMR,5/3/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+436,San Marino,SMR,1/1/2020,3/7/2020,0_no_measures,missing,,,,,,
+441,Saudi Arabia,SAU,3/23/2020,4/5/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+442,Saudi Arabia,SAU,4/6/2020,5/22/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+443,Saudi Arabia,SAU,5/23/2020,5/30/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+444,Saudi Arabia,SAU,5/31/2020,5/31/2020,1_recommended,0_targeted,TRUE,,,,FALSE,FALSE
+440,Saudi Arabia,SAU,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+446,Senegal,SEN,3/25/2020,5/31/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+445,Senegal,SEN,1/1/2020,3/24/2020,0_no_measures,missing,,,,,,
+448,Serbia,SRB,3/15/2020,3/17/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+449,Serbia,SRB,3/18/2020,5/16/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+450,Serbia,SRB,5/17/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+447,Serbia,SRB,1/1/2020,3/14/2020,0_no_measures,missing,,,,,,
+452,Seychelles,SYC,4/8/2020,5/3/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+453,Seychelles,SYC,5/4/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+451,Seychelles,SYC,1/1/2020,4/7/2020,0_no_measures,missing,,,,,,
+455,Sierra Leone,SLE,4/5/2020,4/7/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+456,Sierra Leone,SLE,4/8/2020,4/25/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+457,Sierra Leone,SLE,4/26/2020,5/2/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+458,Sierra Leone,SLE,5/3/2020,5/5/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+459,Sierra Leone,SLE,5/6/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+454,Sierra Leone,SLE,1/1/2020,4/4/2020,0_no_measures,missing,,,,,,
+461,Singapore,SGP,4/3/2020,4/7/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+462,Singapore,SGP,4/8/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+460,Singapore,SGP,1/1/2020,4/2/2020,0_no_measures,missing,,,,,,
+464,Slovak Republic,SVK,3/12/2020,4/7/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+465,Slovak Republic,SVK,4/8/2020,4/13/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+466,Slovak Republic,SVK,4/14/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+463,Slovak Republic,SVK,1/1/2020,3/11/2020,0_no_measures,missing,,,,,,
+468,Slovenia,SVN,3/14/2020,5/13/2020,1_recommended,1_general,update,3/20/2020,2_required_exceptions,1_general,FALSE,FALSE
+467,Slovenia,SVN,1/1/2020,3/13/2020,0_no_measures,missing,,,,,,
+469,Slovenia,SVN,5/14/2020,5/31/2020,0_no_measures,missing,,,,,,
+470,Solomon Islands,SLB,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+472,Somalia,SOM,4/11/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+471,Somalia,SOM,1/1/2020,4/10/2020,0_no_measures,missing,,,,,,
+473,South Africa,ZAF,1/1/2020,3/25/2020,0_no_measures,missing,,,,,,
+474,South Africa,ZAF,3/26/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+476,South Korea,KOR,2/23/2020,3/20/2020,1_recommended,0_targeted,TRUE,,,,FALSE,TRUE
+477,South Korea,KOR,3/21/2020,4/17/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+478,South Korea,KOR,4/18/2020,4/19/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+480,South Korea,KOR,5/29/2020,5/31/2020,1_recommended,0_targeted,TRUE,,,,FALSE,TRUE
+475,South Korea,KOR,1/1/2020,2/22/2020,0_no_measures,missing,,,,,,
+479,South Korea,KOR,4/20/2020,5/28/2020,0_no_measures,missing,,,,,,
+482,South Sudan,SSD,3/24/2020,4/17/2020,1_recommended,1_general,update,3/25/2020,2_required_exceptions,1_general,FALSE,FALSE
+483,South Sudan,SSD,4/18/2020,5/6/2020,2_required_exceptions,0_targeted,update,4/14/2020,2_required_exceptions,1_general,FALSE,FALSE
+484,South Sudan,SSD,5/7/2020,5/28/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+485,South Sudan,SSD,5/29/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+481,South Sudan,SSD,1/1/2020,3/23/2020,0_no_measures,missing,,,,,,
+487,Spain,ESP,3/14/2020,5/26/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+488,Spain,ESP,5/27/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+486,Spain,ESP,1/1/2020,3/13/2020,0_no_measures,missing,,,,,,
+489,Sri Lanka,LKA,1/1/2020,3/17/2020,0_no_measures,missing,,,,,,
+490,Sri Lanka,LKA,3/18/2020,3/19/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+491,Sri Lanka,LKA,3/20/2020,4/19/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+492,Sri Lanka,LKA,4/20/2020,4/23/2020,3_required,0_targeted,TRUE,,,,FALSE,FALSE
+493,Sri Lanka,LKA,4/24/2020,5/10/2020,3_required,1_general,TRUE,,,,FALSE,FALSE
+494,Sri Lanka,LKA,5/11/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+496,Sudan,SDN,3/23/2020,4/17/2020,1_recommended,1_general,update,3/24/2020,2_required_exceptions,1_general,FALSE,FALSE
+497,Sudan,SDN,4/18/2020,5/28/2020,2_required_exceptions,0_targeted,update,4/18/2020,2_required_exceptions,1_general,FALSE,FALSE
+498,Sudan,SDN,5/29/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+495,Sudan,SDN,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+500,Suriname,SUR,3/28/2020,5/23/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+501,Suriname,SUR,5/24/2020,5/25/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+502,Suriname,SUR,5/26/2020,5/31/2020,2_required_exceptions,0_targeted,update,5/26/2020,2_required_exceptions,1_general,FALSE,FALSE
+499,Suriname,SUR,1/1/2020,3/27/2020,0_no_measures,missing,,,,,,
+503,Sweden,SWE,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+505,Switzerland,CHE,3/17/2020,5/31/2020,1_recommended,1_general,FALSE,,,,FALSE,TRUE
+504,Switzerland,CHE,1/1/2020,3/16/2020,0_no_measures,missing,,,,,,
+507,Syria,SYR,4/17/2020,5/24/2020,2_required_exceptions,0_targeted,update,3/25/2020,2_required_exceptions,1_general,FALSE,FALSE
+508,Syria,SYR,5/25/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+506,Syria,SYR,1/1/2020,4/16/2020,0_no_measures,missing,,,,,,
+509,Taiwan,TWN,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+511,Tajikistan,TJK,5/9/2020,5/11/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+512,Tajikistan,TJK,5/12/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+510,Tajikistan,TJK,1/1/2020,5/8/2020,0_no_measures,missing,,,,,,
+513,Tanzania,TZA,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+515,Thailand,THA,3/21/2020,5/31/2020,1_recommended,1_general,update,4/3/2020,2_required_exceptions,,TRUE,TRUE
+514,Thailand,THA,1/1/2020,3/20/2020,0_no_measures,missing,,,,,,
+517,Timor-Leste,TLS,3/28/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+516,Timor-Leste,TLS,1/1/2020,3/27/2020,0_no_measures,missing,,,,,,
+519,Togo,TGO,3/20/2020,4/1/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+520,Togo,TGO,4/2/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+518,Togo,TGO,1/1/2020,3/19/2020,0_no_measures,missing,,,,,,
+521,Trinidad and Tobago,TTO,1/1/2020,3/29/2020,0_no_measures,missing,,,,,,
+522,Trinidad and Tobago,TTO,3/30/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+523,Tunisia,TUN,1/1/2020,3/19/2020,0_no_measures,missing,,,,,,
+524,Tunisia,TUN,3/20/2020,5/14/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+525,Tunisia,TUN,5/15/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+526,Turkey,TUR,1/1/2020,3/8/2020,0_no_measures,missing,,,,,,
+527,Turkey,TUR,3/9/2020,3/20/2020,1_recommended,1_general,TRUE,,,,TRUE,TRUE
+528,Turkey,TUR,3/21/2020,4/10/2020,2_required_exceptions,1_general,update,3/30/2020,3_required,1_general,TRUE,TRUE
+529,Turkey,TUR,4/11/2020,4/12/2020,3_required,0_targeted,TRUE,,,,TRUE,TRUE
+530,Turkey,TUR,4/13/2020,4/17/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,TRUE
+531,Turkey,TUR,4/18/2020,4/19/2020,3_required,0_targeted,TRUE,,,,TRUE,TRUE
+532,Turkey,TUR,4/20/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,TRUE,TRUE
+533,Turkmenistan,TKM,1/1/2020,5/31/2020,0_no_measures,missing,,,,,,
+535,Turks and Caicos Islands,TCA,3/26/2020,5/31/2020,2_required_exceptions,1_general,NA,,,,,
+534,Turks and Caicos Islands,TCA,1/1/2020,3/25/2020,0_no_measures,missing,NA,,,,,
+537,Uganda,UGA,3/30/2020,5/17/2020,2_required_exceptions,1_general,update,3/31/2020,2_required_exceptions,1_general,FALSE,FALSE
+538,Uganda,UGA,5/18/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+536,Uganda,UGA,1/1/2020,3/29/2020,0_no_measures,missing,,,,,,
+540,Ukraine,UKR,3/16/2020,4/2/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+541,Ukraine,UKR,4/3/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+539,Ukraine,UKR,1/1/2020,3/15/2020,0_no_measures,missing,,,,,,
+543,United Arab Emirates,ARE,3/13/2020,3/22/2020,1_recommended,0_targeted,TRUE,,,,FALSE,TRUE
+544,United Arab Emirates,ARE,3/23/2020,5/14/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,
+545,United Arab Emirates,ARE,5/15/2020,5/17/2020,1_recommended,0_targeted,TRUE,,,,FALSE,
+542,United Arab Emirates,ARE,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+546,United Arab Emirates,ARE,5/18/2020,5/31/2020,0_no_measures,missing,,,,,,
+548,United Kingdom,GBR,3/23/2020,5/12/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+549,United Kingdom,GBR,5/13/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+547,United Kingdom,GBR,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
+551,United States,USA,3/15/2020,5/31/2020,2_required_exceptions,0_targeted,NA,,,,,
+550,United States,USA,1/1/2020,3/14/2020,0_no_measures,missing,NA,,,,,
+553,Uruguay,URY,3/13/2020,4/1/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+554,Uruguay,URY,4/2/2020,4/12/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,TRUE
+555,Uruguay,URY,4/13/2020,5/31/2020,1_recommended,1_general,TRUE,,,,FALSE,TRUE
+552,Uruguay,URY,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+556,Uzbekistan,UZB,1/1/2020,3/26/2020,0_no_measures,missing,,,,,,
+557,Uzbekistan,UZB,3/27/2020,5/7/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+558,Uzbekistan,UZB,5/8/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+560,Vanuatu,VUT,3/26/2020,5/31/2020,1_recommended,1_general,update,3/26/2020,2_required_exceptions,1_general,FALSE,FALSE
+559,Vanuatu,VUT,1/1/2020,3/25/2020,0_no_measures,missing,,,,,,
+561,Venezuela,VEN,1/1/2020,3/12/2020,0_no_measures,missing,,,,,,
+562,Venezuela,VEN,3/13/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+563,Vietnam,VNM,1/1/2020,3/31/2020,0_no_measures,missing,,,,,,
+566,Vietnam,VNM,4/22/2020,5/31/2020,0_no_measures,missing,,,,,,
+564,Vietnam,VNM,4/1/2020,4/14/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+565,Vietnam,VNM,4/15/2020,4/21/2020,2_required_exceptions,0_targeted,TRUE,,,,FALSE,FALSE
+568,Yemen,YEM,5/1/2020,5/4/2020,2_required_exceptions,0_targeted,update,4/2/2020,2_required_exceptions,0_targeted,TRUE,FALSE
+569,Yemen,YEM,5/5/2020,5/27/2020,1_recommended,1_general,update,5/6/2020,2_required_exceptions,0_targeted,TRUE,FALSE
+570,Yemen,YEM,5/28/2020,5/31/2020,2_required_exceptions,0_targeted,TRUE,,,,TRUE,FALSE
+567,Yemen,YEM,1/1/2020,4/30/2020,0_no_measures,missing,,,,,,
+572,Zambia,ZMB,4/9/2020,4/14/2020,1_recommended,1_general,update,3/26/2020,1_recommended,1_general,FALSE,TRUE
+573,Zambia,ZMB,4/15/2020,5/7/2020,2_required_exceptions,0_targeted,FALSE,,,,FALSE,TRUE
+571,Zambia,ZMB,1/1/2020,4/8/2020,0_no_measures,missing,,,,,,
+574,Zambia,ZMB,5/8/2020,5/31/2020,0_no_measures,missing,,,,,,
+576,Zimbabwe,ZWE,3/23/2020,3/29/2020,1_recommended,1_general,TRUE,,,,FALSE,FALSE
+577,Zimbabwe,ZWE,3/30/2020,5/31/2020,2_required_exceptions,1_general,TRUE,,,,FALSE,FALSE
+575,Zimbabwe,ZWE,1/1/2020,3/22/2020,0_no_measures,missing,,,,,,
