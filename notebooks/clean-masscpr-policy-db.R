@@ -135,11 +135,9 @@ policy_poi_string <- policy_poi_sort %>%
 # visualize
 # BEFORE OVERRIDES
 p_poi <- ggplot(data= policy_poi_string) + 
-  # geom_linerange(aes(xmin= date_start_cln, xmax= date_end_cln, y= policy_scope_cln, 
-                                           # color= policy_measure_cln, linetype= compliance),
-                 # position = position_dodge(width = .7), size= 1.3, alpha= .8) + 
+  
   geom_point(aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln, shape= compliance),
-             position = position_dodge(width = .7), size= 4, alpha= .5) + 
+             position = position_nudge(y = .2), size= 4, alpha= .5) + 
   
   labs(color= "Policy measure", shape= "Compliance") + 
   
@@ -154,11 +152,12 @@ plot(p_poi)
 
 # create a daily policy dataset
 date_range_df <- data.frame(day= seq(min(policy_poi_string$date_start_cln), date_cutoff, by= "1 day"))
+date_range_comp_df <- data.frame(compliance= c(rep("mandatory", nrow(date_range_df)), rep("recommended", nrow(date_range_df))), day= date_range_df)
 
-date_scope_df <- sqldf("SELECT DISTINCT l.policy_type_cln, l.policy_sub_type_cln, l.policy_scope_cln, l.compliance, l.date_start_min,
+date_scope_df <- sqldf("SELECT DISTINCT l.policy_type_cln, l.policy_sub_type_cln, l.policy_scope_cln, r.compliance, l.date_start_min,
                        r.day
                        FROM policy_poi_string as l
-                       LEFT JOIN date_range_df as r")
+                       LEFT JOIN date_range_comp_df as r")
 
 policy_poi_day <- sqldf("SELECT l.*, 
                         r.policy_measure_cln, r.date_start_cln, r.date_end_cln
@@ -177,15 +176,16 @@ policy_poi_day_all <- policy_poi_day %>% filter(grepl("all ", policy_scope_cln))
 # merge on to do the comparison
 policy_poi_override <- sqldf("SELECT l.*, r.policy_scope_cln as all_scope,
                               r.policy_measure_cln as all_measure,
+                              r.compliance as all_compliance,
                               r.date_start_cln as all_start, r.date_end_cln as all_end
                                    
                               FROM  policy_poi_day l
                               LEFT JOIN  policy_poi_day_all r
                                     
-                              ON l.policy_type_cln = r.policy_type_cln
-                              AND l.compliance = r.compliance
+                              ON (l.policy_type_cln = r.policy_type_cln
+                              AND l.compliance = r.compliance 
                               AND l.day == r.day
-                              AND l.policy_scope_cln != r.policy_scope_cln
+                              AND l.policy_scope_cln != r.policy_scope_cln)
                               AND ((r.date_start_cln <= l.date_start_min)
                                    OR (l.date_start_cln <= r.date_start_cln
                                    AND r.date_start_cln <= l.date_end_cln))
@@ -195,34 +195,53 @@ policy_poi_override <- sqldf("SELECT l.*, r.policy_scope_cln as all_scope,
 policy_poi_override$all_start <- as.Date(policy_poi_override$all_start, origin= "1970-01-01")
 policy_poi_override$all_end <- as.Date(policy_poi_override$all_end, origin= "1970-01-01")
 
+temp <- policy_poi_override %>% filter(policy_scope_cln == "hotels")
+
 
 # update individual policies if needed
 date_gap <- 3
 policy_poi_or_cln <- policy_poi_override %>%
   mutate(update_day = ifelse((all_start - date_start_cln) > date_gap, TRUE, FALSE), 
-         policy_measure_cln_u = ifelse(update_day & !is.na(update_day), all_measure, policy_measure_cln))
+         update_day_minstart = ifelse(!is.na(all_start) & is.na(date_start_cln), TRUE, FALSE),
+         policy_measure_cln_u = ifelse(update_day & !is.na(update_day), all_measure, 
+                                       ifelse(update_day_minstart & !is.na(update_day_minstart), all_measure, policy_measure_cln)),
+         compliance_u = ifelse(update_day_minstart & !is.na(update_day_minstart), all_compliance, compliance))
+
+temp <- policy_poi_or_cln %>% filter(policy_scope_cln == "hotels")
 
 # collapse
 policy_poi_or_col <- policy_poi_or_cln %>%
-  group_by(policy_type_cln, policy_sub_type_cln, policy_measure_cln, compliance, policy_scope_cln, date_start_cln, date_end_cln,
+  group_by(policy_type_cln, policy_sub_type_cln, policy_measure_cln, compliance_u, policy_scope_cln, date_start_cln, date_end_cln,
            all_start, all_end, update_day, policy_measure_cln_u) %>%
   summarize(date_start_u = min(day),
             date_end_u = max(day)) %>%
-  arrange(policy_type_cln, policy_sub_type_cln, policy_scope_cln, compliance, date_start_u) %>%
+  arrange(policy_type_cln, policy_sub_type_cln, policy_scope_cln, compliance_u, date_start_u) %>%
   ungroup() %>%
   mutate(policy_measure_cln_u = ifelse(is.na(policy_measure_cln_u), "l0 - no policy", policy_measure_cln_u),
-         compliance = ifelse(is.na(compliance), "no policy", compliance))
+         compliance_u = ifelse(is.na(compliance_u), "no policy", compliance_u))
 
+# split into recommendations and requirements
+policy_poi_or_col_m <- policy_poi_or_col %>% filter(compliance_u == "mandatory")
+policy_poi_or_col_r <- policy_poi_or_col %>% filter(compliance_u == "recommended")
 
 
 # visualize
 # after OVERRIDES
 p_poi_o <- ggplot() + 
-  geom_linerange(data= policy_poi_or_col, aes(xmin= date_start_u, xmax= date_end_u, y= policy_scope_cln,
-                     color= policy_measure_cln_u, linetype= compliance),
-                 position = position_dodge(width = .7), size= 1.3, alpha= .8) +
-  geom_point(data= policy_poi_or_col, aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln_u, shape= compliance),
-             position = position_dodge(width = .7), size= 4, alpha= .5) +
+  
+  # mandatory
+  geom_linerange(data= policy_poi_or_col_m, aes(xmin= date_start_u, xmax= date_end_u, y= policy_scope_cln,
+                     color= policy_measure_cln_u, linetype= compliance_u),
+                 position = position_nudge(y = .2), size= 1.3, alpha= .8) +
+  geom_point(data= policy_poi_or_col_m, aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln_u, shape= compliance_u),
+             position = position_nudge(y = .2), size= 4, alpha= .5) +
+  
+  # recommended
+  geom_linerange(data= policy_poi_or_col_r, aes(xmin= date_start_u, xmax= date_end_u, y= policy_scope_cln,
+                                                color= policy_measure_cln_u, linetype= compliance_u),
+                 position = position_nudge(y = -.2), size= 1.3, alpha= .8) +
+  geom_point(data= policy_poi_or_col_r, aes(x= date_start_cln, y= policy_scope_cln, color= policy_measure_cln_u, shape= compliance_u),
+             position = position_nudge(y = -.2), size= 4, alpha= .5) +
   
   labs(color= "Policy measure", shape= "Compliance announcement", linetype = "Compliance imputed") + 
   

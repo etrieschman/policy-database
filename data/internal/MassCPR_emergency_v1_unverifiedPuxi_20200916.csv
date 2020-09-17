@@ -1,0 +1,4 @@
+policy_id,province_region,response_level,date_announce,date_start,source type,link,policy_facemask,policy_business,policy_institution,policy_office,policy_school,created_by,verified_by,verification_notes
+P1,Guangdong,Level I,01/23/2020,01/23/2020,Government announcement,http://www.gd.gov.cn/gdywdt/gdyw/content/post_2878901.html,L0 - no announcement,L0 - no announcement,L0 - no announcement,L0 - no announcement,L0 - no announcement,Puxi,Xinyi,
+P2,Guangdong,Level II,02/24/2020,02/24/2020,Government announcement,http://www.gd.gov.cn/gdywdt/gdyw/content/post_2906010.html,L0 - no announcement,L0 - no announcement,L0 - no announcement,L0 - no announcement,L0 - no announcement,Puxi,Xinyi,
+P3,Guangdong,Level III,05/08/2020,05/09/2020,Government announcement,http://www.gd.gov.cn/zwgk/zdlyxxgkzl/zhsgjy/yljh/content/post_2990224.html,L0 - no announcement,L0 - no announcement,L0 - no announcement,L0 - no announcement,L0 - no announcement,Puxi,Xinyi,
