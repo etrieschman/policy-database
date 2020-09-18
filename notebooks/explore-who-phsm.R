@@ -14,27 +14,24 @@ dir <- "C:/Users/ErichTrieschman/dev"
 setwd(dir)
 
 #### ... packages ####
-# install.packages("ggplot2", dependencies = T)
-# install.packages("tidyverse", dependencies = T)
-# install.packages("tidyr", dependencies = T)
-# install.packages("dplyr", dependencies = T)
-# install.packages("reshape2", dependencies = T)
-# install.packages("scales",dependencies= T)
-# install.packages("stringr", dependencies= T)
-require(ggplot2)
-require(tidyverse)
-require(tidyr)
-require(dplyr)
-require(plyr)
-require(reshape2)
-require(scales)
-require(stringr)
+library(ggplot2)
+library(tidyverse)
+library(tidyr)
+library(dplyr)
+library(plyr)
+library(reshape2)
+library(scales)
+library(stringr)
+library(strex)
 
 # color function
 gg_color_hue <- function(n) {
   hues = seq(15, 375, length = n + 1)
   hcl(h = hues, l = 65, c = 100)[1:n]
 }
+
+# dates
+date_today <- gsub("-", "", Sys.Date())
 
 
 # Import data
@@ -79,6 +76,54 @@ db_cln <- db_cln %>% mutate(targeted_cln = tolower(targeted))
 temp_targeted <- db_cln %>% filter(who_measure == "Stay-at-home order") %>%
   group_by(targeted_cln, comments) %>% dplyr::summarize(n = n())
 
+
+# --------------------visualize countries ------------------------------------
+# ____________________________________________________________________________
+
+drop_cats <- c("Drug-based measures", "Other measures", "Environmental measures")
+
+db_sub <- db_cln %>%
+  select(country_territory_area, admin_level_cln, area_covered, dataset, who_category, who_subcategory, who_measure, 
+         date_start_cln, 
+         targeted_cln, enforcement_cln, non_compliance_penalty) %>%
+  filter(!who_category %in% drop_cats)
+
+
+
+plot_country <- function(x){
+  
+  db_sub_ctry <- db_sub %>% 
+    filter(country_territory_area == x) %>%
+    mutate(regions = nchar(gsub("[^,]+", "", area_covered)) + 1)
+  
+  db_sub_ctry_dup <- db_sub_ctry %>%
+    uncount(regions, .remove= FALSE, .id= "id") %>%
+    mutate(str_start = ifelse(id == 1, 1, str_locate_nth(area_covered, ",", id-1)[,1]),
+    str_end = ifelse(id == regions, nchar(area_covered), lead(str_start) - 1),
+    area_covered_cln = str_trim(gsub("-", " ", gsub(",", "", substr(area_covered, str_start, str_end)))))
+  
+  
+  p <- ggplot(data= db_sub_ctry_dup) + 
+    geom_point(aes(x= date_start_cln, y= paste0("(", admin_level_cln, ") ", area_covered_cln), color= who_subcategory)) + 
+    facet_grid(who_category ~ ., space= "free_y", scales= "free_y", switch= "y") + 
+    labs(title = paste(x, "COVID-19 policies"), subtitle= paste0("Dropped categories: \n", paste(drop_cats, collapse= ", ")), color= "Subcategory") +
+    theme(axis.title = element_blank()) + 
+    scale_x_date(date_labels= "%b-%d", date_breaks= "3 weeks")
+  
+  plot(p)
+}
+plot_country("Germany")
+
+
+pdf(paste0("./policy-database/notebooks/outputs/who-phsm-all-policies-overview - ", date_today, ".pdf"), width = 11, height= 8.5)
+countries_of_interest <- c("United States Of America", "Canada", "China", "Germany", "France", "Italy", "Spain")
+for(i in 1:length(countries_of_interest)){
+  
+  country <- countries_of_interest[i]
+  plot_country(country)
+  
+}
+dev.off() 
 
 # --------------------subset to measures of interest -------------------------
 # ____________________________________________________________________________
