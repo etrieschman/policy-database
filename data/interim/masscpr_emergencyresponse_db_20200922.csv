@@ -1,0 +1,8 @@
+"","policy_id","province_region","response_level","date_announce_cln","date_start_cln","date_end_cln"
+"1","P1","Guangdong","Level I",2020-01-23,2020-01-23,2020-02-24
+"2","P2","Guangdong","Level II",2020-02-24,2020-02-24,2020-05-09
+"3","P3","Guangdong","Level III",2020-05-08,2020-05-09,2020-07-31
+"4","X1","Hubei","Level II",2020-01-21,2020-01-21,2020-01-24
+"5","X2","Hubei","Level I",2020-01-24,2020-01-24,2020-05-02
+"6","X3","Hubei","Level II",2020-05-01,2020-05-02,2020-06-13
+"7","X4","Hubei","Level III",2020-06-12,2020-06-13,2020-07-31

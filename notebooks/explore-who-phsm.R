@@ -89,7 +89,6 @@ db_sub <- db_cln %>%
   filter(!who_category %in% drop_cats)
 
 
-
 plot_country <- function(x){
   
   db_sub_ctry <- db_sub %>% 
@@ -112,11 +111,12 @@ plot_country <- function(x){
   
   plot(p)
 }
-plot_country("Germany")
+plot_country("China")
 
-
+unique(db_sub$country_territory_area)
 pdf(paste0("./policy-database/notebooks/outputs/who-phsm-all-policies-overview - ", date_today, ".pdf"), width = 11, height= 8.5)
-countries_of_interest <- c("United States Of America", "Canada", "China", "Germany", "France", "Italy", "Spain")
+countries_of_interest <- c("United States Of America", "Canada", "China", "Germany", "France", "Italy", "Spain", 
+                           "United Kingdom Of Great Britain And Northern Ireland")
 for(i in 1:length(countries_of_interest)){
   
   country <- countries_of_interest[i]
@@ -124,6 +124,24 @@ for(i in 1:length(countries_of_interest)){
   
 }
 dev.off() 
+
+# --------------------quick pca analysis -------------------------
+# ____________________________________________________________________________
+
+country <- "China"
+
+db_pca_pre_cntry <- db_sub %>%
+  filter(country_territory_area == country & area_covered != "") %>%
+  mutate(start_since_2020 = as.numeric(date_start_cln - readr::parse_date("2020-01-01")),
+         who_subcat_full = paste(who_category, sep= " - ")) %>%
+  pivot_wider(id_cols = c(country_territory_area, area_covered), names_from= who_subcat_full, values_from= start_since_2020, values_fn= min)
+
+db_pca_pre_cntry[is.na(db_pca_pre_cntry)] <- 0
+
+pca <- princomp(db_pca_pre_cntry[, 3:length(db_pca_pre_cntry)])
+summary(pca)
+pca$loadings
+biplot(pca)
 
 # --------------------subset to measures of interest -------------------------
 # ____________________________________________________________________________

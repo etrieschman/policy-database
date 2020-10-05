@@ -1,7 +1,6 @@
 # ______________________________________________________________ 
 # --------------- clean masscpr constructed dataset------------- 
 # ______________________________________________________________
-# TO-DOS: NEED TO FIGURE OUT HOW TO APPLY ALL-BUSINESS BEFORE FIRST SUB-BUSINESS POLICY
 # ______________________________________________________________
 
 #### Setup ####
@@ -9,18 +8,6 @@ dir <- "C:/Users/ErichTrieschman/dev"
 setwd(dir)
 
 #### ... packages ####
-# install.packages("ggplot2")
-# install.packages("tidyverse")
-# install.packages("tidyr")
-# install.packages("dplyr")
-# install.packages("reshape2")
-# install.packages("scales")
-# install.packages("stringr")
-# install.packages("googledrive")
-# install.packages("ggpubr")
-# install.packages("tidyselect")
-# install.packages("sqldf")
-# install.packages("gtable")
 library(tidyselect)
 library(ggplot2)
 # library(tidyverse)
