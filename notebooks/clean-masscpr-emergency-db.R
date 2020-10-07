@@ -5,7 +5,7 @@
 # ______________________________________________________________
 
 #### Setup ####
-dir <- "C:/Users/ErichTrieschman/dev"
+dir <- "/Users/ErichTrieschman/dev"
 setwd(dir)
 
 #### ... packages ####
@@ -79,7 +79,7 @@ ggplot(data= e_cln) + geom_boxplot(aes(y= response_level_cln, x= date_start_cln,
 e_string <- e_cln %>%
   arrange(province_region, date_start_cln) %>%
   mutate(use_cutoff_date = ifelse(is.na(lead(province_region)) | (!is.na(province_region) & province_region != lead(province_region)), TRUE, FALSE),
-         date_end_cln = as.Date(ifelse(use_cutoff_date, date_cutoff, lead(date_start_cln)), origin= date_origin)) %>%
+         date_end_cln = as.Date(ifelse(use_cutoff_date, date_cutoff, lead(date_start_cln) - 1), origin= date_origin)) %>%
   select(policy_id, province_region, response_level_cln, flag_sub_variation, date_announce_cln, date_start_cln, date_end_cln) %>%
   arrange(province_region, date_start_cln)
 

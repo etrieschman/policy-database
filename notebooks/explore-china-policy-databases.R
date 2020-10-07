@@ -30,6 +30,7 @@ gg_color_hue <- function(n) {
 
 # dates
 date_today <- gsub("-", "", Sys.Date())
+date_cutoff <- as.Date('2020-07-31')
 
 
 # Import external policy data
@@ -40,7 +41,7 @@ acaps_raw <- read_csv(paste0(idir, "/acaps/acaps_covid19_government_measures_dat
 hit_raw <- read_csv(paste0(idir, "/hit/hit-covid-longdata.csv"))
 
 # import emergency level data
-sul_erl <- read_csv("./policy-database/data/interim/masscpr_emergencyresponse_db_20201001.csv")
+sul_erl <- read_csv("./policy-database/data/interim/masscpr_emergencyresponse_db_20201007.csv")
 
 # -------------------
 # SUBSET AND SUMMARIZE WHO
@@ -49,6 +50,7 @@ sul_erl <- read_csv("./policy-database/data/interim/masscpr_emergencyresponse_db
 names(who_raw)
 unique(who_raw$country_territory_area)
 drop_cats <- c("Drug-based measures", "Other measures", "Environmental measures")
+# drop_cats <- NULL
 who_sub <- who_raw %>% filter(country_territory_area == "China"& !who_category %in% drop_cats)
 
 # CLEAN UP REGIONS
@@ -62,51 +64,190 @@ who_sub_exp <- who_sub_int %>%
   mutate(str_start = ifelse(id == 1, 1, str_locate_nth(area_covered, ",|and", id-1)[,1]),
          str_end = ifelse(id == regions2, nchar(area_covered), lead(str_start) - 1),
          area_covered_cln = str_trim(gsub("-|\\.", " ", gsub(",|and", "", substr(area_covered, str_start, str_end)))),
-         area_covered_cln2 = str_trim(gsub("province$|Province$", "", 
+         area_covered_cln2 = str_trim(gsub("province$|Province$|municipality$", "", 
                                            gsub("Uygur Autonomous Region", "",
                                                 gsub("Inner Mongolia|Nei Mongol", "Neimenggu", 
                                                      gsub("Zhejiang", "Zhengjiang", 
-                                                          gsub("Shangdong", "Shandong", area_covered_cln)))))))
+                                                          gsub("Shangdong", "Shandong", 
+                                                               gsub("SAR|Hong Kong SAR", "Hong Kong",
+                                                                    ifelse(is.na(area_covered_cln), "China", area_covered_cln)))))))))
 sort(unique(who_sub_exp$area_covered_cln2))
 
+# CLEAN UP MEASURES
+unique(who_sub_exp$who_category)
+category_summ_pre <- who_sub_exp %>% group_by(who_category, who_subcategory, who_measure) %>% dplyr::summarize(n = n())
+targeted_summ_pre <- who_sub_exp %>% group_by(who_category, who_subcategory, who_measure, targeted) %>% dplyr::summarize(n = n())
+who_sub_cln <- who_sub_exp %>%
+  mutate(who_measure_cln = ifelse(grepl("suspending or restricting international", tolower(who_measure)), 
+                                  "Suspending or restricting international travel", 
+                                  ifelse(grepl("public gatherings|private gatherings outside", tolower(who_measure)), 
+                                         "Canceling, restricting or adapting public gatherings", who_measure)),
+         who_category_group = ifelse(grepl("domestic|gatherings|office|school|special pop", tolower(who_subcategory)), 
+                                     who_subcategory, who_category),
+         who_category_group_cln = str_trim(gsub("measures", "", 
+                                                gsub("Surveillance and response", "Surveillance", 
+                                                     gsub("Gatherings, businesses and services", "Gatherings", 
+                                                          gsub("Offices, businesses, institutions and operations", "Offi, busi, inst", 
+                                                               who_category_group))))),
+         measure_stage_cln = ifelse(grepl("phase|finish", tolower(measure_stage)), "finish", 
+                                    ifelse(grepl("modification|extension", tolower(measure_stage)), "update", measure_stage)),
+         targeted_cln = str_trim(tolower(targeted)))
+category_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measure_cln) %>% dplyr::summarize(n = n())
+unique(who_sub_cln$measure_stage_cln)
+targeted_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measure_cln, targeted_cln) %>% dplyr::summarize(n = n())
+
+# ----------------------
+# COMBINE WITH ERLS
+# ----------------------
+
+# flag primary level II (the one that follows level I)
+sul_erl <- sul_erl %>% group_by(province_region) %>%
+  mutate(date_start_min = min(date_start_cln),
+         date_start_l1 = max(date_start_cln[response_level_cln == "Level I"], na.rm= T),
+         flag_l2_prim = ifelse(response_level_cln == "Level II" & date_start_min == date_start_l1, TRUE, 
+                               ifelse(response_level_cln == "Level II" & date_start_cln != date_start_min, TRUE, FALSE)),
+         response_level_cln2 = ifelse(response_level_cln == "Level II", ifelse(flag_l2_prim, "Level II", "Level II pre-I"), response_level_cln))
+
 # compare who regions to emergency levels
-test <- merge(x= cbind(sul_erl, sul= 1), y= cbind(who_sub_exp, who= 1), by.x= "province_region", 
+test <- merge(x= cbind(sul_erl, sul= 1), y= cbind(who_sub_cln, who= 1), by.x= "province_region", 
               by.y= "area_covered_cln2", all= T) %>% select(province_region, sul, who) %>% distinct()
 
 # pull over emergency response levels within the defined date buffer
-date_buffer <- 0
-who_sub_erl <- sqldf("SELECT DISTINCT l.*, 
-                     r.who_category, r.who_subcategory, r.who_measure, r.measure_stage, r.targeted, r.enforcement,
+# create a merge column in the WHO data that maps non-province regions to specific province
+default_province <- "Beijing"
+who_sub_cln <- who_sub_cln %>%
+  mutate(key_area = ifelse(area_covered_cln2 %in% unique(sul_erl$province_region), area_covered_cln2, default_province))
+
+date_buffer <- 7
+who_sub_erl <- sqldf(sprintf("SELECT DISTINCT l.*, 
+                     r.area_covered_cln2, r.who_category_group_cln, r.who_measure_cln, r.measure_stage_cln, r.targeted, r.enforcement,
                      r.date_start
                      FROM sul_erl as l
-                     LEFT JOIN who_sub_exp as r
-                     ON l.province_region == r.area_covered_cln2
-                     AND ((l.date_start_cln <= r.date_start + '$date_buffer') OR 
-                         (l.date_start_cln <= r.date_start - '$date_buffer'))
-                     AND ((l.date_end_cln >= r.date_start + '$date_buffer') OR 
-                         (l.date_start_cln >= r.date_start - '$date_buffer'))") %>% as_tibble()
+                     LEFT JOIN who_sub_cln as r
+                     ON (l.province_region == r.key_area)
+                     AND (((l.date_start_cln <= r.date_start) AND
+                           (l.date_end_cln >= r.date_start)) OR
+                          (abs(l.date_start_cln - r.date_start) <= %i) OR
+                          (abs(l.date_end_cln - r.date_start) <= %i))", 
+                             date_buffer, date_buffer)) %>% as_tibble()
+
+# update province flag
+who_sub_erl <- who_sub_erl %>% 
+  mutate(area_covered_cln3 = ifelse(is.na(area_covered_cln2), province_region, area_covered_cln2),
+         province_match = province_region == area_covered_cln3)
+
+# SUMMARY: how many policies get double counted with our policy overlap?
+nrow(who_sub_erl) - nrow(who_sub_cln %>% filter(date_start <= date_cutoff & date_start >= min(sul_erl$date_start_cln)))
 
 
-# what cities get dropped in the merge?
-(who_dropped_cities <- who_sub_exp %>% 
-  filter(!(area_covered_cln2 %in% sul_erl$province_region)) %>% 
-  select(country_territory_area, admin_level, area_covered_cln2) %>% 
-  distinct())
+# SUMMARY: what cities get dropped in the merge?
+# regions and announcements included
+nrow(who_sub_cln %>% filter(area_covered_cln2 %in% sul_erl$province_region)) 
+nrow(who_sub_cln %>% filter(area_covered_cln2 %in% sul_erl$province_region) %>% select(area_covered_cln2) %>% distinct())
+
+# regions and announcements excluded
+(who_dropped_cities <- who_sub_cln %>% filter(!(area_covered_cln2 %in% sul_erl$province_region)) %>% 
+    group_by(country_territory_area, admin_level, area_covered_cln2) %>% dplyr::summarize(n= n()))
+who_dropped_cities %>% summarize(n = sum(n) - who_dropped_cities[who_dropped_cities$admin_level == "national",]$n)
+who_dropped_cities %>% summarize(n = sum(n[area_covered_cln2 %in% c("Hong Kong", "Taiwan", "Wuhan")]))
+
+# ------------------------------------------
+# SUMMARIZE ERLS X ANNOUNCEMENT RELATIONSHIP
+# ------------------------------------------
+
+# create new flags
+who_sub_erl_calc <- who_sub_erl %>%
+  mutate(policies = ifelse(!is.na(who_category_group_cln), 1, 0),
+         policies_required = ifelse(enforcement == "Required", 1, 0),
+         abs_days_from_start = as.numeric(abs(date_start - date_start_cln)),
+         abs_days_from_end = as.numeric(abs(date_start - date_end_cln)))
+
+# summarize for broadest category
+who_erl_t_cat <- who_sub_erl_calc %>% pivot_wider(id_cols = c(province_region, area_covered_cln3, province_match, response_level_cln2, date_start_cln, date_end_cln), 
+                                             names_from = c(who_category_group_cln), names_sort = TRUE,
+                                             values_from = c(policies, policies_required, abs_days_from_start, abs_days_from_end), 
+                                             values_fn = c(policies = function(x){sum(x, na.rm= T)}, 
+                                                           policies_required = function(x){sum(x, na.rm= T)}, 
+                                                           abs_days_from_start = function(x){mean(x, na.rm= T)}, 
+                                                           abs_days_from_end = function(x){mean(x, na.rm= T)}), values_fill = 0)
+
+test <- who_sub_erl_calc %>% filter(province_region == "Anhui" & who_category_group_cln == "Domestic travel") %>% 
+  select(response_level_cln2, province_region, area_covered_cln3, who_category_group_cln, who_measure_cln, date_start_cln, date_end_cln, date_start)
+
+
+
+# summarize for detailed category
+who_erl_t_subcat <- who_sub_erl %>% pivot_wider(id_cols = c(province_region, area_covered_cln3, province_match, response_level_cln2, date_start_cln, date_end_cln), 
+                                             names_from = c(who_category_group_cln, who_measure_cln), names_sep = ": ", names_sort = TRUE,  
+                                             values_from = date_start, values_fn = length, values_fill = 0)
+
+# format for output
+who_erl_t_subcat_out <- who_erl_t_subcat %>% 
+  filter(province_match == TRUE & response_level_cln2 == "Level I") %>%
+  select(-province_match, -area_covered_cln3, -`NA: NA`) %>% arrange(date_start_cln)
 
 # --------------------
 # VISUALIZE POLICIES
 # --------------------
 
-prov <- "Beijing"
+# factorize plot variables for consistency in plotting
+erl_fact <- gg_color_hue(length(unique(sul_erl$response_level_cln)))
+names(erl_fact) <- unique(sort(sul_erl$response_level_cln))
+erl_fact
+stage_fact <- c(24, 22, 25)
+names(stage_fact) <- c("new", "update", "finish")
+stage_fact
 
-p <- ggplot(data= who_sub_exp[who_sub_exp$area_covered_cln2 == prov,]) + 
-  geom_rect(data= sul_erl[sul_erl$province_region == prov, ], inherit.aes = FALSE, 
-            aes(xmin= date_start_cln, xmax= date_end_cln, ymin= -Inf, ymax= +Inf, fill= response_level_cln), alpha= .25, stat= "identity") + 
-  geom_point(aes(x= date_start, y= who_measure, color = who_subcategory, shape= measure_stage)) + 
-  facet_grid(who_category ~ ., scales = "free_y", space = "free_y") + 
-  guides(fill= "none", color= "none")
+# function to plot countries
+plot_prov <- function(prov){
 
-plot(p)
+  who_cntry <- who_sub_cln %>% filter(area_covered_cln2 %in% prov)
+  
+  if(prov %in% unique(sul_erl$province_region)){
+    erl_cntry <- sul_erl %>%  filter(province_region %in% prov)
+    subtitle_text <- NULL
+  }else {
+    erl_cntry <- sul_erl %>% filter(province_region == "Beijing")
+    subtitle_text <- " (with Beijing Emergency Levels)"
+  }
+
+  p <- ggplot(data= who_cntry) + 
+    geom_rect(data= erl_cntry, inherit.aes = FALSE, 
+              aes(xmin= date_start_cln, xmax= date_end_cln, ymin= -Inf, ymax= +Inf, 
+                  fill= response_level_cln), alpha= .25, stat= "identity") + 
+    geom_point(aes(x= date_start, y= who_measure_cln, shape= measure_stage_cln)) + 
+    facet_grid(who_category_group_cln ~ ., scales = "free_y") + 
+    labs(title= "Policy announcements", subtitle= paste0(prov, subtitle_text), 
+         fill= "Emergency Response Level", shape= "Policy announcement type") + 
+    theme(axis.title = element_blank()) + 
+    
+    scale_fill_manual(values = erl_fact) + 
+    scale_shape_manual(values = stage_fact) +
+    scale_x_date(date_labels= "%b", date_breaks= "1 month", limits = c(as.Date('2020-01-01'), date_cutoff))
+  plot(p)
+}
+
+# plot countries
+sort(unique(who_sub_cln$area_covered_cln2))
+plot_prov("Shanghai")
+plot_prov("Zhengjiang")
+plot_prov("Beijing")
+plot_prov("China")
+
+# pdf all of the countries for viewing
+pdf(paste0("./policy-database/notebooks/outputs/who-policies-by-chinese-province-", date_today, ".pdf"), width = 11, height= 8.5)
+for(i in 1:length(unique(who_sub_cln$area_covered_cln2))){
+  
+  country <- sort(unique(who_sub_cln$area_covered_cln2))[i]
+  plot_prov(country)
+}
+dev.off() 
+
+# ---------------
+# WRITE OUTPUTS
+# ---------------
+
+write_csv(x= who_erl_t_cat, file = paste0("./policy-database/notebooks/outputs/who-policy-summary-", date_today, ".csv"))
 
 # ---------------
 # APPENDIX
