@@ -1,0 +1,115 @@
+region,policy_type_cln,policy_sub_type_cln,policy_measure_cln,policy_scope_cln,date_start_cln
+Beijing,offices,office adaptations,l4 - modifying hours,commercial,2020-01-23
+Beijing,domestic travel,restricting entry into region,l1 - quarantine,all citizens,2020-02-10
+Beijing,gatherings,l2 - public gatherings,l3 - cancellation,NA,2020-02-10
+Beijing,gatherings,l2 - public gatherings,l3 - cancellation,NA,2020-02-10
+Beijing,offices,office adaptations,l4 - modifying hours,all offices,2020-02-11
+Beijing,businesses,business adaptations,l1 - hygiene,restaurants,2020-02-11
+Beijing,businesses,business adaptations,l3 - limiting numbers,restaurants,2020-02-11
+Beijing,individual,wearing a mask,NA,general public,2020-01-30
+Beijing,individual,wearing a mask,NA,general public,2020-02-02
+Beijing,individual,wearing a mask,NA,general public,2020-02-02
+Beijing,businesses,business adaptations,l1 - hygiene,all businesses,2020-02-04
+Beijing,gatherings,l1 - private gatherings at home,l2 - restriction,NA,2020-02-08
+Beijing,institutions,institution adaptations,l5 - closing,social welfare,2020-01-27
+Beijing,domestic travel,restricting entry into region,l2 - restriction,all citizens,2020-01-27
+Beijing,individual,wearing a mask,NA,general public,2020-01-27
+Beijing,schools,school adaptations,l5 - closing,NA,2020-01-28
+Beijing,offices,office adaptations,l5 - closing,all offices,2020-01-28
+Beijing,individual,wearing a mask,NA,general public,2020-01-30
+Beijing,gatherings,l3 - mass gatherings,l3 - cancellation,NA,2020-01-30
+Beijing,gatherings,l2 - public gatherings,l3 - cancellation,NA,2020-01-30
+Beijing,gatherings,l1 - private gatherings at home,l2 - restriction,NA,2020-01-30
+Beijing,cinemas,cinema adaptations,l5 - closing,NA,2020-01-30
+Beijing,offices,office adaptations,l5 - closing,all offices,2020-01-31
+Beijing,gatherings,l2 - public gatherings,l3 - cancellation,NA,2020-01-31
+China,institutions,institution adaptations,l1 - hygiene,traffic,2020-01-24
+China,gatherings,l3 - mass gatherings,l3 - cancellation,NA,2020-01-28
+China,gatherings,l3 - mass gatherings,l3 - cancellation,NA,2020-01-28
+China,businesses,business adaptations,l3 - limiting numbers,markets,2020-02-15
+China,businesses,business adaptations,l5 - closing,entertainment,2020-02-15
+China,businesses,business adaptations,l4 - modifying hours,sports,2020-02-15
+China,businesses,business adaptations,l5 - closing,restaurants,2020-02-15
+China,domestic travel,restricting movement within region,l2 - suspension,ill people,2020-02-25
+China,domestic travel,restricting movement within region,l1 - restriction,all citizens,2020-02-25
+China,domestic travel,restricting entry into region,l1 - quarantine,all citizens,2020-02-25
+China,businesses,business adaptations,l3 - limiting numbers,all businesses,2020-02-25
+China,offices,office adaptations,l4 - modifying hours,commercial,2020-02-25
+China,schools,school adaptations,l5 - closing,NA,2020-02-25
+China,institutions,institution adaptations,l1 - hygiene,all institutions,2020-02-25
+China,businesses,business adaptations,l4 - modifying hours,markets,2020-02-25
+China,offices,office adaptations,l2 - physical distancing,all offices,2020-02-25
+Beijing,businesses,business adaptations,l3 - limiting numbers,markets,2020-02-26
+Beijing,domestic travel,restricting entry into region,l1 - quarantine,migrant workers,2020-02-27
+Beijing,domestic travel,restricting entry into region,l2 - restriction,migrant workers,2020-02-27
+Beijing,domestic travel,restricting movement within region,l2 - suspension,ill people,2020-02-28
+Beijing,domestic travel,restricting movement within region,l1 - restriction,all citizens,2020-02-28
+Beijing,domestic travel,restricting entry into region,l1 - quarantine,all citizens,2020-02-28
+Beijing,offices,office adaptations,l1 - hygiene,commercial,2020-02-28
+Beijing,offices,office adaptations,l4 - modifying hours,commercial,2020-02-28
+Beijing,offices,office adaptations,l4 - modifying hours,government,2020-02-28
+Beijing,schools,school adaptations,l5 - closing,NA,2020-02-28
+Beijing,institutions,institution adaptations,l3 - limiting numbers,scenic spots,2020-02-28
+China,institutions,institution adaptations,l1 - hygiene,traffic,2020-02-28
+China,domestic travel,restricting entry into region,l1 - quarantine,all citizens,2020-02-28
+Beijing,domestic travel,restricting entry into region,l2 - restriction,all citizens,2020-02-28
+China,institutions,institution adaptations,l1 - hygiene,social welfare,2020-02-29
+China,schools,school adaptations,l5 - closing,NA,2020-02-29
+Beijing,businesses,business adaptations,l1 - hygiene,entertainment,2020-02-17
+Beijing,businesses,business adaptations,l3 - limiting numbers,entertainment,2020-02-17
+Beijing,individual,wearing a mask,NA,general public,2020-02-18
+Beijing,offices,office adaptations,l4 - modifying hours,all offices,2020-02-18
+China,institutions,institution adaptations,l1 - hygiene,social welfare,2020-02-17
+Beijing,businesses,business adaptations,l3 - limiting numbers,all businesses,2020-02-18
+Beijing,businesses,business adaptations,l3 - limiting numbers,entertainment,2020-02-20
+Beijing,institutions,institution adaptations,l1 - hygiene,social welfare,2020-02-22
+Beijing,offices,office adaptations,l4 - modifying hours,all offices,2020-02-23
+Beijing,offices,office adaptations,l4 - modifying hours,all offices,2020-02-28
+China,institutions,institution adaptations,l1 - hygiene,traffic,2020-03-01
+China,domestic travel,restricting entry into region,l1 - quarantine,migrant workers,2020-03-07
+Beijing,domestic travel,restricting entry into region,l2 - restriction,migrant workers,2020-03-11
+Beijing,offices,office adaptations,l3 - limiting numbers,commercial,2020-03-13
+Beijing,domestic travel,restricting entry into region,l1 - quarantine,migrant workers,2020-03-24
+Beijing,institutions,institution adaptations,l2 - physical distancing,scenic spots,2020-02-17
+Beijing,institutions,institution adaptations,l3 - limiting numbers,traffic,2020-03-07
+Beijing,offices,office adaptations,l2 - physical distancing,all offices,2020-03-20
+Beijing,businesses,business adaptations,l1 - hygiene,all businesses,2020-03-21
+Beijing,businesses,business adaptations,l2 - physical distancing,entertainment,2020-03-21
+Beijing,institutions,institution adaptations,l3 - limiting numbers,scenic spots,2020-04-01
+China,gatherings,l3 - mass gatherings,l2 - restriction,NA,2020-04-09
+China,offices,office adaptations,l2 - physical distancing,all offices,2020-04-09
+China,businesses,business adaptations,l1 - hygiene,all businesses,2020-04-09
+China,institutions,institution adaptations,l2 - physical distancing,traffic,2020-04-09
+China,institutions,institution adaptations,l1 - hygiene,social welfare,2020-04-09
+China,offices,office adaptations,l2 - physical distancing,commercial,2020-04-10
+China,institutions,institution adaptations,l3 - limiting numbers,scenic spots,2020-04-13
+China,individual,wearing a mask,NA,general public,2020-04-16
+China,domestic travel,restricting movement within region,l1 - restriction,all citizens,2020-04-16
+Beijing,businesses,business adaptations,l3 - limiting numbers,sports,2020-04-22
+China,domestic travel,restricting entry into region,l2 - restriction,migrant workers,2020-02-19
+Beijing,offices,office adaptations,l2 - physical distancing,commercial,2020-04-29
+Beijing,individual,wearing a mask,NA,general public,2020-04-29
+Beijing,businesses,business adaptations,l1 - hygiene,hotels,2020-04-29
+Beijing,businesses,business adaptations,l1 - hygiene,all businesses,2020-04-29
+Beijing,institutions,institution adaptations,l1 - hygiene,all institutions,2020-04-29
+Beijing,institutions,institution adaptations,l1 - hygiene,social welfare,2020-04-29
+Beijing,businesses,business adaptations,l2 - physical distancing,all businesses,2020-04-29
+Beijing,businesses,business adaptations,l2 - physical distancing,entertainment,2020-04-29
+Beijing,institutions,institution adaptations,l2 - physical distancing,traffic,2020-04-29
+Beijing,gatherings,l1 - private gatherings at home,l2 - restriction,NA,2020-04-30
+Beijing,offices,office adaptations,l4 - modifying hours,all offices,2020-02-19
+China,offices,office adaptations,l4 - modifying hours,all offices,2020-02-22
+Beijing,offices,office adaptations,l4 - modifying hours,all offices,2020-02-24
+Beijing,domestic travel,restricting entry into region,l1 - quarantine,migrant workers,2020-02-24
+China,businesses,business adaptations,l3 - limiting numbers,all businesses,2020-02-24
+Beijing,domestic travel,restricting entry into region,l2 - restriction,all citizens,2020-06-18
+Beijing,individual,wearing a mask,NA,general public,2020-06-23
+Beijing,institutions,institution adaptations,l1 - hygiene,healthcare institutions,2020-06-30
+Beijing,businesses,business adaptations,l1 - hygiene,sports venues,2020-07-21
+Beijing,individual,wearing a mask,NA,general public,2020-06-26
+Beijing,individual,performing hand hygiene,NA,general public,2020-06-26
+Beijing,schools,school adaptations,l1 - hygiene,NA,2020-07-02
+China,gatherings,l3 - mass gatherings,l2 - restriction,NA,2020-05-08
+China,gatherings,l2 - public gatherings,l1 - adaptation,NA,2020-05-08
+Beijing,institutions,institution adaptations,l1 - hygiene,social welfare,2020-05-14
+Beijing,cinemas,cinema adaptations,l3 - limiting numbers,NA,2020-07-21

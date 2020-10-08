@@ -12,10 +12,10 @@ setwd(dir)
 
 # PACKAGES
 library(ggplot2)
+library(dplyr)
 library(tidyverse)
 library(tidyr)
 library(plyr)
-library(dplyr)
 library(reshape2)
 library(scales)
 library(stringr)
@@ -36,16 +36,19 @@ date_cutoff <- as.Date('2020-07-31')
 # Import external policy data
 who_raw <- read_csv(paste0(idir, "/who-phsm/WHO_PHSM_Cleaned_V1_20_09_23.csv"))
 sol_raw <- read_csv(paste0(idir, "/solomon-hsiang/CHN_processed.csv"))
-cnet_raw <- read_csv(paste0(idir, "/coronanet/coronanet_release.csv"))
-acaps_raw <- read_csv(paste0(idir, "/acaps/acaps_covid19_government_measures_dataset.csv"))
-hit_raw <- read_csv(paste0(idir, "/hit/hit-covid-longdata.csv"))
+# cnet_raw <- read_csv(paste0(idir, "/coronanet/coronanet_release.csv"))
+# acaps_raw <- read_csv(paste0(idir, "/acaps/acaps_covid19_government_measures_dataset.csv"))
+# hit_raw <- read_csv(paste0(idir, "/hit/hit-covid-longdata.csv"))
 
 # import emergency level data
 sul_erl <- read_csv("./policy-database/data/interim/masscpr_emergencyresponse_db_20201007.csv")
 
-# -------------------
+# import beijing policy data
+sul_pa <- read_csv("./policy-database/data/interim/masscpr_policydb_20201008.csv")
+
+# -------------------------
 # SUBSET AND SUMMARIZE WHO
-# -------------------
+# -------------------------
 
 names(who_raw)
 unique(who_raw$country_territory_area)
@@ -95,6 +98,68 @@ who_sub_cln <- who_sub_exp %>%
 category_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measure_cln) %>% dplyr::summarize(n = n())
 unique(who_sub_cln$measure_stage_cln)
 targeted_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measure_cln, targeted_cln) %>% dplyr::summarize(n = n())
+
+# -----------------------------
+# VALIDATE WHO DATA AGAINST SUL
+# -----------------------------
+who_sub_cln %>% 
+  select(who_category_group_cln, who_measure_cln) %>% 
+  filter(!(who_category_group_cln %in% c("International travel", "Surveillance", "Special populations"))) %>% 
+  arrange(who_category_group_cln) %>%  distinct()
+           
+# categorize SUL data into WHO format
+names(sul_pa)
+sul_pa %>% select(policy_type_cln, policy_sub_type_cln, policy_measure_cln) %>% arrange(policy_type_cln) %>% distinct()
+sul_pa_cln <- sul_pa %>% 
+  mutate(sul_category_group = ifelse(grepl("busi|offi|cinema|inst", policy_type_cln), "offi, busi, inst", 
+                                     ifelse(policy_type_cln == "schools", "school", policy_type_cln)))
+sul_pa_cln %>% select(sul_category_group, policy_measure_cln) %>% arrange(sul_category_group) %>% distinct()
+
+# visualize differences between SUL dataset and WHO dataset
+g <- ggplot() + 
+        geom_rect(data= sul_erl[sul_erl$province_region == "Beijing",], 
+                  aes(xmin = date_start_cln, xmax= date_end_cln, ymin= -Inf, ymax= Inf, fill= response_level_cln), alpha = .2) +
+        geom_point(data= who_sub_cln[who_sub_cln$area_covered_cln2 %in% c("Beijing", "Wuhan", "China"),], 
+                   aes(x= date_start, y= tolower(who_category_group_cln), color = area_covered_cln2),
+                   position= position_nudge(y= .1), shape = 22, size = 4, alpha = .9) + 
+        geom_point(data= sul_pa_cln, aes(x= date_start_cln, y= sul_category_group),
+                   position= position_nudge(y= -.1), color = "darkgrey", shape = 21, size = 4, alpha = .9) + 
+        labs(title= "Beijing policy anouncements", subtitle = "Comparing WHO and internal SUL datasets\nSquare = WHO; Circle = SUL",
+             color = "WHO regions") + 
+        theme(axis.title = element_blank()) + 
+        scale_x_date(date_labels= "%b", date_breaks= "1 month", limits = c(as.Date('2020-01-01'), date_cutoff))
+plot(g)
+
+# summarize difference
+who_sub_cln %>% filter(area_covered_cln2 %in% c("Beijing", "Wuhan", "China")) %>% 
+  group_by(who_category_group_cln, area_covered_cln2) %>% 
+  dplyr::summarize(n = n()) %>% ungroup() %>%
+  pivot_wider(id_cols = who_category_group_cln, names_from = area_covered_cln2, names_prefix = "n_" , values_from= n) %>%
+  rowwise() %>% mutate(n_total = sum(across(!who_category_group_cln), na.rm= T),
+                       who_category_group_cln = tolower(who_category_group_cln))
+sul_pa_cln %>% group_by(sul_category_group) %>%
+  dplyr::summarize(n = n())
+
+data_check <- who_sub_cln %>% filter(area_covered_cln2 == "Beijing" & who_category_group_cln == "School")
+
+# ----------------------------------
+# VALIDATE WHO DATA AGAINST SOLOMON
+# ----------------------------------
+
+names(sol_raw)
+sol_cln <- sol_raw %>% select(adm1_name, adm2_name, date, travel_ban_local, emergency_declaration, home_isolation) %>%
+  arrange(adm1_name, adm2_name, date) %>%
+  group_by(adm1_name, adm2_name) %>%
+  mutate(date_start_tb = as.Date(ifelse(date == first(date), date, ifelse(travel_ban_local == lag(travel_ban_local), NA, date)), origin= '1970-01-01'),
+         date_start_ed = as.Date(ifelse(date == first(date), date, ifelse(emergency_declaration == lag(emergency_declaration), NA, date)), origin= '1970-01-01'),
+         date_start_hi = as.Date(ifelse(date == first(date), date, ifelse(home_isolation == lag(home_isolation), NA, date)), origin= '1970-01-01'))
+
+sol_cln_tb <- sol_cln %>% rename(date_start_tb = date_start_tb) %>% select(adm1_name, adm2_name, date_start) 
+
+sol_cln_st <- rbind(sol_cln %>% select(adm1_name, adm2_name, date_start_tb))
+
+sol_cln[1, "date_start_tb"] <- sol_cln[1, "date"]
+
 
 # ----------------------
 # COMBINE WITH ERLS
@@ -173,18 +238,6 @@ who_erl_t_cat <- who_sub_erl_calc %>% pivot_wider(id_cols = c(province_region, a
 
 test <- who_sub_erl_calc %>% filter(province_region == "Anhui" & who_category_group_cln == "Domestic travel") %>% 
   select(response_level_cln2, province_region, area_covered_cln3, who_category_group_cln, who_measure_cln, date_start_cln, date_end_cln, date_start)
-
-
-
-# summarize for detailed category
-who_erl_t_subcat <- who_sub_erl %>% pivot_wider(id_cols = c(province_region, area_covered_cln3, province_match, response_level_cln2, date_start_cln, date_end_cln), 
-                                             names_from = c(who_category_group_cln, who_measure_cln), names_sep = ": ", names_sort = TRUE,  
-                                             values_from = date_start, values_fn = length, values_fill = 0)
-
-# format for output
-who_erl_t_subcat_out <- who_erl_t_subcat %>% 
-  filter(province_match == TRUE & response_level_cln2 == "Level I") %>%
-  select(-province_match, -area_covered_cln3, -`NA: NA`) %>% arrange(date_start_cln)
 
 # --------------------
 # VISUALIZE POLICIES

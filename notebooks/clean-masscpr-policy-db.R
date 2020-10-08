@@ -4,7 +4,7 @@
 # ______________________________________________________________
 
 #### Setup ####
-dir <- "C:/Users/ErichTrieschman/dev"
+dir <- "/Users/ErichTrieschman/dev"
 setwd(dir)
 
 #### ... packages ####
@@ -37,7 +37,7 @@ date_origin <- "1970-01-01"
 # policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_unverified_20200818.csv", stringsAsFactors = FALSE)
 # policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_pverified_20200819.csv", stringsAsFactors = FALSE)
 # policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v3_verified_20200827.csv", stringsAsFactors = FALSE)
-policy_raw <- read.csv(file= "./policy-database/data/internal/MassCPR_level1_v4_verified_20200910.csv", stringsAsFactors = FALSE)
+policy_raw <- read_csv(file= "./policy-database/data/internal/MassCPR_level1_v4_verified_20200910.csv")
 
 business_scope <- c("all_business", "hotel", "restaurant", "entertainment", "market", "sport", "theater")
 institution_scope <- c("all_insti", "scenic", "public service", "traffic", "social welfare", "healthcare")
@@ -50,8 +50,9 @@ policy_clean <- policy_raw %>% filter(!(verification_status %in% c("update", "de
 
 # clean categories
 policy_clean <- policy_clean %>%
-  mutate(policy_type_cln = tolower(ifelse(grepl(paste0(business_scope, collapse= "|"), tolower(policy_scope)), "businesses", 
-                                          ifelse(grepl(paste0(institution_scope, collapse= "|"), tolower(policy_scope)), "institutions", policy_type)))) %>%
+  mutate(policy_type_cln = ifelse(grepl(paste0(business_scope, collapse= "|"), tolower(policy_scope)), "businesses",
+                                  ifelse(grepl(paste0(institution_scope, collapse= "|"), tolower(policy_scope)), "institutions", 
+                                         tolower(policy_type)))) %>%
   
   mutate(policy_sub_type_cln = tolower(ifelse(grepl(paste0(business_scope, collapse= "|"), tolower(policy_scope)), "business adaptations", 
                                               ifelse(grepl(paste0(institution_scope, collapse= "|"), tolower(policy_scope)), "institution adaptations", 
@@ -378,69 +379,9 @@ grid.draw(rbind(ggplotGrob(p_m), ggplotGrob(p_gath), ggplotGrob(p_trvl), size = 
 
 # --------------------output dataset  ------------
 # ____________________________________________________________________________
+policy_out <- policy_clean %>% select(region, policy_type_cln, policy_sub_type_cln, policy_measure_cln, policy_scope_cln, date_start_cln)
 
-write.csv(x= policy_out, file= paste0("./masscpr-policy-database/data/interim/masscpr_policydb_", today,".csv"))
-
-
-
-
-
-
-
-# --------------------Appendix  ------------
-# ____________________________________________________________________________
-
-# INDEXING WAY OF CREATING POLICY STRINGS
-
-# create strings of dates
-policy_poi_sort$date_string_start <- NA
-policy_poi_sort$date_string_end <- NA
-policy_poi_sort$date_string_start[1] <- policy_poi_sort$date_start[1]
-# define end date
-policy_poi_sort$date_string_end[1] <- with(policy_poi_sort, 
-                                           ifelse(policy_scope_cln[1] == policy_scope_cln[2] & 
-                                                    policy_measure_cln[1] != policy_measure_cln[2],
-                                                  date_start_cln[i+1], NA))
-for(i in 2:nrow(policy_poi_sort)){
-  
-  # carry string if same grouping
-  policy_poi_sort$date_string_start[i] <- with(policy_poi_sort, 
-                                               ifelse(policy_scope_cln[i] == policy_scope_cln[i-1] & 
-                                                        policy_measure_cln[i] == policy_measure_cln[i-1] & 
-                                                        compliance[i] == compliance[i-1],
-                                                      NA, date_start_cln[i]))
-  
-  # group on start date
-  policy_poi_sort$date_string_start[i] <- ifelse(is.na(policy_poi_sort$date_string_start[i]),
-                                                 policy_poi_sort$date_string_start[i-1],
-                                                 policy_poi_sort$date_string_start[i])
-  
-  
-  # define end date
-  policy_poi_sort$date_string_end[i] <- with(policy_poi_sort, 
-                                             ifelse(policy_scope_cln[i] == policy_scope_cln[i+1] & 
-                                                      compliance[i] == compliance[i+1] & 
-                                                      policy_measure_cln[i] != policy_measure_cln[i+1],
-                                                    date_start_cln[i+1], NA))
-  
-  
-  print(i)
-}
-
-# collapse on these strings and clean up the dataset a bit
-policy_poi_col <- policy_poi_sort %>% 
-  group_by(policy_type_cln, policy_sub_type_cln, policy_measure_cln, compliance, policy_scope_cln, date_string_start) %>%
-  dplyr::summarize(date_string_end = max(date_string_end, na.rm= T)) %>%
-  arrange(policy_type_cln, policy_sub_type_cln, date_string_start)
-
-# set end dates to last date of analysis (if unavailable)
-policy_poi_col <- policy_poi_col %>% rowwise() %>% mutate(date_string_end = pmin(abs(date_string_end), date_cutoff))
-
-# format dates
-policy_poi_col$date_string_start <- as.Date(policy_poi_col$date_string_start, origin= "1970-01-01")
-policy_poi_col$date_string_end <- as.Date(policy_poi_col$date_string_end, origin= "1970-01-01")
-
-
+write_csv(x= policy_out, file= paste0("./policy-database/data/interim/masscpr_policydb_", today,".csv"))
 
 
 
