@@ -1,0 +1,170 @@
+province,city_level,place,place_cln,date_start,date_end,sah_standard,et_manual
+Anhui,prefecture,Bengbu,Bengbu,2020-02-03,NA,partial shutdown,TRUE
+Anhui,prefecture,Fuyang,Fuyang,2020-02-05,2020-02-08,partial shutdown,TRUE
+Anhui,prefecture,Hefei,Hefei,2020-02-05,NA,partial shutdown,TRUE
+Anhui,prefecture,Hefei,Hefei,2020-02-05,NA,closed management,TRUE
+Anhui,prefecture,Huaibei,Huaibei,2020-02-03,NA,partial shutdown,TRUE
+Anhui,prefecture,Ma'anshan,Maanshan,2020-02-06,NA,closed management,TRUE
+Anhui,prefecture,Maanshan,Maanshan,2020-02-06,NA,closed management,TRUE
+Anhui,province,NA,NA,2020-02-07,NA,closed management,TRUE
+Beijing,province,NA,NA,2020-02-10,NA,closed management,TRUE
+Chongqing,district,Jiangjin,Jiangjin,2020-02-07,NA,closed management,TRUE
+Chongqing,district,Liangping,Liangping,2020-01-31,NA,closed management,TRUE
+Chongqing,district,Wanzhou,Wanzhou,2020-01-31,NA,closed management,TRUE
+Chongqing,province,NA,NA,2020-02-08,NA,closed management,TRUE
+Fujian,prefecture,Fuzhou,Fuzhou,2020-02-04,NA,partial shutdown,TRUE
+Fujian,prefecture,Fuzhou,Fuzhou,2020-02-04,NA,closed management,TRUE
+Gansu,prefecture,Lanzhou,Lanzhou,2020-02-07,NA,closed management,TRUE
+Guangdong,prefecture,Dongguan,Dongguan,2020-02-09,NA,closed management,TRUE
+Guangdong,prefecture,Foshan,Foshan,2020-02-08,NA,closed management,TRUE
+Guangdong,prefecture,Guangzhou,Guangzhou,2020-02-07,NA,closed management,TRUE
+Guangdong,prefecture,Huizhou,Huizhou,2020-02-09,NA,closed management,TRUE
+Guangdong,prefecture,Shenzhen,Shenzhen,2020-02-07,NA,closed management,TRUE
+Guangdong,prefecture,Zhuhai,Zhuhai,2020-02-06,NA,closed management,TRUE
+Guangxi,prefecture,Fangchenggang,Fangchenggang,2020-02-02,2020-02-08,partial shutdown,TRUE
+Guangxi,prefecture,Guigang,Guigang,2020-02-02,NA,partial shutdown,TRUE
+Guangxi,prefecture,Guilin,Guilin,2020-02-05,NA,partial shutdown,TRUE
+Guangxi,district,"Jinchengjiang, Hechi","Jinchengjiang, Hechi",2020-02-05,NA,partial shutdown,TRUE
+Guangxi,prefecture,Liuzhou,Liuzhou,2020-02-05,NA,partial shutdown,TRUE
+Guangxi,prefecture,Nanning,Nanning,2020-02-05,NA,closed management,TRUE
+Guangxi,district,"Yuzhou, Yulin","Yuzhou, Yulin",2020-02-02,2020-02-09,partial shutdown,TRUE
+Guizhou,prefecture,Guiyang,Guiyang,2020-02-07,NA,closed management,TRUE
+Guizhou,prefecture,Zunyi,Zunyi,2020-02-07,NA,closed management,TRUE
+Hainan,prefecture,Haikou,Haikou,2020-02-05,NA,closed management,TRUE
+Hainan,prefecture,Sanya,Sanya,2020-02-05,NA,closed management,TRUE
+Hebei,prefecture,Shijiazhuang,Shijiazhuang,2020-02-05,NA,closed management,TRUE
+Hebei,prefecture,Tangshan,Tangshan,2020-02-07,NA,closed management,TRUE
+Hebei,prefecture,Tangshan,Tangshan,2020-02-07,NA,partial shutdown,TRUE
+Heilongjiang,prefecture,Haerbin,Harbin,2020-02-04,NA,partial shutdown,TRUE
+Heilongjiang,prefecture,Harbin,Harbin,2020-02-04,NA,partial shutdown,TRUE
+Heilongjiang,prefecture,Harbin,Harbin,2020-02-04,NA,closed management,TRUE
+Heilongjiang,district,Suifenhe,Suifenhe,2020-04-08,NA,partial shutdown,TRUE
+Heilongjiang,district,Suifenhe,Suifenhe,2020-04-08,NA,closed management,TRUE
+Henan,district,Jia,Jia,2020-03-31,NA,closed management,TRUE
+Henan,district,"Yicheng, Zhumadian","Yicheng, Zhumadian",2020-02-04,NA,partial shutdown,TRUE
+Henan,prefecture,Zhengzhou,Zhengzhou,2020-02-04,NA,partial shutdown,TRUE
+Henan,prefecture,Zhengzhou,Zhengzhou,2020-02-04,NA,closed management,TRUE
+Henan,prefecture,Zhumadian,Zhumadian,2020-02-04,NA,partial shutdown,TRUE
+Henan,prefecture,Zhumadian,Zhumadian,2020-02-04,NA,closed management,TRUE
+Hubei,prefecture,Enshi,Enshi,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Enshi,Enshi,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Enshitujiazumiaozu,Enshitujiazumiaozu,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Ezhou,Ezhou,2020-01-23,NA,complete shutdown,TRUE
+Hubei,prefecture,Ezhou,Ezhou,2020-01-23,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Ezhou,Ezhou,2020-02-04,NA,partial shutdown,TRUE
+Hubei,prefecture,Huanggang,Huanggang,2020-01-23,NA,complete shutdown,TRUE
+Hubei,prefecture,Huanggang,Huanggang,2020-01-23,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Huanggang,Huanggang,2020-02-01,2020-03-22,partial shutdown,TRUE
+Hubei,prefecture,Huangshi,Huangshi,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Huangshi,Huangshi,2020-01-24,2020-03-13,complete shutdown,TRUE
+Hubei,prefecture,Jingmen,Jingmen,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Jingmen,Jingmen,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Jingzhou,Jingzhou,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Jingzhou,Jingzhou,2020-01-24,2020-03-17,complete shutdown,TRUE
+Hubei,prefecture,Qianjiang,Qianjiang,2020-01-24,NA,complete shutdown,TRUE
+Hubei,district,Qianjiang,Qianjiang,2020-01-24,2020-03-13,complete shutdown,TRUE
+Hubei,district,Shennongjia,Shennongjia,2020-01-27,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Shiyan,Shiyan,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Shiyan,Shiyan,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Suizhou,Suizhou,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Suizhou,Suizhou,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Tianmen,Tianmen,2020-01-24,NA,complete shutdown,TRUE
+Hubei,district,Tianmen,Tianmen,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Wuhan,Wuhan,2020-01-23,NA,complete shutdown,TRUE
+Hubei,district,Wuhan,Wuhan,2020-01-23,2020-04-08,complete shutdown,TRUE
+Hubei,prefecture,Xiangyang,Xiangyang,2020-01-28,NA,complete shutdown,TRUE
+Hubei,prefecture,Xiangyang,Xiangyang,2020-01-28,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Xianning,Xianning,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Xianning,Xianning,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Xiantao,Xiantao,2020-01-24,NA,complete shutdown,TRUE
+Hubei,district,Xiantao,Xiantao,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Xiaogan,Xiaogan,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Xiaogan,Xiaogan,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,prefecture,Yichang,Yichang,2020-01-24,NA,complete shutdown,TRUE
+Hubei,prefecture,Yichang,Yichang,2020-01-24,2020-03-25,complete shutdown,TRUE
+Hubei,province,NA,NA,2020-02-16,2020-04-08,partial shutdown,TRUE
+Hubei,province,NA,NA,2020-02-07,NA,closed management,TRUE
+Jiangsu,district,Buning,Buning,2020-02-05,NA,closed management,TRUE
+Jiangsu,prefecture,Changzhou,Changzhou,2020-02-04,NA,closed management,TRUE
+Jiangsu,district,"Hailing, Taizhou","Hailing, Taizhou",2020-02-05,NA,partial shutdown,TRUE
+Jiangsu,prefecture,Huai'an,Huaian,2020-02-03,NA,closed management,TRUE
+Jiangsu,prefecture,Huaian,Huaian,2020-02-03,NA,closed management,TRUE
+Jiangsu,district,Jiangyan,Jiangyan,2020-02-04,NA,closed management,TRUE
+Jiangsu,district,Jiangyin,Jiangyin,2020-02-03,NA,closed management,TRUE
+Jiangsu,prefecture,Lianyungang,Lianyungang,2020-02-07,NA,closed management,TRUE
+Jiangsu,prefecture,Nanjing,Nanjing,2020-02-04,NA,closed management,TRUE
+Jiangsu,prefecture,Nantong,Nantong,2020-02-04,NA,closed management,TRUE
+Jiangsu,prefecture,Suqian,Suqian,2020-02-05,NA,closed management,TRUE
+Jiangsu,prefecture,Suzhou,Suzhou,2020-02-06,NA,closed management,TRUE
+Jiangsu,prefecture,Taizhou,Taizhou,2020-02-05,NA,closed management,TRUE
+Jiangsu,prefecture,Wuxi,Wuxi,2020-02-09,NA,closed management,TRUE
+Jiangsu,prefecture,Xuzhou,Xuzhou,2020-02-04,NA,closed management,TRUE
+Jiangsu,prefecture,Xuzhou,Xuzhou,2020-02-04,2020-02-08,partial shutdown,TRUE
+Jiangsu,prefecture,Yangzhou,Yangzhou,2020-02-05,NA,closed management,TRUE
+Jiangsu,prefecture,Zhenjiang,Zhenjiang,2020-02-04,NA,closed management,TRUE
+Jiangxi,prefecture,Jingdezhen,Jingdezhen,2020-02-04,NA,closed management,TRUE
+Jiangxi,prefecture,Jingdezhen,Jingdezhen,2020-02-04,2020-03-31,partial shutdown,TRUE
+Jiangxi,prefecture,Nanchang,Nanchang,2020-02-05,NA,closed management,TRUE
+Jiangxi,province,NA,NA,2020-02-06,2020-03-31,partial shutdown,TRUE
+Jiangxi,province,NA,NA,2020-02-06,NA,closed management,TRUE
+Jilin,prefecture,Jilin,Jilin,2020-02-06,NA,closed management,TRUE
+Jilin,district,"Kuancheng, Changchun","Kuancheng, Changchun",2020-02-06,NA,partial shutdown,TRUE
+Liaoning,prefecture,Benxi,Benxi,2020-02-05,NA,partial shutdown,TRUE
+Liaoning,prefecture,Jinzhou,Jinzhou,2020-02-06,NA,partial shutdown,TRUE
+Liaoning,province,NA,NA,2020-02-06,NA,closed management,TRUE
+Nei Mongol,prefecture,Alashan,Alashan,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Baotou,Baotou,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Bayannaoer,Bayannaoer,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Chifeng,Chifeng,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Ereduosi,Ereduosi,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Huhehaote,Huhehaote,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Hulunbeier,Hulunbeier,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Tongliao,Tongliao,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Wuhai,Wuhai,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Wulanchabu,Wulanchabu,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Xilinguole,Xilinguole,2020-02-12,NA,closed management,TRUE
+Nei Mongol,prefecture,Xingan,Xingan,2020-02-12,NA,closed management,TRUE
+Nei Mongol,province,NA,NA,2020-02-12,NA,closed management,TRUE
+Ningxia Hui,prefecture,Wuzhong,Wuzhong,2020-01-31,NA,closed management,TRUE
+Ningxia Hui,prefecture,Yinchuan,Yinchuan,2020-01-31,NA,closed management,TRUE
+Shaanxi,district,"Chang'an, Xi'an","Chang'an, Xi'an",2020-02-04,NA,partial shutdown,TRUE
+Shaanxi,prefecture,Hanzhong,Hanzhong,2020-02-09,NA,closed management,TRUE
+Shaanxi,district,"Huyi, Xi'an","Huyi, Xi'an",2020-02-03,2020-02-09,partial shutdown,TRUE
+Shaanxi,district,"Lianhu, Xi'an","Lianhu, Xi'an",2020-02-05,NA,partial shutdown,TRUE
+Shaanxi,prefecture,Xianyang,Xianyang,2020-02-06,NA,partial shutdown,TRUE
+Shaanxi,district,"Xincheng, Xi'an","Xincheng, Xi'an",2020-02-04,NA,partial shutdown,TRUE
+Shaanxi,district,"Yanta, Xi'an","Yanta, Xi'an",2020-02-05,NA,partial shutdown,TRUE
+Shaanxi,district,"Zhouzhi, Xi'an","Zhouzhi, Xi'an",2020-02-02,NA,partial shutdown,TRUE
+Shandong,district,"Bincheng, Binzhou","Bincheng, Binzhou",2020-02-03,2020-02-09,partial shutdown,TRUE
+Shandong,prefecture,Jinan,Jinan,2020-02-05,NA,closed management,TRUE
+Shandong,prefecture,Linyi,Linyi,2020-02-04,NA,closed management,TRUE
+Shandong,prefecture,Qingdao,Qingdao,2020-02-05,NA,closed management,TRUE
+Shandong,prefecture,Rizhao,Rizhao,2020-02-05,NA,closed management,TRUE
+Shandong,prefecture,Tai'an,Tai'an,2020-02-05,NA,closed management,TRUE
+Shandong,prefecture,Taian,Taian,2020-02-05,NA,closed management,TRUE
+Shanghai,province,NA,NA,2020-02-10,NA,closed management,TRUE
+Sichuan,prefecture,Chengdu,Chengdu,2020-02-07,NA,closed management,TRUE
+Sichuan,prefecture,Deyang,Deyang,2020-02-09,NA,closed management,TRUE
+Sichuan,prefecture,Garzê,Garzê,2020-02-05,NA,partial shutdown,TRUE
+Sichuan,prefecture,Guangyuan,Guangyuan,2020-02-07,NA,closed management,TRUE
+Sichuan,prefecture,Mianyang,Mianyang,2020-02-09,NA,closed management,TRUE
+Sichuan,prefecture,Neijiang,Neijiang,2020-02-06,NA,closed management,TRUE
+Sichuan,prefecture,Ngawa,Ngawa,2020-02-05,NA,partial shutdown,TRUE
+Sichuan,prefecture,Suining,Suining,2020-02-07,NA,closed management,TRUE
+Sichuan,prefecture,Ya'an,Yaan,2020-02-06,NA,closed management,TRUE
+Sichuan,prefecture,Yaan,Yaan,2020-02-06,NA,closed management,TRUE
+Sichuan,prefecture,Ziyang,Ziyang,2020-02-08,NA,closed management,TRUE
+Tianjin,district,"Baodi, Tianjin","Baodi, Tianjin",2020-02-09,NA,partial shutdown,TRUE
+Tianjin,prefecture,Tianjin,Tianjin,2020-02-07,NA,closed management,TRUE
+Tianjin,province,NA,NA,2020-02-07,NA,closed management,TRUE
+Yunnan,prefecture,Kunming,Kunming,2020-02-05,NA,closed management,TRUE
+Zhejiang,prefecture,Hangzhou,Hangzhou,2020-02-04,NA,partial shutdown,TRUE
+Zhejiang,prefecture,Hangzhou,Hangzhou,2020-02-04,NA,closed management,TRUE
+Zhejiang,prefecture,Ningbo,Ningbo,2020-02-04,NA,partial shutdown,TRUE
+Zhejiang,prefecture,Ningbo,Ningbo,2020-02-05,NA,partial shutdown,TRUE
+Zhejiang,prefecture,Ningbo,Ningbo,2020-02-04,NA,closed management,TRUE
+Zhejiang,prefecture,Taizhou,Taizhou,2020-02-03,NA,partial shutdown,TRUE
+Zhejiang,prefecture,Wenling,Wenling,2020-02-02,NA,partial shutdown,TRUE
+Zhejiang,prefecture,Wenzhou,Wenzhou,2020-02-02,NA,partial shutdown,TRUE
+Zhejiang,prefecture,Wenzhou,Wenzhou,2020-02-02,2020-02-08,partial shutdown,TRUE
+Zhejiang,prefecture,Wenzhou,Wenzhou,2020-02-02,NA,closed management,TRUE
