@@ -135,7 +135,7 @@ who_sub_cln %>% filter(area_covered_cln2 %in% c("Beijing", "Wuhan", "China")) %>
   group_by(who_category_group_cln, area_covered_cln2) %>% 
   dplyr::summarize(n = n()) %>% ungroup() %>%
   pivot_wider(id_cols = who_category_group_cln, names_from = area_covered_cln2, names_prefix = "n_" , values_from= n) %>%
-  rowwise() %>% mutate(n_total = sum(across(!who_category_group_cln), na.rm= T),
+  rowwise() %>% dplyr::mutate(n_total = sum(across(!who_category_group_cln), na.rm= T),
                        who_category_group_cln = tolower(who_category_group_cln))
 sul_pa_cln %>% group_by(sul_category_group) %>%
   dplyr::summarize(n = n())
@@ -146,6 +146,8 @@ data_check <- who_sub_cln %>% filter(area_covered_cln2 == "Beijing" & who_catego
 # VALIDATE WHO DATA AGAINST SOLOMON
 # ----------------------------------
 
+date_cutoff_sh <- max(sol_raw$date)
+
 names(sol_raw)
 sol_cln <- sol_raw %>% select(adm1_name, adm2_name, date, travel_ban_local, emergency_declaration, home_isolation) %>%
   arrange(adm1_name, adm2_name, date) %>%
@@ -154,12 +156,65 @@ sol_cln <- sol_raw %>% select(adm1_name, adm2_name, date, travel_ban_local, emer
          date_start_ed = as.Date(ifelse(date == first(date), date, ifelse(emergency_declaration == lag(emergency_declaration), NA, date)), origin= '1970-01-01'),
          date_start_hi = as.Date(ifelse(date == first(date), date, ifelse(home_isolation == lag(home_isolation), NA, date)), origin= '1970-01-01'))
 
-sol_cln_tb <- sol_cln %>% rename(date_start_tb = date_start_tb) %>% select(adm1_name, adm2_name, date_start) 
+# travel ban
+sol_cln_tb <- sol_cln %>% dplyr::rename(date_start = date_start_tb) %>% filter(!is.na(date_start)) %>%
+  mutate(date_end = as.Date(ifelse(adm2_name == lead(adm2_name), lead(date_start) - 1, date_cutoff_sh), origin= '1970-01-01'),
+         policy = "travel_ban") %>%
+  filter(travel_ban_local == 1) %>%
+  select(adm1_name, adm2_name, policy, date_start, date_end) 
 
-sol_cln_st <- rbind(sol_cln %>% select(adm1_name, adm2_name, date_start_tb))
+# emergency declaration
+sol_cln_ed <- sol_cln %>% dplyr::rename(date_start = date_start_ed) %>% filter(!is.na(date_start)) %>%
+  mutate(date_end = as.Date(ifelse(adm2_name == lead(adm2_name), lead(date_start) - 1, date_cutoff_sh), origin= '1970-01-01'),
+         policy = "emergency_declaration") %>%
+  filter(emergency_declaration == 1) %>%
+  select(adm1_name, adm2_name, policy, date_start, date_end) 
 
-sol_cln[1, "date_start_tb"] <- sol_cln[1, "date"]
+# home isolation
+sol_cln_hi <- sol_cln %>% dplyr::rename(date_start = date_start_hi) %>% filter(!is.na(date_start)) %>%
+  mutate(date_end = as.Date(ifelse(adm2_name == lead(adm2_name), lead(date_start) - 1, date_cutoff_sh), origin= '1970-01-01'),
+         policy = "home_isolation") %>%
+  filter(home_isolation == 1) %>%
+  select(adm1_name, adm2_name, policy, date_start, date_end) 
 
+# stack
+sol_cln_st <- rbind(sol_cln_tb, sol_cln_ed, sol_cln_hi)
+
+# is there intra-province variation?
+sol_cln_summ <- sol_cln_st %>% group_by(adm1_name, policy) %>%
+                  dplyr::summarize(n = n(), cities = n_distinct(adm2_name),
+                   distinct_start_dates = n_distinct(date_start),
+                   distinct_end_dates = n_distinct(date_end))
+# yes there is some
+h <- ggplot() + 
+  geom_point(data= sol_cln_st, aes(x= date_start, y= adm1_name, fill = policy), 
+             position= position_jitter(w= 0, h= 0), color= "lightgrey", alpha= .2, shape= 21, size= 4) + 
+  
+  geom_point(data= sol_cln_st[sol_cln_st$date_end != date_cutoff_sh,], 
+             aes(x= date_end, y= adm1_name, fill = policy), 
+             position= position_jitter(w= 0, h= 0), color= "lightgrey", alpha= .2, shape= 22, size= 4) + 
+  
+  geom_point(data= who_sub_cln[who_sub_cln$area_covered_cln2 %in% unique(sol_cln_st$adm1_name),], 
+             aes(x= date_start, y= area_covered_cln2, color= who_category_group_cln), position= position_jitter(w=0, h= 0.3), size= 2, shape= 18, alpha= 1) + 
+  
+  labs(title = "Comparing Solomon Hsiang policy data to WHO policy data", 
+       subtitle = "Circle = SH policy start; Square = SH policy end; Diamond = WHO policy announcement", 
+       color= "WHO policies", fill= "Solomon Hsiang policies") +
+  scale_x_date(date_labels= "%b", date_breaks= "1 month", limits = c(as.Date('2020-01-01'), date_cutoff_sh))
+
+i <- ggplot() + 
+  geom_point(data= sol_cln_st, aes(x= date_start, y= adm1_name, fill = policy), 
+             position= position_jitter(w= 0, h= 0), color= "lightgrey", alpha= .2, shape= 21, size= 4) + 
+  
+  geom_point(data= sol_cln_st[sol_cln_st$date_end != date_cutoff_sh,], 
+             aes(x= date_end, y= adm1_name, fill = policy), 
+             position= position_jitter(w= 0, h= 0), color= "lightgrey", alpha= .2, shape= 22, size= 4) + 
+  
+  geom_linerange(data= sul_erl, aes(xmin= date_start_cln, xmax= date_end_cln, y= province_region, color= response_level_cln)) + 
+  scale_x_date(date_labels= "%b", date_breaks= "1 month", limits = c(as.Date('2020-01-01'), date_cutoff_sh)) + 
+  labs(title = "Comparing Solomon Hsiang policy data to Emergency Response Levels", color= "Emergency Response Level", fill = "Solomon Hsiang policies")
+
+i  
 
 # ----------------------
 # COMBINE WITH ERLS
