@@ -1,0 +1,46 @@
+province,city_level,place_cln,date_start,date_end,sah_standard
+Anhui,prefecture,Bengbu,2020-02-03,NA,partial shutdown
+Anhui,prefecture,Fuyang,2020-02-05,2020-02-08,partial shutdown
+Anhui,prefecture,Hefei,2020-02-05,NA,partial shutdown
+Anhui,prefecture,Huaibei,2020-02-03,NA,partial shutdown
+Fujian,prefecture,Fuzhou,2020-02-04,NA,partial shutdown
+Guangxi,prefecture,Fangchenggang,2020-02-02,2020-02-08,partial shutdown
+Guangxi,prefecture,Guigang,2020-02-02,NA,partial shutdown
+Guangxi,prefecture,Guilin,2020-02-05,NA,partial shutdown
+Guangxi,district,"Jinchengjiang, Hechi",2020-02-05,NA,partial shutdown
+Guangxi,prefecture,Liuzhou,2020-02-05,NA,partial shutdown
+Guangxi,district,"Yuzhou, Yulin",2020-02-02,2020-02-09,partial shutdown
+Hebei,prefecture,Tangshan,2020-02-07,NA,partial shutdown
+Heilongjiang,prefecture,Harbin,2020-02-04,NA,partial shutdown
+Heilongjiang,district,Suifenhe,2020-04-08,NA,partial shutdown
+Henan,district,"Yicheng, Zhumadian",2020-02-04,NA,partial shutdown
+Henan,prefecture,Zhengzhou,2020-02-04,NA,partial shutdown
+Henan,prefecture,Zhumadian,2020-02-04,NA,partial shutdown
+Hubei,prefecture,Ezhou,2020-02-04,NA,partial shutdown
+Hubei,prefecture,Huanggang,2020-02-01,2020-03-22,partial shutdown
+Hubei,province,NA,2020-02-16,2020-04-08,partial shutdown
+Jiangsu,district,"Hailing, Taizhou",2020-02-05,NA,partial shutdown
+Jiangsu,prefecture,Xuzhou,2020-02-04,2020-02-08,partial shutdown
+Jiangxi,prefecture,Jingdezhen,2020-02-04,2020-03-31,partial shutdown
+Jiangxi,province,NA,2020-02-06,2020-03-31,partial shutdown
+Jilin,district,"Kuancheng, Changchun",2020-02-06,NA,partial shutdown
+Liaoning,prefecture,Benxi,2020-02-05,NA,partial shutdown
+Liaoning,prefecture,Jinzhou,2020-02-06,NA,partial shutdown
+Shaanxi,district,"Chang'an, Xi'an",2020-02-04,NA,partial shutdown
+Shaanxi,district,"Huyi, Xi'an",2020-02-03,2020-02-09,partial shutdown
+Shaanxi,district,"Lianhu, Xi'an",2020-02-05,NA,partial shutdown
+Shaanxi,prefecture,Xianyang,2020-02-06,NA,partial shutdown
+Shaanxi,district,"Xincheng, Xi'an",2020-02-04,NA,partial shutdown
+Shaanxi,district,"Yanta, Xi'an",2020-02-05,NA,partial shutdown
+Shaanxi,district,"Zhouzhi, Xi'an",2020-02-02,NA,partial shutdown
+Shandong,district,"Bincheng, Binzhou",2020-02-03,2020-02-09,partial shutdown
+Sichuan,prefecture,Garzê,2020-02-05,NA,partial shutdown
+Sichuan,prefecture,Ngawa,2020-02-05,NA,partial shutdown
+Tianjin,district,"Baodi, Tianjin",2020-02-09,NA,partial shutdown
+Zhejiang,prefecture,Hangzhou,2020-02-04,NA,partial shutdown
+Zhejiang,prefecture,Ningbo,2020-02-04,NA,partial shutdown
+Zhejiang,prefecture,Ningbo,2020-02-05,NA,partial shutdown
+Zhejiang,prefecture,Taizhou,2020-02-03,NA,partial shutdown
+Zhejiang,prefecture,Wenling,2020-02-02,NA,partial shutdown
+Zhejiang,prefecture,Wenzhou,2020-02-02,NA,partial shutdown
+Zhejiang,prefecture,Wenzhou,2020-02-02,2020-02-08,partial shutdown

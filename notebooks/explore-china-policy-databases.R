@@ -6,7 +6,7 @@
 # -----------
 # SETUP
 # -----------
-dir <- "/Users/ErichTrieschman/dev"
+dir <- "/Users/ErichTrieschman/Dropbox (MIT)"
 idir <- "./policy-database/data/external"
 setwd(dir)
 
@@ -36,7 +36,9 @@ date_cutoff <- as.Date('2020-07-31')
 # Import external policy data
 who_raw <- read_csv(paste0(idir, "/who-phsm/WHO_PHSM_Cleaned_V1_20_09_23.csv"))
 sol_raw <- read_csv(paste0(idir, "/solomon-hsiang/CHN_processed.csv"))
-# cnet_raw <- read_csv(paste0(idir, "/coronanet/coronanet_release.csv"))
+sol_src_raw <- read_csv(paste0(idir, "/solomon-hsiang/sources_from_SH_paper.csv"))
+sol_sources <- read_csv(paste0(idir, "/solomon-hsiang/CHN_policy_data_sources.csv"))
+cnet_raw <- read_csv(paste0(idir, "/coronanet/coronanet_release.csv"))
 # acaps_raw <- read_csv(paste0(idir, "/acaps/acaps_covid19_government_measures_dataset.csv"))
 # hit_raw <- read_csv(paste0(idir, "/hit/hit-covid-longdata.csv"))
 
@@ -201,6 +203,7 @@ h <- ggplot() +
        subtitle = "Circle = SH policy start; Square = SH policy end; Diamond = WHO policy announcement", 
        color= "WHO policies", fill= "Solomon Hsiang policies") +
   scale_x_date(date_labels= "%b", date_breaks= "1 month", limits = c(as.Date('2020-01-01'), date_cutoff_sh))
+h
 
 i <- ggplot() + 
   geom_point(data= sol_cln_st, aes(x= date_start, y= adm1_name, fill = policy), 
@@ -215,6 +218,39 @@ i <- ggplot() +
   labs(title = "Comparing Solomon Hsiang policy data to Emergency Response Levels", color= "Emergency Response Level", fill = "Solomon Hsiang policies")
 
 i  
+# ----------------------------------
+# SOLOMON LOCKDOWN DATA
+# ----------------------------------
+
+# understand solomon sources
+temp <- sol_sources %>% group_by(policy, source) %>% dplyr::summarize(n = n()) %>% arrange(-n)
+
+# clean manual data created from solomon sources
+sol_src_cln <- sol_src_raw %>% select(-sah_original, -source, -notes, -place, -et_manual) %>% 
+  distinct() %>% arrange(province, place_cln, date_start, sah_standard) %>%
+  mutate(flag_any_policy_overlap = date_start == lead(date_start) & place_cln == lead(place_cln) & 
+           province == lead(province) & sah_standard != lead(sah_standard),
+         flag_shutdown_policy_overlap = flag_any_policy_overlap & sah_standard != "closed management",
+         flag_date_overlap = place_cln == lead(place_cln) & province == lead(province) & date_end > lead(date_start))
+
+sol_scr_summ <- sol_src_cln %>% filter(sah_standard == "partial shutdown") %>%
+  group_by(city_level) %>%
+  dplyr::summarize(n = n_distinct(ifelse(is.na(place_cln), province, place_cln)),
+                   date_start_earliest = min(date_start),
+                   date_start_latest = max(date_start))
+
+sol_scr_partial <- sol_src_cln %>% filter(sah_standard == "partial shutdown") %>% select(province:sah_standard)
+  
+# plot to visualize the data
+g <- ggplot(data= sol_src_cln) + 
+  geom_point(aes(x= date_start, y= place_cln, color= sah_standard), alpha= .7, size= 2) + 
+  geom_linerange(aes(xmin= date_start, xmax= date_end, y= place_cln, color= sah_standard), size= .75) + 
+  facet_grid(province ~ ., scales= "free_y", space= "free_y") + 
+  labs(title= "Stay-at-home (SAH) measures from SH paper sources", color= "SAH measures") + 
+  theme(axis.text.y = element_text(size= 6, angle= 45),
+        strip.text.y = element_text(size= 8, angle= 0),
+        axis.title = element_blank())
+g
 
 # ----------------------
 # COMBINE WITH ERLS
@@ -351,11 +387,82 @@ for(i in 1:length(unique(who_sub_cln$area_covered_cln2))){
 }
 dev.off() 
 
+# ----------------------
+# WHO BUSINESS CLOSURES
+# ----------------------
+
+# categorize pois
+keep_cats <- c("Offi, busi, inst", "Gatherings", "School")
+drop_meas <- c("closing internal land", "restricting entry")
+restaurant <- c("restaurant", "catering", "bar", "pub", "eater")
+entertainment <- c("entertainment", "party", "karaoke", "hair", "beauty", "salon", "club", "cinema", 
+                   "parlor", "bathhouse", "performance", "casino", "recreation")
+hotels <- c("hotel")
+sports <- c("sport", "fitness", "gym")
+markets <- c("market", "food", "convenience", "salmon", "outlet")
+office_govt <- c("civil", "immigration", "facilit", "govt employees", "government employees")
+office_comm <- c("office", "workplace", "non-essential busi", "factori")
+scenic <- c("disney", "religi", "church", "baseball", "event", "cultural", "leisure", 
+            "beach", "cultural", "museum", "playground", "tour", "temple")
+govt_service <- c("government service", "driving test", "librar", "social welf")
+all_emp_busi <- c("all employee", "all busine", "all worker")
+
+# categorize policy stage
+stage_finish <- c("reopen", "lifted", "resume", "back to", "opened", "resumption", "coming to an end", 
+            "can take off their facemask", "open", "return to", "lift lock", "to return", "permitted to")
+stage_finish_negate <- "not to resume|not resume|deferred resumption|renewed closure|reopen date pending|will be postponed"
+
+
+# create pois
+who_poi <- who_sub_cln %>% 
+  filter(who_category_group_cln %in% keep_cats & 
+           !grepl(paste0(drop_meas, collapse= "|"), tolower(who_measure_cln))) %>%
+  mutate(poi_restaurant = grepl(paste0(restaurant, collapse= "|"), targeted_cln),
+         poi_entertainment = grepl(paste0(entertainment, collapse= "|"), targeted_cln),
+         poi_hotel = grepl(paste0(hotels, collapse= "|"), targeted_cln),
+         poi_sports = grepl(paste0(sports, collapse= "|"), targeted_cln),
+         poi_markets = grepl(paste0(markets, collapse= "|"), targeted_cln),
+         poi_off_government = grepl(paste0(office_govt, collapse= "|"), targeted_cln),
+         poi_off_commercial = grepl(paste0(office_comm, collapse= "|"), targeted_cln),
+         poi_scenic_spot = grepl(paste0(scenic, collapse= "|"), targeted_cln),
+         poi_govt_service = grepl(paste0(govt_service, collapse= "|"), targeted_cln),
+         poi_all_busi_all_emp = grepl(paste0(all_emp_busi, collapse= "|"), targeted_cln),
+         poi_any = poi_restaurant | poi_entertainment | poi_hotel | poi_sports | poi_markets | 
+           poi_off_government  | poi_off_commercial | poi_scenic_spot | poi_govt_service | poi_all_busi_all_emp,
+         school = who_category_group_cln == "School",
+         all_gather = who_category_group_cln == "Gatherings",
+         keep_check = poi_any | school | all_gather) %>%
+  mutate(stage_reopen = grepl(paste0(stage_finish, collapse= "|"), tolower(comments)) & 
+           !grepl(stage_finish_negate, tolower(comments)))
+
+temp <- who_poi %>% select(who_category_group_cln, who_measure_cln, targeted_cln, starts_with("poi_"), school, all_gather, keep_check) %>% 
+  distinct() %>% arrange(who_category_group_cln, who_measure_cln)
+
+temp <- who_poi %>% group_by(who_category_group_cln, measure_stage_cln) %>% dplyr::summarize(n= n())
+
+who_poi_t <- who_poi %>% pivot_longer(cols= c(starts_with("poi_"), school, all_gather), 
+                                      names_to= "targeted_cln2", values_to= "keep") %>%
+  select(area_covered_cln2, key_area, who_category_group_cln, who_measure_cln, measure_stage_cln , targeted_cln2, keep, enforcement, date_start) %>% 
+  filter(keep == TRUE & targeted_cln2 != "poi_any") %>% distinct()
+
+# visualize
+g <- ggplot(data= who_poi_t) + 
+  geom_point(aes(x= date_start, y= who_measure_cln, color= targeted_cln2, shape= measure_stage_cln), 
+             size= 2, alpha= .5, position= position_jitter(w= 0, h= .15)) + 
+  facet_grid(who_category_group_cln ~ ., space= "free_y", scales= "free_y") + 
+  labs(title= "Categorized WHO measures", color= "POI categories", shape= "Announcement type") + 
+  theme(axis.title = element_blank())
+
+g
+
+
 # ---------------
 # WRITE OUTPUTS
 # ---------------
 
 write_csv(x= who_erl_t_cat, file = paste0("./policy-database/notebooks/outputs/who-policy-summary-", date_today, ".csv"))
+write_csv(x= sol_src_cln, file= paste0("./policy-database/notebooks/outputs/solomon-source-policy-cln-", date_today, ".csv"))
+write_csv(x= sol_scr_partial, file= paste0("./policy-database/notebooks/outputs/partial-lockdowns-for-ras-", date_today, ".csv"))
 
 # ---------------
 # APPENDIX
@@ -378,5 +485,6 @@ unique(cnet_raw$country)
 cnet_sub <- cnet_raw %>% filter(country == "China")
 summary(cnet_sub)
 cnet_summ <- cnet_sub %>% group_by(init_country_level, province, city) %>% dplyr::summarize(n= n())
+cnet_summ <- cnet_sub %>% select(type, type_sub_cat) %>% distinct()
           
                  
