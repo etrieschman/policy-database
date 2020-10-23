@@ -132,7 +132,9 @@ pca_who_t <- pca_who %>%
 
 # impute missing data
 pca_who_t_imp <- pca_who_t %>%
-  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.)))) %>%
+  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.))))
+
+pca_who_t_imp_in <- pca_who_t_imp %>%
   column_to_rownames("area_covered_cln2")
 
 pca_policies <- princomp(pca_who_t_imp, cor= TRUE)
@@ -221,10 +223,22 @@ h
 sol_cln_t <- sol_cln_st %>% 
   mutate(date_start_i = as.numeric(date_start - date_index)) %>%
   pivot_wider(id_cols= adm1_name, names_from= policy, values_from= date_start_i, values_fn= min)
+class(sol_cln_t$home_isolation)
 
+sol_cln_t_imp <- sol_cln_t %>%
+  ungroup() %>%
+  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.))))
 
-who_sol <- who_
-
+# merge and only keep overlapping rows
+who_sol <- pca_who_t_imp %>% inner_join(sol_cln_t_imp, by= c("area_covered_cln2" = "adm1_name")) %>%
+  column_to_rownames("area_covered_cln2")
+                
+                
+pca_who_sol <- princomp(who_sol, cor= TRUE)
+summary(pca_who_sol)
+pca_who_sol$loadings
+plot(pca_who_sol)
+biplot(pca_who_sol)
 # ----------------------------------
 # SOLOMON LOCKDOWN DATA
 # ----------------------------------
