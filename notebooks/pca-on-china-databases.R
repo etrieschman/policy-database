@@ -21,6 +21,8 @@ library(scales)
 library(stringr)
 library(strex)
 library(sqldf)
+library(FactoMineR)
+library(factoextra)
 
 # color function
 gg_color_hue <- function(n) {
@@ -31,6 +33,7 @@ gg_color_hue <- function(n) {
 # dates
 date_today <- gsub("-", "", Sys.Date())
 date_cutoff <- as.Date('2020-07-31')
+date_index <- as.Date("2020-01-01")
 
 
 # Import external policy data
@@ -99,6 +102,12 @@ category_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measu
 unique(who_sub_cln$measure_stage_cln)
 targeted_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measure_cln, targeted_cln) %>% dplyr::summarize(n = n())
 
+# get a summary of the transposed data to show how thin it is
+summ_who_sub_t <- who_sub_cln %>% filter(measure_stage_cln != "finish" & !(area_covered_cln2 %in% c("Hong Kong", "Taiwan", "Macao"))) %>%
+  pivot_wider(id_cols= area_covered_cln2, names_from= who_category_group_cln, values_from= who_id, values_fn= n_distinct) %>%
+  rowwise() %>%
+  dplyr::mutate(n_policies = sum(across(-area_covered_cln2), na.rm= T)) %>% arrange(-n_policies)
+
 # ----------------------------------
 # RUN PRINCIPAL COMPONENT ANALYSIS
 # ----------------------------------
@@ -107,30 +116,49 @@ targeted_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measu
 pca_who <- who_sub_cln %>% 
   filter(measure_stage_cln != "finish" & !(area_covered_cln2 %in% c("Hong Kong", "Taiwan", "Macao"))) %>%
   select(area_covered_cln2, who_category_group_cln, who_measure_cln, targeted_cln, date_start) %>%
-  mutate(date_start_i = as.numeric(date_start - as.Date("2020-01-01")))
+  mutate(date_start_i = as.numeric(date_start - date_index))
 class(pca_who$date_start_i)
 
 # understand records that will get dropped
-pca_who_checkdrops <- pca_who %>% group_by(area_covered_cln2, who_category_group_cln, who_measure_cln) %>% dplyr::summarise(n = n())
+pca_who_checkdrops <- pca_who %>% group_by(area_covered_cln2, who_category_group_cln, who_measure_cln) %>% dplyr::summarise(n = n()) %>%
+  mutate(one = 1,
+         n_mone = n - one) %>%
+  ungroup() %>%
+  dplyr::summarize(across(c(n, one, n_mone), sum, na.rm= T))
 
+# transpose the data in categories
 pca_who_t <- pca_who %>% 
   pivot_wider(id_cols= area_covered_cln2, names_from= who_category_group_cln, values_from= date_start_i, values_fn= min)
 
+# impute missing data
 pca_who_t_imp <- pca_who_t %>%
-  rowwise() %>%
-  dplyr::mutate(drop_median = max(across(-area_covered_cln2), na.rm= T)) %>%
-  dplyr::mutate(across(where(is.numeric), function(x){ifelse(is.na(x), drop_median, x)})) %>%
-  select(-drop_median, -area_covered_cln2)
+  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.)))) %>%
+  column_to_rownames("area_covered_cln2")
 
-test <- princomp(pca_who_t_imp, cor= TRUE)
-head(test$x)
-plot(test)
-test$loadings
-biplot(test)
+pca_policies <- princomp(pca_who_t_imp, cor= TRUE)
+summary(pca_policies)
+pca_policies$loadings
+plot(pca_policies)
+pca_policies$loadings
+biplot(pca_policies)
 
-# ----------------------------------
-# VALIDATE WHO DATA AGAINST SOLOMON
-# ----------------------------------
+# -------------------------------------
+# RUN MULTIPLE CORRESPONDENCE ANALYSIS
+# -------------------------------------
+
+mca_who <- pca_who %>% 
+  mutate(flag = 1) %>%
+  pivot_wider(id_cols= c(area_covered_cln2, date_start_i), names_from= who_category_group_cln, values_from= flag, values_fn= max) %>%
+  dplyr::mutate(across(c(-area_covered_cln2, -date_start_i), ~if_else(is.na(.), FALSE, TRUE)))
+
+test <- MCA(mca_who[,3:9], graph= FALSE)
+head(test$var$coord)
+
+fviz_screeplot(test, addlabels = TRUE)
+
+# ------------------------------------
+# VALIDATE SOLOMON POLICY DATA IN PCA
+# ------------------------------------
 
 date_cutoff_sh <- max(sol_raw$date)
 
@@ -189,6 +217,13 @@ h <- ggplot() +
   scale_x_date(date_labels= "%b", date_breaks= "1 month", limits = c(as.Date('2020-01-01'), date_cutoff_sh))
 h
 
+# merge solomon data with who data
+sol_cln_t <- sol_cln_st %>% 
+  mutate(date_start_i = as.numeric(date_start - date_index)) %>%
+  pivot_wider(id_cols= adm1_name, names_from= policy, values_from= date_start_i, values_fn= min)
+
+
+who_sol <- who_
 
 # ----------------------------------
 # SOLOMON LOCKDOWN DATA
@@ -223,75 +258,6 @@ g <- ggplot(data= sol_src_cln) +
         strip.text.y = element_text(size= 8, angle= 0),
         axis.title = element_blank())
 g
-
-# ----------------------
-# WHO BUSINESS CLOSURES
-# ----------------------
-
-# categorize pois
-keep_cats <- c("Offi, busi, inst", "Gatherings", "School")
-drop_meas <- c("closing internal land", "restricting entry")
-restaurant <- c("restaurant", "catering", "bar", "pub", "eater")
-entertainment <- c("entertainment", "party", "karaoke", "hair", "beauty", "salon", "club", "cinema", 
-                   "parlor", "bathhouse", "performance", "casino", "recreation")
-hotels <- c("hotel")
-sports <- c("sport", "fitness", "gym")
-markets <- c("market", "food", "convenience", "salmon", "outlet")
-office_govt <- c("civil", "immigration", "facilit", "govt employees", "government employees")
-office_comm <- c("office", "workplace", "non-essential busi", "factori")
-scenic <- c("disney", "religi", "church", "baseball", "event", "cultural", "leisure", 
-            "beach", "cultural", "museum", "playground", "tour", "temple")
-govt_service <- c("government service", "driving test", "librar", "social welf")
-all_emp_busi <- c("all employee", "all busine", "all worker")
-
-# categorize policy stage
-stage_finish <- c("reopen", "lifted", "resume", "back to", "opened", "resumption", "coming to an end", 
-            "can take off their facemask", "open", "return to", "lift lock", "to return", "permitted to")
-stage_finish_negate <- "not to resume|not resume|deferred resumption|renewed closure|reopen date pending|will be postponed"
-
-
-# create pois
-who_poi <- who_sub_cln %>% 
-  filter(who_category_group_cln %in% keep_cats & 
-           !grepl(paste0(drop_meas, collapse= "|"), tolower(who_measure_cln))) %>%
-  mutate(poi_restaurant = grepl(paste0(restaurant, collapse= "|"), targeted_cln),
-         poi_entertainment = grepl(paste0(entertainment, collapse= "|"), targeted_cln),
-         poi_hotel = grepl(paste0(hotels, collapse= "|"), targeted_cln),
-         poi_sports = grepl(paste0(sports, collapse= "|"), targeted_cln),
-         poi_markets = grepl(paste0(markets, collapse= "|"), targeted_cln),
-         poi_off_government = grepl(paste0(office_govt, collapse= "|"), targeted_cln),
-         poi_off_commercial = grepl(paste0(office_comm, collapse= "|"), targeted_cln),
-         poi_scenic_spot = grepl(paste0(scenic, collapse= "|"), targeted_cln),
-         poi_govt_service = grepl(paste0(govt_service, collapse= "|"), targeted_cln),
-         poi_all_busi_all_emp = grepl(paste0(all_emp_busi, collapse= "|"), targeted_cln),
-         poi_any = poi_restaurant | poi_entertainment | poi_hotel | poi_sports | poi_markets | 
-           poi_off_government  | poi_off_commercial | poi_scenic_spot | poi_govt_service | poi_all_busi_all_emp,
-         school = who_category_group_cln == "School",
-         all_gather = who_category_group_cln == "Gatherings",
-         keep_check = poi_any | school | all_gather) %>%
-  mutate(stage_reopen = grepl(paste0(stage_finish, collapse= "|"), tolower(comments)) & 
-           !grepl(stage_finish_negate, tolower(comments)))
-
-temp <- who_poi %>% select(who_category_group_cln, who_measure_cln, targeted_cln, starts_with("poi_"), school, all_gather, keep_check) %>% 
-  distinct() %>% arrange(who_category_group_cln, who_measure_cln)
-
-temp <- who_poi %>% group_by(who_category_group_cln, measure_stage_cln) %>% dplyr::summarize(n= n())
-
-who_poi_t <- who_poi %>% pivot_longer(cols= c(starts_with("poi_"), school, all_gather), 
-                                      names_to= "targeted_cln2", values_to= "keep") %>%
-  select(area_covered_cln2, key_area, who_category_group_cln, who_measure_cln, measure_stage_cln , targeted_cln2, keep, enforcement, date_start) %>% 
-  filter(keep == TRUE & targeted_cln2 != "poi_any") %>% distinct()
-
-# visualize
-g <- ggplot(data= who_poi_t) + 
-  geom_point(aes(x= date_start, y= who_measure_cln, color= targeted_cln2, shape= measure_stage_cln), 
-             size= 2, alpha= .5, position= position_jitter(w= 0, h= .15)) + 
-  facet_grid(who_category_group_cln ~ ., space= "free_y", scales= "free_y") + 
-  labs(title= "Categorized WHO measures", color= "POI categories", shape= "Announcement type") + 
-  theme(axis.title = element_blank())
-
-g
-
 
 # ---------------
 # WRITE OUTPUTS
