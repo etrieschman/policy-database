@@ -23,6 +23,8 @@ library(strex)
 library(sqldf)
 library(FactoMineR)
 library(factoextra)
+library(gridExtra)
+library(ggfortify)
 
 # color function
 gg_color_hue <- function(n) {
@@ -40,6 +42,8 @@ date_index <- as.Date("2020-01-01")
 who_raw <- read_csv(paste0(idir, "/who-phsm/WHO_PHSM_Cleaned_V1_20_09_23.csv"))
 sol_raw <- read_csv(paste0(idir, "/solomon-hsiang/CHN_processed.csv"))
 sol_src_raw <- read_csv(paste0(idir, "/solomon-hsiang/sources_from_SH_paper.csv"))
+sul_beijing <- read_csv("./policy-database/data/internal/MassCPR_level1_v4_verified_20200910.csv") %>% 
+  filter(!(verification_status %in% c("update", "delete")))
 
 # import emergency level data
 sul_erl <- read_csv("./policy-database/data/interim/masscpr_emergencyresponse_db_20201007.csv")
@@ -50,8 +54,8 @@ sul_erl <- read_csv("./policy-database/data/interim/masscpr_emergencyresponse_db
 
 who_taxonomy <- who_raw %>% 
   filter(country_territory_area == "China") %>% 
-  select(who_category, who_subcategory) %>% 
-  distinct() %>% arrange(who_category, who_subcategory)
+  select(who_category, who_subcategory, who_measure) %>% 
+  distinct() %>% arrange(who_category, who_subcategory, who_measure)
 
 names(who_raw)
 unique(who_raw$country_territory_area)
@@ -102,18 +106,29 @@ category_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measu
 unique(who_sub_cln$measure_stage_cln)
 targeted_summ_post <- who_sub_cln %>% group_by(who_category_group_cln, who_measure_cln, targeted_cln) %>% dplyr::summarize(n = n())
 
+# drop "finish" policies
+# drop hong kong, taiwan, and macau
+who_sub_cln_sub <- who_sub_cln %>% 
+  filter(measure_stage_cln != "finish") %>% 
+  filter(!grepl("hong kong|macao|taiwan", tolower(area_covered_cln2)))
+
+
+
 # get a summary of the transposed data to show how thin it is
-summ_who_sub_t <- who_sub_cln %>% filter(measure_stage_cln != "finish" & !(area_covered_cln2 %in% c("Hong Kong", "Taiwan", "Macao"))) %>%
+summ_who_sub_t <- who_sub_cln_sub %>%
   pivot_wider(id_cols= area_covered_cln2, names_from= who_category_group_cln, values_from= who_id, values_fn= n_distinct) %>%
   rowwise() %>%
   dplyr::mutate(n_policies = sum(across(-area_covered_cln2), na.rm= T)) %>% arrange(-n_policies)
+
+# count remaining rows
+summ_who_sub_t[-(1:10),] %>% summarize(n_tenplus = sum(n_policies, na.rm= T))
 
 # ----------------------------------
 # RUN PRINCIPAL COMPONENT ANALYSIS
 # ----------------------------------
 
 # subset to only new policies without subpopulations
-pca_who <- who_sub_cln %>% 
+pca_who <- who_sub_cln_sub %>% 
   filter(measure_stage_cln != "finish" & !(area_covered_cln2 %in% c("Hong Kong", "Taiwan", "Macao"))) %>%
   select(area_covered_cln2, who_category_group_cln, who_measure_cln, targeted_cln, date_start) %>%
   mutate(date_start_i = as.numeric(date_start - date_index))
@@ -130,11 +145,20 @@ pca_who_checkdrops <- pca_who %>% group_by(area_covered_cln2, who_category_group
 pca_who_t <- pca_who %>% 
   pivot_wider(id_cols= area_covered_cln2, names_from= who_category_group_cln, values_from= date_start_i, values_fn= min)
 
+# how many missing per row?
+summ_miss_policy <- pca_who_t %>%
+  rowwise() %>%
+  dplyr::mutate(n_miss = sum(across(where(is.numeric), ~if_else(is.na(.), 1, 0))),
+                pct_miss = n_miss / 7)
+
+ggplot(data= summ_miss_policy) + geom_histogram(aes(x= pct_miss), bins= 10) + 
+  labs(title= "Count of regions with missing policies") + 
+  xlab("% of policies that are missing (7 total)") + 
+  theme(axis.title.y = element_blank())
+
 # impute missing data
 pca_who_t_imp <- pca_who_t %>%
-  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.))))
-
-pca_who_t_imp_in <- pca_who_t_imp %>%
+  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.)))) %>%
   column_to_rownames("area_covered_cln2")
 
 pca_policies <- princomp(pca_who_t_imp, cor= TRUE)
@@ -143,6 +167,58 @@ pca_policies$loadings
 plot(pca_policies)
 pca_policies$loadings
 biplot(pca_policies)
+
+# ----------------------------------
+# PCA ROBUSTNESS CHECKS
+# ----------------------------------
+
+# indata sensitivity options
+s_full <- pca_who_t
+s_chi <- pca_who_t %>% filter(area_covered_cln2 != "China")
+s_cit <- pca_who_t %>% filter(!area_covered_cln2 %in% c("China", "Beijing's Chaoyang district", "Hongshan District of Wuhan",
+                                                         "Jia county", "Some regions", "Some provinces"))
+
+# impute function options
+s_f_med <- function(x,y){if_else(is.na(x), median(x, na.rm=T), as.numeric(x))}
+s_f_rand <- function(x, y){if_else(is.na(x), floor(runif(nrow(y), min=rand_min, max= rand_max+1)), as.numeric(x))}
+
+d <- s_chi
+f <- s_f_rand
+
+# write a function to plot biplots
+# https://cran.r-project.org/web/packages/ggfortify/vignettes/plot_pca.html
+run_pca <- function(d, f){
+  
+  rand_min <- min(dplyr::summarize(d, across(where(is.numeric), min, na.rm= T)))
+  rand_max <- max(dplyr::summarize(d, across(where(is.numeric), max, na.rm= T)))
+  n_policies <- sum(dplyr::summarize(d, across(where(is.numeric), ~if_else(!is.na(.), 1, 0))))
+  dat <- d
+  
+  pca_in <- d %>% dplyr::mutate(across(where(is.numeric), f, dat)) %>%
+    column_to_rownames("area_covered_cln2")
+  pca_policies_s <- princomp(pca_in, cor= TRUE)
+  # biplot(pca_policies_s)
+  b <- autoplot(pca_policies_s, label= T, size= .5, label.size= 3, alpha= .2, label.alpha= .5, loadings= TRUE, loadings.label= TRUE, scale= 0) +
+    labs(title= paste0("Regions: ", nrow(d), "; Policies: ", n_policies)) 
+    # scale_x_continuous(limits= c(-.5, 1))+
+    # scale_y_continuous(limits=c(-.5, 1))
+  b
+}
+
+# build plots
+p_full_med <- run_pca(s_full, s_f_med)
+p_full_rand <- run_pca(s_full, s_f_rand)
+p_chi_med <- run_pca(s_chi, s_f_med)
+p_chi_rand <- run_pca(s_chi, s_f_rand)
+p_cit_med <- run_pca(s_cit, s_f_med)
+p_cit_rand <- run_pca(s_cit, s_f_rand)
+
+# plot all
+# https://cran.r-project.org/web/packages/egg/vignettes/Ecosystem.html
+grid.arrange(arrangeGrob(top= "Median imputation", left= "Full sample", p_full_med), 
+             arrangeGrob(top= "Random imputation", p_full_rand), 
+             arrangeGrob(left= "Drop China", p_chi_med), p_chi_rand, 
+             arrangeGrob(left= "Drop China and districts", p_cit_med), p_cit_rand, ncol=2)
 
 # -------------------------------------
 # RUN MULTIPLE CORRESPONDENCE ANALYSIS
@@ -210,7 +286,7 @@ h <- ggplot() +
              aes(x= date_end, y= adm1_name, fill = policy), 
              position= position_jitter(w= 0, h= 0), color= "lightgrey", alpha= .2, shape= 22, size= 4) + 
   
-  geom_point(data= who_sub_cln[who_sub_cln$area_covered_cln2 %in% unique(sol_cln_st$adm1_name),], 
+  geom_point(data= who_sub_cln_sub[who_sub_cln_sub$area_covered_cln2 %in% unique(sol_cln_st$adm1_name),], 
              aes(x= date_start, y= area_covered_cln2, color= who_category_group_cln), position= position_jitter(w=0, h= 0.3), size= 2, shape= 18, alpha= 1) + 
   
   labs(title = "Comparing Solomon Hsiang policy data to WHO policy data", 
@@ -225,13 +301,26 @@ sol_cln_t <- sol_cln_st %>%
   pivot_wider(id_cols= adm1_name, names_from= policy, values_from= date_start_i, values_fn= min)
 class(sol_cln_t$home_isolation)
 
-sol_cln_t_imp <- sol_cln_t %>%
-  ungroup() %>%
-  dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.))))
+# sol_cln_t_imp <- sol_cln_t %>%
+#   ungroup() %>%
+#   dplyr::mutate(across(where(is.numeric), ~if_else(is.na(.), median(., na.rm= T), as.numeric(.))))
 
-# merge and only keep overlapping rows
-who_sol <- pca_who_t_imp %>% inner_join(sol_cln_t_imp, by= c("area_covered_cln2" = "adm1_name")) %>%
+# merge and only keep overlapping rows, but first drop any dates that happen later than the last solomon date
+pca_who_t_date_cln <- pca_who_t %>% mutate(across(where(is.numeric)), ~if_else(x > date_cutoff_sh, NA, x))
+who_sol <- pca_who_t_date_cln %>% inner_join(sol_cln_t, by= c("area_covered_cln2" = "adm1_name"))
+
+# impute
+rand_min <- min(dplyr::summarize(who_sol, across(where(is.numeric), min, na.rm= T)))
+rand_max <- max(dplyr::summarize(who_sol, across(where(is.numeric), max, na.rm= T)))
+n_policies <- sum(dplyr::summarize(who_sol, across(where(is.numeric), ~if_else(!is.na(.), 1, 0))))
+
+who_sol_in <- who_sol %>% dplyr::mutate(across(where(is.numeric), s_f_rand, who_sol)) %>%
   column_to_rownames("area_covered_cln2")
+pca_policies_s <- princomp(who_sol_in, cor= TRUE)
+b <- autoplot(pca_policies_s, label= T, size= .5, label.size= 3, alpha= .2, label.alpha= .5, loadings= TRUE, loadings.label= TRUE, scale= 0) +
+  labs(title= paste0("Regions: ", nrow(who_sol), "; Policies: ", n_policies)) 
+b
+
                 
                 
 pca_who_sol <- princomp(who_sol, cor= TRUE)
