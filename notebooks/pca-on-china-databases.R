@@ -6,7 +6,7 @@
 # -----------
 # SETUP
 # -----------
-dir <- "/Users/ErichTrieschman/Dropbox (MIT)"
+dir <- "/Users/etriesch/dev"
 idir <- "./policy-database/data/external"
 setwd(dir)
 
@@ -22,7 +22,6 @@ library(stringr)
 library(strex)
 library(sqldf)
 library(FactoMineR)
-library(factoextra)
 library(gridExtra)
 library(ggfortify)
 
@@ -71,7 +70,7 @@ who_sub_int <- who_sub %>%
          test = regions == regions2)
 who_sub_exp <- who_sub_int %>%
   uncount(regions2, .remove= FALSE, .id= "id") %>%
-  mutate(str_start = ifelse(id == 1, 1, str_locate_nth(area_covered, ",|and", id-1)[,1]),
+  mutate(str_start = ifelse(id == 1, 1, strex::str_locate_nth(area_covered, ",|and", id-1)[,1]),
          str_end = ifelse(id == regions2, nchar(area_covered), lead(str_start) - 1),
          area_covered_cln = str_trim(gsub("-|\\.", " ", gsub(",|and", "", substr(area_covered, str_start, str_end)))),
          area_covered_cln2 = str_trim(gsub("province$|Province$|municipality$", "", 
