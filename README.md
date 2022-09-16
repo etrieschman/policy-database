@@ -1,7 +1,5 @@
 # policy-database
-Evaluating COVID-19 policy databases for use at MIT's [Sustainable Urbanization Lab](https://sul.mit.edu/)
-
-*This repo contains researhc and summary analyses conducted while I was an Research Assistant at MIT SUL*
+This repo contains research and summary analyses conducted while I was an Research Assistant at MIT's [Sustainable Urbanization Lab](https://sul.mit.edu/). 
 
 ## Overview
 
